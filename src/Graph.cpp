@@ -11,12 +11,12 @@
  * Created on March 7, 2018, 10:44 AM
  */
 
-#include "Graph.h"
+#include "../include/Graph.h"
 #include "iostream"
 #include "cstdlib"
 #include "cstdio"
-#include "depthFirst.h"
-#include "BreadthFirst.h"
+#include "../include/depthFirst.h"
+#include "../include/BreadthFirst.h"
 #include <chrono>
 #include <ctime>
 #include <fstream>

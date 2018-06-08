@@ -2,7 +2,7 @@
 // Created by js on 4/3/18.
 //
 
-#include "BreadthFirst.h"
+#include "../include/BreadthFirst.h"
 #include <iostream>
 #include <cstdlib>
 #include <algorithm>

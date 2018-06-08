@@ -14,8 +14,8 @@
 #include <omp.h>
 #include <sys/types.h>
 #include <unistd.h>
-#include "mystack.h"
-#include "depthFirst.h"
+#include "../include/mystack.h"
+#include "../include/depthFirst.h"
 
 //#include "DepthFirst.h"
 

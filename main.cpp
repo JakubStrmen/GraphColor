@@ -14,9 +14,9 @@
 #include <cstdlib>
 #include <cstdio>
 #include <iostream>
-#include "Graph.h"
-#include "Filter.h"
-#include "BreadthFirst.h"
+#include "include/Graph.h"
+#include "include/Filter.h"
+#include "include/BreadthFirst.h"
 
 
 

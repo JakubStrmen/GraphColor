@@ -15,4 +15,4 @@ else(OPENMP_FOUND)
     message("ERROR: OpenMP could not be found! ")
 endif(OPENMP_FOUND)
 
-add_executable(GraphColor main.cpp Graph.cpp Graph.h depthFirst.c depthFirst.h mystack.c mystack.h Filter.cpp Filter.h BreadthFirst.cpp BreadthFirst.h)
+add_executable(GraphColor main.cpp src/Graph.cpp include/Graph.h src/depthFirst.c include/depthFirst.h src/mystack.c include/mystack.h src/Filter.cpp include/Filter.h src/BreadthFirst.cpp include/BreadthFirst.h)

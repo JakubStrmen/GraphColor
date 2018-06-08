@@ -11,7 +11,7 @@
  * Created on March 21, 2018, 2:31 PM
  */
 
-#include "Filter.h"
+#include "../include/Filter.h"
 #include <fstream>
 
 Filter::Filter() {
