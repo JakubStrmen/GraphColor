@@ -84,37 +84,49 @@
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/home/jakub/Git/GraphColor/BreadthFirst.cpp">
+		<Unit filename="/home/jakub/Git/GraphColor/include/BreadthFirst.h">
 			<Option target="GraphColor"/>
 		</Unit>
-		<Unit filename="/home/jakub/Git/GraphColor/BreadthFirst.h">
+		<Unit filename="/home/jakub/Git/GraphColor/include/Filter.h">
 			<Option target="GraphColor"/>
 		</Unit>
-		<Unit filename="/home/jakub/Git/GraphColor/Filter.cpp">
+		<Unit filename="/home/jakub/Git/GraphColor/include/Graph.h">
 			<Option target="GraphColor"/>
 		</Unit>
-		<Unit filename="/home/jakub/Git/GraphColor/Filter.h">
+		<Unit filename="/home/jakub/Git/GraphColor/include/depthFirst.h">
 			<Option target="GraphColor"/>
 		</Unit>
-		<Unit filename="/home/jakub/Git/GraphColor/Graph.cpp">
-			<Option target="GraphColor"/>
-		</Unit>
-		<Unit filename="/home/jakub/Git/GraphColor/Graph.h">
-			<Option target="GraphColor"/>
-		</Unit>
-		<Unit filename="/home/jakub/Git/GraphColor/depthFirst.c">
-			<Option target="GraphColor"/>
-		</Unit>
-		<Unit filename="/home/jakub/Git/GraphColor/depthFirst.h">
+		<Unit filename="/home/jakub/Git/GraphColor/include/mystack.h">
 			<Option target="GraphColor"/>
 		</Unit>
 		<Unit filename="/home/jakub/Git/GraphColor/main.cpp">
 			<Option target="GraphColor"/>
 		</Unit>
-		<Unit filename="/home/jakub/Git/GraphColor/mystack.c">
+		<Unit filename="/home/jakub/Git/GraphColor/src/BreadthFirst.cpp">
 			<Option target="GraphColor"/>
 		</Unit>
-		<Unit filename="/home/jakub/Git/GraphColor/mystack.h">
+		<Unit filename="/home/jakub/Git/GraphColor/src/Filter.cpp">
+			<Option target="GraphColor"/>
+		</Unit>
+		<Unit filename="/home/jakub/Git/GraphColor/src/Graph.cpp">
+			<Option target="GraphColor"/>
+		</Unit>
+		<Unit filename="/home/jakub/Git/GraphColor/src/GraphNew.cpp">
+			<Option target="GraphColor"/>
+		</Unit>
+		<Unit filename="/home/jakub/Git/GraphColor/src/GraphNew.h">
+			<Option target="GraphColor"/>
+		</Unit>
+		<Unit filename="/home/jakub/Git/GraphColor/src/Vertex.cpp">
+			<Option target="GraphColor"/>
+		</Unit>
+		<Unit filename="/home/jakub/Git/GraphColor/src/Vertex.h">
+			<Option target="GraphColor"/>
+		</Unit>
+		<Unit filename="/home/jakub/Git/GraphColor/src/depthFirst.c">
+			<Option target="GraphColor"/>
+		</Unit>
+		<Unit filename="/home/jakub/Git/GraphColor/src/mystack.c">
 			<Option target="GraphColor"/>
 		</Unit>
 		<Unit filename="/home/jakub/Git/GraphColor/CMakeLists.txt">

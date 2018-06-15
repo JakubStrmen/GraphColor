@@ -81,147 +81,199 @@ CMakeFiles/GraphColor.dir/main.cpp.o.provides: CMakeFiles/GraphColor.dir/main.cp
 CMakeFiles/GraphColor.dir/main.cpp.o.provides.build: CMakeFiles/GraphColor.dir/main.cpp.o
 
 
-CMakeFiles/GraphColor.dir/Graph.cpp.o: CMakeFiles/GraphColor.dir/flags.make
-CMakeFiles/GraphColor.dir/Graph.cpp.o: ../Graph.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/jakub/Git/GraphColor/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/GraphColor.dir/Graph.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/GraphColor.dir/Graph.cpp.o -c /home/jakub/Git/GraphColor/Graph.cpp
+CMakeFiles/GraphColor.dir/src/Graph.cpp.o: CMakeFiles/GraphColor.dir/flags.make
+CMakeFiles/GraphColor.dir/src/Graph.cpp.o: ../src/Graph.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/jakub/Git/GraphColor/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/GraphColor.dir/src/Graph.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/GraphColor.dir/src/Graph.cpp.o -c /home/jakub/Git/GraphColor/src/Graph.cpp
 
-CMakeFiles/GraphColor.dir/Graph.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/GraphColor.dir/Graph.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/jakub/Git/GraphColor/Graph.cpp > CMakeFiles/GraphColor.dir/Graph.cpp.i
+CMakeFiles/GraphColor.dir/src/Graph.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/GraphColor.dir/src/Graph.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/jakub/Git/GraphColor/src/Graph.cpp > CMakeFiles/GraphColor.dir/src/Graph.cpp.i
 
-CMakeFiles/GraphColor.dir/Graph.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/GraphColor.dir/Graph.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/jakub/Git/GraphColor/Graph.cpp -o CMakeFiles/GraphColor.dir/Graph.cpp.s
+CMakeFiles/GraphColor.dir/src/Graph.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/GraphColor.dir/src/Graph.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/jakub/Git/GraphColor/src/Graph.cpp -o CMakeFiles/GraphColor.dir/src/Graph.cpp.s
 
-CMakeFiles/GraphColor.dir/Graph.cpp.o.requires:
+CMakeFiles/GraphColor.dir/src/Graph.cpp.o.requires:
 
-.PHONY : CMakeFiles/GraphColor.dir/Graph.cpp.o.requires
+.PHONY : CMakeFiles/GraphColor.dir/src/Graph.cpp.o.requires
 
-CMakeFiles/GraphColor.dir/Graph.cpp.o.provides: CMakeFiles/GraphColor.dir/Graph.cpp.o.requires
-	$(MAKE) -f CMakeFiles/GraphColor.dir/build.make CMakeFiles/GraphColor.dir/Graph.cpp.o.provides.build
-.PHONY : CMakeFiles/GraphColor.dir/Graph.cpp.o.provides
+CMakeFiles/GraphColor.dir/src/Graph.cpp.o.provides: CMakeFiles/GraphColor.dir/src/Graph.cpp.o.requires
+	$(MAKE) -f CMakeFiles/GraphColor.dir/build.make CMakeFiles/GraphColor.dir/src/Graph.cpp.o.provides.build
+.PHONY : CMakeFiles/GraphColor.dir/src/Graph.cpp.o.provides
 
-CMakeFiles/GraphColor.dir/Graph.cpp.o.provides.build: CMakeFiles/GraphColor.dir/Graph.cpp.o
-
-
-CMakeFiles/GraphColor.dir/depthFirst.c.o: CMakeFiles/GraphColor.dir/flags.make
-CMakeFiles/GraphColor.dir/depthFirst.c.o: ../depthFirst.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/jakub/Git/GraphColor/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object CMakeFiles/GraphColor.dir/depthFirst.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/GraphColor.dir/depthFirst.c.o   -c /home/jakub/Git/GraphColor/depthFirst.c
-
-CMakeFiles/GraphColor.dir/depthFirst.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/GraphColor.dir/depthFirst.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/jakub/Git/GraphColor/depthFirst.c > CMakeFiles/GraphColor.dir/depthFirst.c.i
-
-CMakeFiles/GraphColor.dir/depthFirst.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/GraphColor.dir/depthFirst.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/jakub/Git/GraphColor/depthFirst.c -o CMakeFiles/GraphColor.dir/depthFirst.c.s
-
-CMakeFiles/GraphColor.dir/depthFirst.c.o.requires:
-
-.PHONY : CMakeFiles/GraphColor.dir/depthFirst.c.o.requires
-
-CMakeFiles/GraphColor.dir/depthFirst.c.o.provides: CMakeFiles/GraphColor.dir/depthFirst.c.o.requires
-	$(MAKE) -f CMakeFiles/GraphColor.dir/build.make CMakeFiles/GraphColor.dir/depthFirst.c.o.provides.build
-.PHONY : CMakeFiles/GraphColor.dir/depthFirst.c.o.provides
-
-CMakeFiles/GraphColor.dir/depthFirst.c.o.provides.build: CMakeFiles/GraphColor.dir/depthFirst.c.o
+CMakeFiles/GraphColor.dir/src/Graph.cpp.o.provides.build: CMakeFiles/GraphColor.dir/src/Graph.cpp.o
 
 
-CMakeFiles/GraphColor.dir/mystack.c.o: CMakeFiles/GraphColor.dir/flags.make
-CMakeFiles/GraphColor.dir/mystack.c.o: ../mystack.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/jakub/Git/GraphColor/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building C object CMakeFiles/GraphColor.dir/mystack.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/GraphColor.dir/mystack.c.o   -c /home/jakub/Git/GraphColor/mystack.c
+CMakeFiles/GraphColor.dir/src/depthFirst.c.o: CMakeFiles/GraphColor.dir/flags.make
+CMakeFiles/GraphColor.dir/src/depthFirst.c.o: ../src/depthFirst.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/jakub/Git/GraphColor/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object CMakeFiles/GraphColor.dir/src/depthFirst.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/GraphColor.dir/src/depthFirst.c.o   -c /home/jakub/Git/GraphColor/src/depthFirst.c
 
-CMakeFiles/GraphColor.dir/mystack.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/GraphColor.dir/mystack.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/jakub/Git/GraphColor/mystack.c > CMakeFiles/GraphColor.dir/mystack.c.i
+CMakeFiles/GraphColor.dir/src/depthFirst.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/GraphColor.dir/src/depthFirst.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/jakub/Git/GraphColor/src/depthFirst.c > CMakeFiles/GraphColor.dir/src/depthFirst.c.i
 
-CMakeFiles/GraphColor.dir/mystack.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/GraphColor.dir/mystack.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/jakub/Git/GraphColor/mystack.c -o CMakeFiles/GraphColor.dir/mystack.c.s
+CMakeFiles/GraphColor.dir/src/depthFirst.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/GraphColor.dir/src/depthFirst.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/jakub/Git/GraphColor/src/depthFirst.c -o CMakeFiles/GraphColor.dir/src/depthFirst.c.s
 
-CMakeFiles/GraphColor.dir/mystack.c.o.requires:
+CMakeFiles/GraphColor.dir/src/depthFirst.c.o.requires:
 
-.PHONY : CMakeFiles/GraphColor.dir/mystack.c.o.requires
+.PHONY : CMakeFiles/GraphColor.dir/src/depthFirst.c.o.requires
 
-CMakeFiles/GraphColor.dir/mystack.c.o.provides: CMakeFiles/GraphColor.dir/mystack.c.o.requires
-	$(MAKE) -f CMakeFiles/GraphColor.dir/build.make CMakeFiles/GraphColor.dir/mystack.c.o.provides.build
-.PHONY : CMakeFiles/GraphColor.dir/mystack.c.o.provides
+CMakeFiles/GraphColor.dir/src/depthFirst.c.o.provides: CMakeFiles/GraphColor.dir/src/depthFirst.c.o.requires
+	$(MAKE) -f CMakeFiles/GraphColor.dir/build.make CMakeFiles/GraphColor.dir/src/depthFirst.c.o.provides.build
+.PHONY : CMakeFiles/GraphColor.dir/src/depthFirst.c.o.provides
 
-CMakeFiles/GraphColor.dir/mystack.c.o.provides.build: CMakeFiles/GraphColor.dir/mystack.c.o
-
-
-CMakeFiles/GraphColor.dir/Filter.cpp.o: CMakeFiles/GraphColor.dir/flags.make
-CMakeFiles/GraphColor.dir/Filter.cpp.o: ../Filter.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/jakub/Git/GraphColor/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/GraphColor.dir/Filter.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/GraphColor.dir/Filter.cpp.o -c /home/jakub/Git/GraphColor/Filter.cpp
-
-CMakeFiles/GraphColor.dir/Filter.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/GraphColor.dir/Filter.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/jakub/Git/GraphColor/Filter.cpp > CMakeFiles/GraphColor.dir/Filter.cpp.i
-
-CMakeFiles/GraphColor.dir/Filter.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/GraphColor.dir/Filter.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/jakub/Git/GraphColor/Filter.cpp -o CMakeFiles/GraphColor.dir/Filter.cpp.s
-
-CMakeFiles/GraphColor.dir/Filter.cpp.o.requires:
-
-.PHONY : CMakeFiles/GraphColor.dir/Filter.cpp.o.requires
-
-CMakeFiles/GraphColor.dir/Filter.cpp.o.provides: CMakeFiles/GraphColor.dir/Filter.cpp.o.requires
-	$(MAKE) -f CMakeFiles/GraphColor.dir/build.make CMakeFiles/GraphColor.dir/Filter.cpp.o.provides.build
-.PHONY : CMakeFiles/GraphColor.dir/Filter.cpp.o.provides
-
-CMakeFiles/GraphColor.dir/Filter.cpp.o.provides.build: CMakeFiles/GraphColor.dir/Filter.cpp.o
+CMakeFiles/GraphColor.dir/src/depthFirst.c.o.provides.build: CMakeFiles/GraphColor.dir/src/depthFirst.c.o
 
 
-CMakeFiles/GraphColor.dir/BreadthFirst.cpp.o: CMakeFiles/GraphColor.dir/flags.make
-CMakeFiles/GraphColor.dir/BreadthFirst.cpp.o: ../BreadthFirst.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/jakub/Git/GraphColor/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/GraphColor.dir/BreadthFirst.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/GraphColor.dir/BreadthFirst.cpp.o -c /home/jakub/Git/GraphColor/BreadthFirst.cpp
+CMakeFiles/GraphColor.dir/src/mystack.c.o: CMakeFiles/GraphColor.dir/flags.make
+CMakeFiles/GraphColor.dir/src/mystack.c.o: ../src/mystack.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/jakub/Git/GraphColor/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building C object CMakeFiles/GraphColor.dir/src/mystack.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/GraphColor.dir/src/mystack.c.o   -c /home/jakub/Git/GraphColor/src/mystack.c
 
-CMakeFiles/GraphColor.dir/BreadthFirst.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/GraphColor.dir/BreadthFirst.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/jakub/Git/GraphColor/BreadthFirst.cpp > CMakeFiles/GraphColor.dir/BreadthFirst.cpp.i
+CMakeFiles/GraphColor.dir/src/mystack.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/GraphColor.dir/src/mystack.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/jakub/Git/GraphColor/src/mystack.c > CMakeFiles/GraphColor.dir/src/mystack.c.i
 
-CMakeFiles/GraphColor.dir/BreadthFirst.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/GraphColor.dir/BreadthFirst.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/jakub/Git/GraphColor/BreadthFirst.cpp -o CMakeFiles/GraphColor.dir/BreadthFirst.cpp.s
+CMakeFiles/GraphColor.dir/src/mystack.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/GraphColor.dir/src/mystack.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/jakub/Git/GraphColor/src/mystack.c -o CMakeFiles/GraphColor.dir/src/mystack.c.s
 
-CMakeFiles/GraphColor.dir/BreadthFirst.cpp.o.requires:
+CMakeFiles/GraphColor.dir/src/mystack.c.o.requires:
 
-.PHONY : CMakeFiles/GraphColor.dir/BreadthFirst.cpp.o.requires
+.PHONY : CMakeFiles/GraphColor.dir/src/mystack.c.o.requires
 
-CMakeFiles/GraphColor.dir/BreadthFirst.cpp.o.provides: CMakeFiles/GraphColor.dir/BreadthFirst.cpp.o.requires
-	$(MAKE) -f CMakeFiles/GraphColor.dir/build.make CMakeFiles/GraphColor.dir/BreadthFirst.cpp.o.provides.build
-.PHONY : CMakeFiles/GraphColor.dir/BreadthFirst.cpp.o.provides
+CMakeFiles/GraphColor.dir/src/mystack.c.o.provides: CMakeFiles/GraphColor.dir/src/mystack.c.o.requires
+	$(MAKE) -f CMakeFiles/GraphColor.dir/build.make CMakeFiles/GraphColor.dir/src/mystack.c.o.provides.build
+.PHONY : CMakeFiles/GraphColor.dir/src/mystack.c.o.provides
 
-CMakeFiles/GraphColor.dir/BreadthFirst.cpp.o.provides.build: CMakeFiles/GraphColor.dir/BreadthFirst.cpp.o
+CMakeFiles/GraphColor.dir/src/mystack.c.o.provides.build: CMakeFiles/GraphColor.dir/src/mystack.c.o
+
+
+CMakeFiles/GraphColor.dir/src/Filter.cpp.o: CMakeFiles/GraphColor.dir/flags.make
+CMakeFiles/GraphColor.dir/src/Filter.cpp.o: ../src/Filter.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/jakub/Git/GraphColor/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/GraphColor.dir/src/Filter.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/GraphColor.dir/src/Filter.cpp.o -c /home/jakub/Git/GraphColor/src/Filter.cpp
+
+CMakeFiles/GraphColor.dir/src/Filter.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/GraphColor.dir/src/Filter.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/jakub/Git/GraphColor/src/Filter.cpp > CMakeFiles/GraphColor.dir/src/Filter.cpp.i
+
+CMakeFiles/GraphColor.dir/src/Filter.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/GraphColor.dir/src/Filter.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/jakub/Git/GraphColor/src/Filter.cpp -o CMakeFiles/GraphColor.dir/src/Filter.cpp.s
+
+CMakeFiles/GraphColor.dir/src/Filter.cpp.o.requires:
+
+.PHONY : CMakeFiles/GraphColor.dir/src/Filter.cpp.o.requires
+
+CMakeFiles/GraphColor.dir/src/Filter.cpp.o.provides: CMakeFiles/GraphColor.dir/src/Filter.cpp.o.requires
+	$(MAKE) -f CMakeFiles/GraphColor.dir/build.make CMakeFiles/GraphColor.dir/src/Filter.cpp.o.provides.build
+.PHONY : CMakeFiles/GraphColor.dir/src/Filter.cpp.o.provides
+
+CMakeFiles/GraphColor.dir/src/Filter.cpp.o.provides.build: CMakeFiles/GraphColor.dir/src/Filter.cpp.o
+
+
+CMakeFiles/GraphColor.dir/src/BreadthFirst.cpp.o: CMakeFiles/GraphColor.dir/flags.make
+CMakeFiles/GraphColor.dir/src/BreadthFirst.cpp.o: ../src/BreadthFirst.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/jakub/Git/GraphColor/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/GraphColor.dir/src/BreadthFirst.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/GraphColor.dir/src/BreadthFirst.cpp.o -c /home/jakub/Git/GraphColor/src/BreadthFirst.cpp
+
+CMakeFiles/GraphColor.dir/src/BreadthFirst.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/GraphColor.dir/src/BreadthFirst.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/jakub/Git/GraphColor/src/BreadthFirst.cpp > CMakeFiles/GraphColor.dir/src/BreadthFirst.cpp.i
+
+CMakeFiles/GraphColor.dir/src/BreadthFirst.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/GraphColor.dir/src/BreadthFirst.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/jakub/Git/GraphColor/src/BreadthFirst.cpp -o CMakeFiles/GraphColor.dir/src/BreadthFirst.cpp.s
+
+CMakeFiles/GraphColor.dir/src/BreadthFirst.cpp.o.requires:
+
+.PHONY : CMakeFiles/GraphColor.dir/src/BreadthFirst.cpp.o.requires
+
+CMakeFiles/GraphColor.dir/src/BreadthFirst.cpp.o.provides: CMakeFiles/GraphColor.dir/src/BreadthFirst.cpp.o.requires
+	$(MAKE) -f CMakeFiles/GraphColor.dir/build.make CMakeFiles/GraphColor.dir/src/BreadthFirst.cpp.o.provides.build
+.PHONY : CMakeFiles/GraphColor.dir/src/BreadthFirst.cpp.o.provides
+
+CMakeFiles/GraphColor.dir/src/BreadthFirst.cpp.o.provides.build: CMakeFiles/GraphColor.dir/src/BreadthFirst.cpp.o
+
+
+CMakeFiles/GraphColor.dir/src/Vertex.cpp.o: CMakeFiles/GraphColor.dir/flags.make
+CMakeFiles/GraphColor.dir/src/Vertex.cpp.o: ../src/Vertex.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/jakub/Git/GraphColor/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/GraphColor.dir/src/Vertex.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/GraphColor.dir/src/Vertex.cpp.o -c /home/jakub/Git/GraphColor/src/Vertex.cpp
+
+CMakeFiles/GraphColor.dir/src/Vertex.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/GraphColor.dir/src/Vertex.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/jakub/Git/GraphColor/src/Vertex.cpp > CMakeFiles/GraphColor.dir/src/Vertex.cpp.i
+
+CMakeFiles/GraphColor.dir/src/Vertex.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/GraphColor.dir/src/Vertex.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/jakub/Git/GraphColor/src/Vertex.cpp -o CMakeFiles/GraphColor.dir/src/Vertex.cpp.s
+
+CMakeFiles/GraphColor.dir/src/Vertex.cpp.o.requires:
+
+.PHONY : CMakeFiles/GraphColor.dir/src/Vertex.cpp.o.requires
+
+CMakeFiles/GraphColor.dir/src/Vertex.cpp.o.provides: CMakeFiles/GraphColor.dir/src/Vertex.cpp.o.requires
+	$(MAKE) -f CMakeFiles/GraphColor.dir/build.make CMakeFiles/GraphColor.dir/src/Vertex.cpp.o.provides.build
+.PHONY : CMakeFiles/GraphColor.dir/src/Vertex.cpp.o.provides
+
+CMakeFiles/GraphColor.dir/src/Vertex.cpp.o.provides.build: CMakeFiles/GraphColor.dir/src/Vertex.cpp.o
+
+
+CMakeFiles/GraphColor.dir/src/GraphNew.cpp.o: CMakeFiles/GraphColor.dir/flags.make
+CMakeFiles/GraphColor.dir/src/GraphNew.cpp.o: ../src/GraphNew.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/jakub/Git/GraphColor/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/GraphColor.dir/src/GraphNew.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/GraphColor.dir/src/GraphNew.cpp.o -c /home/jakub/Git/GraphColor/src/GraphNew.cpp
+
+CMakeFiles/GraphColor.dir/src/GraphNew.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/GraphColor.dir/src/GraphNew.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/jakub/Git/GraphColor/src/GraphNew.cpp > CMakeFiles/GraphColor.dir/src/GraphNew.cpp.i
+
+CMakeFiles/GraphColor.dir/src/GraphNew.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/GraphColor.dir/src/GraphNew.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/jakub/Git/GraphColor/src/GraphNew.cpp -o CMakeFiles/GraphColor.dir/src/GraphNew.cpp.s
+
+CMakeFiles/GraphColor.dir/src/GraphNew.cpp.o.requires:
+
+.PHONY : CMakeFiles/GraphColor.dir/src/GraphNew.cpp.o.requires
+
+CMakeFiles/GraphColor.dir/src/GraphNew.cpp.o.provides: CMakeFiles/GraphColor.dir/src/GraphNew.cpp.o.requires
+	$(MAKE) -f CMakeFiles/GraphColor.dir/build.make CMakeFiles/GraphColor.dir/src/GraphNew.cpp.o.provides.build
+.PHONY : CMakeFiles/GraphColor.dir/src/GraphNew.cpp.o.provides
+
+CMakeFiles/GraphColor.dir/src/GraphNew.cpp.o.provides.build: CMakeFiles/GraphColor.dir/src/GraphNew.cpp.o
 
 
 # Object files for target GraphColor
 GraphColor_OBJECTS = \
 "CMakeFiles/GraphColor.dir/main.cpp.o" \
-"CMakeFiles/GraphColor.dir/Graph.cpp.o" \
-"CMakeFiles/GraphColor.dir/depthFirst.c.o" \
-"CMakeFiles/GraphColor.dir/mystack.c.o" \
-"CMakeFiles/GraphColor.dir/Filter.cpp.o" \
-"CMakeFiles/GraphColor.dir/BreadthFirst.cpp.o"
+"CMakeFiles/GraphColor.dir/src/Graph.cpp.o" \
+"CMakeFiles/GraphColor.dir/src/depthFirst.c.o" \
+"CMakeFiles/GraphColor.dir/src/mystack.c.o" \
+"CMakeFiles/GraphColor.dir/src/Filter.cpp.o" \
+"CMakeFiles/GraphColor.dir/src/BreadthFirst.cpp.o" \
+"CMakeFiles/GraphColor.dir/src/Vertex.cpp.o" \
+"CMakeFiles/GraphColor.dir/src/GraphNew.cpp.o"
 
 # External object files for target GraphColor
 GraphColor_EXTERNAL_OBJECTS =
 
 GraphColor: CMakeFiles/GraphColor.dir/main.cpp.o
-GraphColor: CMakeFiles/GraphColor.dir/Graph.cpp.o
-GraphColor: CMakeFiles/GraphColor.dir/depthFirst.c.o
-GraphColor: CMakeFiles/GraphColor.dir/mystack.c.o
-GraphColor: CMakeFiles/GraphColor.dir/Filter.cpp.o
-GraphColor: CMakeFiles/GraphColor.dir/BreadthFirst.cpp.o
+GraphColor: CMakeFiles/GraphColor.dir/src/Graph.cpp.o
+GraphColor: CMakeFiles/GraphColor.dir/src/depthFirst.c.o
+GraphColor: CMakeFiles/GraphColor.dir/src/mystack.c.o
+GraphColor: CMakeFiles/GraphColor.dir/src/Filter.cpp.o
+GraphColor: CMakeFiles/GraphColor.dir/src/BreadthFirst.cpp.o
+GraphColor: CMakeFiles/GraphColor.dir/src/Vertex.cpp.o
+GraphColor: CMakeFiles/GraphColor.dir/src/GraphNew.cpp.o
 GraphColor: CMakeFiles/GraphColor.dir/build.make
 GraphColor: CMakeFiles/GraphColor.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/jakub/Git/GraphColor/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Linking CXX executable GraphColor"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/jakub/Git/GraphColor/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Linking CXX executable GraphColor"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/GraphColor.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -230,11 +282,13 @@ CMakeFiles/GraphColor.dir/build: GraphColor
 .PHONY : CMakeFiles/GraphColor.dir/build
 
 CMakeFiles/GraphColor.dir/requires: CMakeFiles/GraphColor.dir/main.cpp.o.requires
-CMakeFiles/GraphColor.dir/requires: CMakeFiles/GraphColor.dir/Graph.cpp.o.requires
-CMakeFiles/GraphColor.dir/requires: CMakeFiles/GraphColor.dir/depthFirst.c.o.requires
-CMakeFiles/GraphColor.dir/requires: CMakeFiles/GraphColor.dir/mystack.c.o.requires
-CMakeFiles/GraphColor.dir/requires: CMakeFiles/GraphColor.dir/Filter.cpp.o.requires
-CMakeFiles/GraphColor.dir/requires: CMakeFiles/GraphColor.dir/BreadthFirst.cpp.o.requires
+CMakeFiles/GraphColor.dir/requires: CMakeFiles/GraphColor.dir/src/Graph.cpp.o.requires
+CMakeFiles/GraphColor.dir/requires: CMakeFiles/GraphColor.dir/src/depthFirst.c.o.requires
+CMakeFiles/GraphColor.dir/requires: CMakeFiles/GraphColor.dir/src/mystack.c.o.requires
+CMakeFiles/GraphColor.dir/requires: CMakeFiles/GraphColor.dir/src/Filter.cpp.o.requires
+CMakeFiles/GraphColor.dir/requires: CMakeFiles/GraphColor.dir/src/BreadthFirst.cpp.o.requires
+CMakeFiles/GraphColor.dir/requires: CMakeFiles/GraphColor.dir/src/Vertex.cpp.o.requires
+CMakeFiles/GraphColor.dir/requires: CMakeFiles/GraphColor.dir/src/GraphNew.cpp.o.requires
 
 .PHONY : CMakeFiles/GraphColor.dir/requires
 

@@ -5,8 +5,8 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_C
-  "/home/jakub/Git/GraphColor/depthFirst.c" "/home/jakub/Git/GraphColor/cmake-build-debug/CMakeFiles/GraphColor.dir/depthFirst.c.o"
-  "/home/jakub/Git/GraphColor/mystack.c" "/home/jakub/Git/GraphColor/cmake-build-debug/CMakeFiles/GraphColor.dir/mystack.c.o"
+  "/home/jakub/Git/GraphColor/src/depthFirst.c" "/home/jakub/Git/GraphColor/cmake-build-debug/CMakeFiles/GraphColor.dir/src/depthFirst.c.o"
+  "/home/jakub/Git/GraphColor/src/mystack.c" "/home/jakub/Git/GraphColor/cmake-build-debug/CMakeFiles/GraphColor.dir/src/mystack.c.o"
   )
 set(CMAKE_C_COMPILER_ID "GNU")
 
@@ -14,10 +14,12 @@ set(CMAKE_C_COMPILER_ID "GNU")
 set(CMAKE_C_TARGET_INCLUDE_PATH
   )
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/jakub/Git/GraphColor/BreadthFirst.cpp" "/home/jakub/Git/GraphColor/cmake-build-debug/CMakeFiles/GraphColor.dir/BreadthFirst.cpp.o"
-  "/home/jakub/Git/GraphColor/Filter.cpp" "/home/jakub/Git/GraphColor/cmake-build-debug/CMakeFiles/GraphColor.dir/Filter.cpp.o"
-  "/home/jakub/Git/GraphColor/Graph.cpp" "/home/jakub/Git/GraphColor/cmake-build-debug/CMakeFiles/GraphColor.dir/Graph.cpp.o"
   "/home/jakub/Git/GraphColor/main.cpp" "/home/jakub/Git/GraphColor/cmake-build-debug/CMakeFiles/GraphColor.dir/main.cpp.o"
+  "/home/jakub/Git/GraphColor/src/BreadthFirst.cpp" "/home/jakub/Git/GraphColor/cmake-build-debug/CMakeFiles/GraphColor.dir/src/BreadthFirst.cpp.o"
+  "/home/jakub/Git/GraphColor/src/Filter.cpp" "/home/jakub/Git/GraphColor/cmake-build-debug/CMakeFiles/GraphColor.dir/src/Filter.cpp.o"
+  "/home/jakub/Git/GraphColor/src/Graph.cpp" "/home/jakub/Git/GraphColor/cmake-build-debug/CMakeFiles/GraphColor.dir/src/Graph.cpp.o"
+  "/home/jakub/Git/GraphColor/src/GraphNew.cpp" "/home/jakub/Git/GraphColor/cmake-build-debug/CMakeFiles/GraphColor.dir/src/GraphNew.cpp.o"
+  "/home/jakub/Git/GraphColor/src/Vertex.cpp" "/home/jakub/Git/GraphColor/cmake-build-debug/CMakeFiles/GraphColor.dir/src/Vertex.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

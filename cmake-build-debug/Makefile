@@ -123,114 +123,6 @@ GraphColor/fast:
 	$(MAKE) -f CMakeFiles/GraphColor.dir/build.make CMakeFiles/GraphColor.dir/build
 .PHONY : GraphColor/fast
 
-BreadthFirst.o: BreadthFirst.cpp.o
-
-.PHONY : BreadthFirst.o
-
-# target to build an object file
-BreadthFirst.cpp.o:
-	$(MAKE) -f CMakeFiles/GraphColor.dir/build.make CMakeFiles/GraphColor.dir/BreadthFirst.cpp.o
-.PHONY : BreadthFirst.cpp.o
-
-BreadthFirst.i: BreadthFirst.cpp.i
-
-.PHONY : BreadthFirst.i
-
-# target to preprocess a source file
-BreadthFirst.cpp.i:
-	$(MAKE) -f CMakeFiles/GraphColor.dir/build.make CMakeFiles/GraphColor.dir/BreadthFirst.cpp.i
-.PHONY : BreadthFirst.cpp.i
-
-BreadthFirst.s: BreadthFirst.cpp.s
-
-.PHONY : BreadthFirst.s
-
-# target to generate assembly for a file
-BreadthFirst.cpp.s:
-	$(MAKE) -f CMakeFiles/GraphColor.dir/build.make CMakeFiles/GraphColor.dir/BreadthFirst.cpp.s
-.PHONY : BreadthFirst.cpp.s
-
-Filter.o: Filter.cpp.o
-
-.PHONY : Filter.o
-
-# target to build an object file
-Filter.cpp.o:
-	$(MAKE) -f CMakeFiles/GraphColor.dir/build.make CMakeFiles/GraphColor.dir/Filter.cpp.o
-.PHONY : Filter.cpp.o
-
-Filter.i: Filter.cpp.i
-
-.PHONY : Filter.i
-
-# target to preprocess a source file
-Filter.cpp.i:
-	$(MAKE) -f CMakeFiles/GraphColor.dir/build.make CMakeFiles/GraphColor.dir/Filter.cpp.i
-.PHONY : Filter.cpp.i
-
-Filter.s: Filter.cpp.s
-
-.PHONY : Filter.s
-
-# target to generate assembly for a file
-Filter.cpp.s:
-	$(MAKE) -f CMakeFiles/GraphColor.dir/build.make CMakeFiles/GraphColor.dir/Filter.cpp.s
-.PHONY : Filter.cpp.s
-
-Graph.o: Graph.cpp.o
-
-.PHONY : Graph.o
-
-# target to build an object file
-Graph.cpp.o:
-	$(MAKE) -f CMakeFiles/GraphColor.dir/build.make CMakeFiles/GraphColor.dir/Graph.cpp.o
-.PHONY : Graph.cpp.o
-
-Graph.i: Graph.cpp.i
-
-.PHONY : Graph.i
-
-# target to preprocess a source file
-Graph.cpp.i:
-	$(MAKE) -f CMakeFiles/GraphColor.dir/build.make CMakeFiles/GraphColor.dir/Graph.cpp.i
-.PHONY : Graph.cpp.i
-
-Graph.s: Graph.cpp.s
-
-.PHONY : Graph.s
-
-# target to generate assembly for a file
-Graph.cpp.s:
-	$(MAKE) -f CMakeFiles/GraphColor.dir/build.make CMakeFiles/GraphColor.dir/Graph.cpp.s
-.PHONY : Graph.cpp.s
-
-depthFirst.o: depthFirst.c.o
-
-.PHONY : depthFirst.o
-
-# target to build an object file
-depthFirst.c.o:
-	$(MAKE) -f CMakeFiles/GraphColor.dir/build.make CMakeFiles/GraphColor.dir/depthFirst.c.o
-.PHONY : depthFirst.c.o
-
-depthFirst.i: depthFirst.c.i
-
-.PHONY : depthFirst.i
-
-# target to preprocess a source file
-depthFirst.c.i:
-	$(MAKE) -f CMakeFiles/GraphColor.dir/build.make CMakeFiles/GraphColor.dir/depthFirst.c.i
-.PHONY : depthFirst.c.i
-
-depthFirst.s: depthFirst.c.s
-
-.PHONY : depthFirst.s
-
-# target to generate assembly for a file
-depthFirst.c.s:
-	$(MAKE) -f CMakeFiles/GraphColor.dir/build.make CMakeFiles/GraphColor.dir/depthFirst.c.s
-.PHONY : depthFirst.c.s
-
 main.o: main.cpp.o
 
 .PHONY : main.o
@@ -258,32 +150,194 @@ main.cpp.s:
 	$(MAKE) -f CMakeFiles/GraphColor.dir/build.make CMakeFiles/GraphColor.dir/main.cpp.s
 .PHONY : main.cpp.s
 
-mystack.o: mystack.c.o
+src/BreadthFirst.o: src/BreadthFirst.cpp.o
 
-.PHONY : mystack.o
+.PHONY : src/BreadthFirst.o
 
 # target to build an object file
-mystack.c.o:
-	$(MAKE) -f CMakeFiles/GraphColor.dir/build.make CMakeFiles/GraphColor.dir/mystack.c.o
-.PHONY : mystack.c.o
+src/BreadthFirst.cpp.o:
+	$(MAKE) -f CMakeFiles/GraphColor.dir/build.make CMakeFiles/GraphColor.dir/src/BreadthFirst.cpp.o
+.PHONY : src/BreadthFirst.cpp.o
 
-mystack.i: mystack.c.i
+src/BreadthFirst.i: src/BreadthFirst.cpp.i
 
-.PHONY : mystack.i
+.PHONY : src/BreadthFirst.i
 
 # target to preprocess a source file
-mystack.c.i:
-	$(MAKE) -f CMakeFiles/GraphColor.dir/build.make CMakeFiles/GraphColor.dir/mystack.c.i
-.PHONY : mystack.c.i
+src/BreadthFirst.cpp.i:
+	$(MAKE) -f CMakeFiles/GraphColor.dir/build.make CMakeFiles/GraphColor.dir/src/BreadthFirst.cpp.i
+.PHONY : src/BreadthFirst.cpp.i
 
-mystack.s: mystack.c.s
+src/BreadthFirst.s: src/BreadthFirst.cpp.s
 
-.PHONY : mystack.s
+.PHONY : src/BreadthFirst.s
 
 # target to generate assembly for a file
-mystack.c.s:
-	$(MAKE) -f CMakeFiles/GraphColor.dir/build.make CMakeFiles/GraphColor.dir/mystack.c.s
-.PHONY : mystack.c.s
+src/BreadthFirst.cpp.s:
+	$(MAKE) -f CMakeFiles/GraphColor.dir/build.make CMakeFiles/GraphColor.dir/src/BreadthFirst.cpp.s
+.PHONY : src/BreadthFirst.cpp.s
+
+src/Filter.o: src/Filter.cpp.o
+
+.PHONY : src/Filter.o
+
+# target to build an object file
+src/Filter.cpp.o:
+	$(MAKE) -f CMakeFiles/GraphColor.dir/build.make CMakeFiles/GraphColor.dir/src/Filter.cpp.o
+.PHONY : src/Filter.cpp.o
+
+src/Filter.i: src/Filter.cpp.i
+
+.PHONY : src/Filter.i
+
+# target to preprocess a source file
+src/Filter.cpp.i:
+	$(MAKE) -f CMakeFiles/GraphColor.dir/build.make CMakeFiles/GraphColor.dir/src/Filter.cpp.i
+.PHONY : src/Filter.cpp.i
+
+src/Filter.s: src/Filter.cpp.s
+
+.PHONY : src/Filter.s
+
+# target to generate assembly for a file
+src/Filter.cpp.s:
+	$(MAKE) -f CMakeFiles/GraphColor.dir/build.make CMakeFiles/GraphColor.dir/src/Filter.cpp.s
+.PHONY : src/Filter.cpp.s
+
+src/Graph.o: src/Graph.cpp.o
+
+.PHONY : src/Graph.o
+
+# target to build an object file
+src/Graph.cpp.o:
+	$(MAKE) -f CMakeFiles/GraphColor.dir/build.make CMakeFiles/GraphColor.dir/src/Graph.cpp.o
+.PHONY : src/Graph.cpp.o
+
+src/Graph.i: src/Graph.cpp.i
+
+.PHONY : src/Graph.i
+
+# target to preprocess a source file
+src/Graph.cpp.i:
+	$(MAKE) -f CMakeFiles/GraphColor.dir/build.make CMakeFiles/GraphColor.dir/src/Graph.cpp.i
+.PHONY : src/Graph.cpp.i
+
+src/Graph.s: src/Graph.cpp.s
+
+.PHONY : src/Graph.s
+
+# target to generate assembly for a file
+src/Graph.cpp.s:
+	$(MAKE) -f CMakeFiles/GraphColor.dir/build.make CMakeFiles/GraphColor.dir/src/Graph.cpp.s
+.PHONY : src/Graph.cpp.s
+
+src/GraphNew.o: src/GraphNew.cpp.o
+
+.PHONY : src/GraphNew.o
+
+# target to build an object file
+src/GraphNew.cpp.o:
+	$(MAKE) -f CMakeFiles/GraphColor.dir/build.make CMakeFiles/GraphColor.dir/src/GraphNew.cpp.o
+.PHONY : src/GraphNew.cpp.o
+
+src/GraphNew.i: src/GraphNew.cpp.i
+
+.PHONY : src/GraphNew.i
+
+# target to preprocess a source file
+src/GraphNew.cpp.i:
+	$(MAKE) -f CMakeFiles/GraphColor.dir/build.make CMakeFiles/GraphColor.dir/src/GraphNew.cpp.i
+.PHONY : src/GraphNew.cpp.i
+
+src/GraphNew.s: src/GraphNew.cpp.s
+
+.PHONY : src/GraphNew.s
+
+# target to generate assembly for a file
+src/GraphNew.cpp.s:
+	$(MAKE) -f CMakeFiles/GraphColor.dir/build.make CMakeFiles/GraphColor.dir/src/GraphNew.cpp.s
+.PHONY : src/GraphNew.cpp.s
+
+src/Vertex.o: src/Vertex.cpp.o
+
+.PHONY : src/Vertex.o
+
+# target to build an object file
+src/Vertex.cpp.o:
+	$(MAKE) -f CMakeFiles/GraphColor.dir/build.make CMakeFiles/GraphColor.dir/src/Vertex.cpp.o
+.PHONY : src/Vertex.cpp.o
+
+src/Vertex.i: src/Vertex.cpp.i
+
+.PHONY : src/Vertex.i
+
+# target to preprocess a source file
+src/Vertex.cpp.i:
+	$(MAKE) -f CMakeFiles/GraphColor.dir/build.make CMakeFiles/GraphColor.dir/src/Vertex.cpp.i
+.PHONY : src/Vertex.cpp.i
+
+src/Vertex.s: src/Vertex.cpp.s
+
+.PHONY : src/Vertex.s
+
+# target to generate assembly for a file
+src/Vertex.cpp.s:
+	$(MAKE) -f CMakeFiles/GraphColor.dir/build.make CMakeFiles/GraphColor.dir/src/Vertex.cpp.s
+.PHONY : src/Vertex.cpp.s
+
+src/depthFirst.o: src/depthFirst.c.o
+
+.PHONY : src/depthFirst.o
+
+# target to build an object file
+src/depthFirst.c.o:
+	$(MAKE) -f CMakeFiles/GraphColor.dir/build.make CMakeFiles/GraphColor.dir/src/depthFirst.c.o
+.PHONY : src/depthFirst.c.o
+
+src/depthFirst.i: src/depthFirst.c.i
+
+.PHONY : src/depthFirst.i
+
+# target to preprocess a source file
+src/depthFirst.c.i:
+	$(MAKE) -f CMakeFiles/GraphColor.dir/build.make CMakeFiles/GraphColor.dir/src/depthFirst.c.i
+.PHONY : src/depthFirst.c.i
+
+src/depthFirst.s: src/depthFirst.c.s
+
+.PHONY : src/depthFirst.s
+
+# target to generate assembly for a file
+src/depthFirst.c.s:
+	$(MAKE) -f CMakeFiles/GraphColor.dir/build.make CMakeFiles/GraphColor.dir/src/depthFirst.c.s
+.PHONY : src/depthFirst.c.s
+
+src/mystack.o: src/mystack.c.o
+
+.PHONY : src/mystack.o
+
+# target to build an object file
+src/mystack.c.o:
+	$(MAKE) -f CMakeFiles/GraphColor.dir/build.make CMakeFiles/GraphColor.dir/src/mystack.c.o
+.PHONY : src/mystack.c.o
+
+src/mystack.i: src/mystack.c.i
+
+.PHONY : src/mystack.i
+
+# target to preprocess a source file
+src/mystack.c.i:
+	$(MAKE) -f CMakeFiles/GraphColor.dir/build.make CMakeFiles/GraphColor.dir/src/mystack.c.i
+.PHONY : src/mystack.c.i
+
+src/mystack.s: src/mystack.c.s
+
+.PHONY : src/mystack.s
+
+# target to generate assembly for a file
+src/mystack.c.s:
+	$(MAKE) -f CMakeFiles/GraphColor.dir/build.make CMakeFiles/GraphColor.dir/src/mystack.c.s
+.PHONY : src/mystack.c.s
 
 # Help Target
 help:
@@ -294,24 +348,30 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... GraphColor"
-	@echo "... BreadthFirst.o"
-	@echo "... BreadthFirst.i"
-	@echo "... BreadthFirst.s"
-	@echo "... Filter.o"
-	@echo "... Filter.i"
-	@echo "... Filter.s"
-	@echo "... Graph.o"
-	@echo "... Graph.i"
-	@echo "... Graph.s"
-	@echo "... depthFirst.o"
-	@echo "... depthFirst.i"
-	@echo "... depthFirst.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
-	@echo "... mystack.o"
-	@echo "... mystack.i"
-	@echo "... mystack.s"
+	@echo "... src/BreadthFirst.o"
+	@echo "... src/BreadthFirst.i"
+	@echo "... src/BreadthFirst.s"
+	@echo "... src/Filter.o"
+	@echo "... src/Filter.i"
+	@echo "... src/Filter.s"
+	@echo "... src/Graph.o"
+	@echo "... src/Graph.i"
+	@echo "... src/Graph.s"
+	@echo "... src/GraphNew.o"
+	@echo "... src/GraphNew.i"
+	@echo "... src/GraphNew.s"
+	@echo "... src/Vertex.o"
+	@echo "... src/Vertex.i"
+	@echo "... src/Vertex.s"
+	@echo "... src/depthFirst.o"
+	@echo "... src/depthFirst.i"
+	@echo "... src/depthFirst.s"
+	@echo "... src/mystack.o"
+	@echo "... src/mystack.i"
+	@echo "... src/mystack.s"
 .PHONY : help
 
 
