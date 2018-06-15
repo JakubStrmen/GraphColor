@@ -48,13 +48,13 @@ OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWA
  **************************************************************************************************/
 
 #include <pthread.h>
-#include "parallel/MultiSolvers.h"
-#include "mtl/Sort.h"
-#include "utils/System.h"
-#include "simp/SimpSolver.h"
+#include "../GlucoseMiniSat/parallel/MultiSolvers.h"
+#include "../GlucoseMiniSat/mtl/Sort.h"
+#include "../GlucoseMiniSat/utils/System.h"
+#include "../GlucoseMiniSat/simp/SimpSolver.h"
 #include <errno.h>
 #include <string.h>
-#include "parallel/SolverConfiguration.h"
+#include "../GlucoseMiniSat/parallel/SolverConfiguration.h"
 
 using namespace Glucose;
 

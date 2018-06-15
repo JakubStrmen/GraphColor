@@ -20,8 +20,8 @@ OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWA
 #ifndef Glucose_Map_h
 #define Glucose_Map_h
 
-#include "mtl/IntTypes.h"
-#include "mtl/Vec.h"
+#include "../GlucoseMiniSat/mtl/IntTypes.h"
+#include "../GlucoseMiniSat/mtl/Vec.h"
 #include <string>
 #include <unordered_map>
 
