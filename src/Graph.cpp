@@ -694,6 +694,12 @@ bool Graph::testIreducibility() {
     return false;
 }
 
+void Graph::doSATSolve() {
+
+
+
+}
+
 // TODO - test criticality ... etc methods
 
 

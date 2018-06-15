@@ -258,6 +258,33 @@ src/GraphNew.cpp.s:
 	$(MAKE) -f CMakeFiles/GraphColor.dir/build.make CMakeFiles/GraphColor.dir/src/GraphNew.cpp.s
 .PHONY : src/GraphNew.cpp.s
 
+src/SATSolver.o: src/SATSolver.cpp.o
+
+.PHONY : src/SATSolver.o
+
+# target to build an object file
+src/SATSolver.cpp.o:
+	$(MAKE) -f CMakeFiles/GraphColor.dir/build.make CMakeFiles/GraphColor.dir/src/SATSolver.cpp.o
+.PHONY : src/SATSolver.cpp.o
+
+src/SATSolver.i: src/SATSolver.cpp.i
+
+.PHONY : src/SATSolver.i
+
+# target to preprocess a source file
+src/SATSolver.cpp.i:
+	$(MAKE) -f CMakeFiles/GraphColor.dir/build.make CMakeFiles/GraphColor.dir/src/SATSolver.cpp.i
+.PHONY : src/SATSolver.cpp.i
+
+src/SATSolver.s: src/SATSolver.cpp.s
+
+.PHONY : src/SATSolver.s
+
+# target to generate assembly for a file
+src/SATSolver.cpp.s:
+	$(MAKE) -f CMakeFiles/GraphColor.dir/build.make CMakeFiles/GraphColor.dir/src/SATSolver.cpp.s
+.PHONY : src/SATSolver.cpp.s
+
 src/Vertex.o: src/Vertex.cpp.o
 
 .PHONY : src/Vertex.o
@@ -363,6 +390,9 @@ help:
 	@echo "... src/GraphNew.o"
 	@echo "... src/GraphNew.i"
 	@echo "... src/GraphNew.s"
+	@echo "... src/SATSolver.o"
+	@echo "... src/SATSolver.i"
+	@echo "... src/SATSolver.s"
 	@echo "... src/Vertex.o"
 	@echo "... src/Vertex.i"
 	@echo "... src/Vertex.s"

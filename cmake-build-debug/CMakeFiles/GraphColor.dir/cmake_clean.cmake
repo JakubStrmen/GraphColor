@@ -7,6 +7,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/GraphColor.dir/src/BreadthFirst.cpp.o"
   "CMakeFiles/GraphColor.dir/src/Vertex.cpp.o"
   "CMakeFiles/GraphColor.dir/src/GraphNew.cpp.o"
+  "CMakeFiles/GraphColor.dir/src/SATSolver.cpp.o"
   "GraphColor.pdb"
   "GraphColor"
 )

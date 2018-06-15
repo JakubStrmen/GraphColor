@@ -1,0 +1,190 @@
+/home/jakub/Git/GraphColor/GlucoseMiniSat/parallel/SolverConfiguration.o /home/jakub/Git/GraphColor/GlucoseMiniSat/parallel/SolverConfiguration.or /home/jakub/Git/GraphColor/GlucoseMiniSat/parallel/SolverConfiguration.od /home/jakub/Git/GraphColor/GlucoseMiniSat/parallel/SolverConfiguration.op: \
+ /home/jakub/Git/GraphColor/GlucoseMiniSat/parallel/SolverConfiguration.cc \
+ /home/jakub/Git/GraphColor/GlucoseMiniSat/parallel/../parallel/MultiSolvers.h \
+ /home/jakub/Git/GraphColor/GlucoseMiniSat/parallel/../parallel/ParallelSolver.h \
+ /home/jakub/Git/GraphColor/GlucoseMiniSat/parallel/../core/SolverTypes.h \
+ /home/jakub/Git/GraphColor/GlucoseMiniSat/parallel/../mtl/IntTypes.h \
+ /home/jakub/Git/GraphColor/GlucoseMiniSat/parallel/../mtl/Alg.h \
+ /home/jakub/Git/GraphColor/GlucoseMiniSat/parallel/../mtl/Vec.h \
+ /home/jakub/Git/GraphColor/GlucoseMiniSat/parallel/../mtl/XAlloc.h \
+ /home/jakub/Git/GraphColor/GlucoseMiniSat/parallel/../mtl/Map.h \
+ /home/jakub/Git/GraphColor/GlucoseMiniSat/parallel/../mtl/Alloc.h \
+ /home/jakub/Git/GraphColor/GlucoseMiniSat/parallel/../core/Solver.h \
+ /home/jakub/Git/GraphColor/GlucoseMiniSat/parallel/../mtl/Heap.h \
+ /home/jakub/Git/GraphColor/GlucoseMiniSat/parallel/../utils/Options.h \
+ /home/jakub/Git/GraphColor/GlucoseMiniSat/parallel/../utils/ParseUtils.h \
+ /home/jakub/Git/GraphColor/GlucoseMiniSat/parallel/../core/BoundedQueue.h \
+ /home/jakub/Git/GraphColor/GlucoseMiniSat/parallel/../core/Constants.h \
+ /home/jakub/Git/GraphColor/GlucoseMiniSat/parallel/../mtl/Clone.h \
+ /home/jakub/Git/GraphColor/GlucoseMiniSat/parallel/../core/SolverStats.h \
+ /home/jakub/Git/GraphColor/GlucoseMiniSat/parallel/../simp/SimpSolver.h \
+ /home/jakub/Git/GraphColor/GlucoseMiniSat/parallel/../mtl/Queue.h \
+ /home/jakub/Git/GraphColor/GlucoseMiniSat/parallel/../parallel/SharedCompanion.h \
+ /home/jakub/Git/GraphColor/GlucoseMiniSat/parallel/../parallel/SolverCompanion.h \
+ /home/jakub/Git/GraphColor/GlucoseMiniSat/parallel/../parallel/ClausesBuffer.h \
+ /home/jakub/Git/GraphColor/GlucoseMiniSat/parallel/../parallel/SolverConfiguration.h
+/home/jakub/Git/GraphColor/GlucoseMiniSat/parallel/MultiSolvers.o /home/jakub/Git/GraphColor/GlucoseMiniSat/parallel/MultiSolvers.or /home/jakub/Git/GraphColor/GlucoseMiniSat/parallel/MultiSolvers.od /home/jakub/Git/GraphColor/GlucoseMiniSat/parallel/MultiSolvers.op: \
+ /home/jakub/Git/GraphColor/GlucoseMiniSat/parallel/MultiSolvers.cc \
+ /home/jakub/Git/GraphColor/GlucoseMiniSat/parallel/../parallel/MultiSolvers.h \
+ /home/jakub/Git/GraphColor/GlucoseMiniSat/parallel/../parallel/ParallelSolver.h \
+ /home/jakub/Git/GraphColor/GlucoseMiniSat/parallel/../core/SolverTypes.h \
+ /home/jakub/Git/GraphColor/GlucoseMiniSat/parallel/../mtl/IntTypes.h \
+ /home/jakub/Git/GraphColor/GlucoseMiniSat/parallel/../mtl/Alg.h \
+ /home/jakub/Git/GraphColor/GlucoseMiniSat/parallel/../mtl/Vec.h \
+ /home/jakub/Git/GraphColor/GlucoseMiniSat/parallel/../mtl/XAlloc.h \
+ /home/jakub/Git/GraphColor/GlucoseMiniSat/parallel/../mtl/Map.h \
+ /home/jakub/Git/GraphColor/GlucoseMiniSat/parallel/../mtl/Alloc.h \
+ /home/jakub/Git/GraphColor/GlucoseMiniSat/parallel/../core/Solver.h \
+ /home/jakub/Git/GraphColor/GlucoseMiniSat/parallel/../mtl/Heap.h \
+ /home/jakub/Git/GraphColor/GlucoseMiniSat/parallel/../utils/Options.h \
+ /home/jakub/Git/GraphColor/GlucoseMiniSat/parallel/../utils/ParseUtils.h \
+ /home/jakub/Git/GraphColor/GlucoseMiniSat/parallel/../core/BoundedQueue.h \
+ /home/jakub/Git/GraphColor/GlucoseMiniSat/parallel/../core/Constants.h \
+ /home/jakub/Git/GraphColor/GlucoseMiniSat/parallel/../mtl/Clone.h \
+ /home/jakub/Git/GraphColor/GlucoseMiniSat/parallel/../core/SolverStats.h \
+ /home/jakub/Git/GraphColor/GlucoseMiniSat/parallel/../simp/SimpSolver.h \
+ /home/jakub/Git/GraphColor/GlucoseMiniSat/parallel/../mtl/Queue.h \
+ /home/jakub/Git/GraphColor/GlucoseMiniSat/parallel/../parallel/SharedCompanion.h \
+ /home/jakub/Git/GraphColor/GlucoseMiniSat/parallel/../parallel/SolverCompanion.h \
+ /home/jakub/Git/GraphColor/GlucoseMiniSat/parallel/../parallel/ClausesBuffer.h \
+ /home/jakub/Git/GraphColor/GlucoseMiniSat/parallel/../mtl/Sort.h \
+ /home/jakub/Git/GraphColor/GlucoseMiniSat/parallel/../utils/System.h \
+ /home/jakub/Git/GraphColor/GlucoseMiniSat/parallel/../parallel/SolverConfiguration.h
+/home/jakub/Git/GraphColor/GlucoseMiniSat/parallel/SharedCompanion.o /home/jakub/Git/GraphColor/GlucoseMiniSat/parallel/SharedCompanion.or /home/jakub/Git/GraphColor/GlucoseMiniSat/parallel/SharedCompanion.od /home/jakub/Git/GraphColor/GlucoseMiniSat/parallel/SharedCompanion.op: \
+ /home/jakub/Git/GraphColor/GlucoseMiniSat/parallel/SharedCompanion.cc \
+ /home/jakub/Git/GraphColor/GlucoseMiniSat/parallel/../core/Solver.h \
+ /home/jakub/Git/GraphColor/GlucoseMiniSat/parallel/../mtl/Heap.h \
+ /home/jakub/Git/GraphColor/GlucoseMiniSat/parallel/../mtl/Vec.h \
+ /home/jakub/Git/GraphColor/GlucoseMiniSat/parallel/../mtl/IntTypes.h \
+ /home/jakub/Git/GraphColor/GlucoseMiniSat/parallel/../mtl/XAlloc.h \
+ /home/jakub/Git/GraphColor/GlucoseMiniSat/parallel/../mtl/Alg.h \
+ /home/jakub/Git/GraphColor/GlucoseMiniSat/parallel/../utils/Options.h \
+ /home/jakub/Git/GraphColor/GlucoseMiniSat/parallel/../utils/ParseUtils.h \
+ /home/jakub/Git/GraphColor/GlucoseMiniSat/parallel/../core/SolverTypes.h \
+ /home/jakub/Git/GraphColor/GlucoseMiniSat/parallel/../mtl/Map.h \
+ /home/jakub/Git/GraphColor/GlucoseMiniSat/parallel/../mtl/Alloc.h \
+ /home/jakub/Git/GraphColor/GlucoseMiniSat/parallel/../core/BoundedQueue.h \
+ /home/jakub/Git/GraphColor/GlucoseMiniSat/parallel/../core/Constants.h \
+ /home/jakub/Git/GraphColor/GlucoseMiniSat/parallel/../mtl/Clone.h \
+ /home/jakub/Git/GraphColor/GlucoseMiniSat/parallel/../core/SolverStats.h \
+ /home/jakub/Git/GraphColor/GlucoseMiniSat/parallel/../parallel/ParallelSolver.h \
+ /home/jakub/Git/GraphColor/GlucoseMiniSat/parallel/../simp/SimpSolver.h \
+ /home/jakub/Git/GraphColor/GlucoseMiniSat/parallel/../mtl/Queue.h \
+ /home/jakub/Git/GraphColor/GlucoseMiniSat/parallel/../parallel/SharedCompanion.h \
+ /home/jakub/Git/GraphColor/GlucoseMiniSat/parallel/../parallel/SolverCompanion.h \
+ /home/jakub/Git/GraphColor/GlucoseMiniSat/parallel/../parallel/ClausesBuffer.h
+/home/jakub/Git/GraphColor/GlucoseMiniSat/parallel/ClausesBuffer.o /home/jakub/Git/GraphColor/GlucoseMiniSat/parallel/ClausesBuffer.or /home/jakub/Git/GraphColor/GlucoseMiniSat/parallel/ClausesBuffer.od /home/jakub/Git/GraphColor/GlucoseMiniSat/parallel/ClausesBuffer.op: \
+ /home/jakub/Git/GraphColor/GlucoseMiniSat/parallel/ClausesBuffer.cc \
+ /home/jakub/Git/GraphColor/GlucoseMiniSat/parallel/../parallel/ClausesBuffer.h \
+ /home/jakub/Git/GraphColor/GlucoseMiniSat/parallel/../mtl/Vec.h \
+ /home/jakub/Git/GraphColor/GlucoseMiniSat/parallel/../mtl/IntTypes.h \
+ /home/jakub/Git/GraphColor/GlucoseMiniSat/parallel/../mtl/XAlloc.h \
+ /home/jakub/Git/GraphColor/GlucoseMiniSat/parallel/../core/SolverTypes.h \
+ /home/jakub/Git/GraphColor/GlucoseMiniSat/parallel/../mtl/Alg.h \
+ /home/jakub/Git/GraphColor/GlucoseMiniSat/parallel/../mtl/Map.h \
+ /home/jakub/Git/GraphColor/GlucoseMiniSat/parallel/../mtl/Alloc.h \
+ /home/jakub/Git/GraphColor/GlucoseMiniSat/parallel/../core/Solver.h \
+ /home/jakub/Git/GraphColor/GlucoseMiniSat/parallel/../mtl/Heap.h \
+ /home/jakub/Git/GraphColor/GlucoseMiniSat/parallel/../utils/Options.h \
+ /home/jakub/Git/GraphColor/GlucoseMiniSat/parallel/../utils/ParseUtils.h \
+ /home/jakub/Git/GraphColor/GlucoseMiniSat/parallel/../core/BoundedQueue.h \
+ /home/jakub/Git/GraphColor/GlucoseMiniSat/parallel/../core/Constants.h \
+ /home/jakub/Git/GraphColor/GlucoseMiniSat/parallel/../mtl/Clone.h \
+ /home/jakub/Git/GraphColor/GlucoseMiniSat/parallel/../core/SolverStats.h
+/home/jakub/Git/GraphColor/GlucoseMiniSat/parallel/ParallelSolver.o /home/jakub/Git/GraphColor/GlucoseMiniSat/parallel/ParallelSolver.or /home/jakub/Git/GraphColor/GlucoseMiniSat/parallel/ParallelSolver.od /home/jakub/Git/GraphColor/GlucoseMiniSat/parallel/ParallelSolver.op: \
+ /home/jakub/Git/GraphColor/GlucoseMiniSat/parallel/ParallelSolver.cc \
+ /home/jakub/Git/GraphColor/GlucoseMiniSat/parallel/../parallel/ParallelSolver.h \
+ /home/jakub/Git/GraphColor/GlucoseMiniSat/parallel/../core/SolverTypes.h \
+ /home/jakub/Git/GraphColor/GlucoseMiniSat/parallel/../mtl/IntTypes.h \
+ /home/jakub/Git/GraphColor/GlucoseMiniSat/parallel/../mtl/Alg.h \
+ /home/jakub/Git/GraphColor/GlucoseMiniSat/parallel/../mtl/Vec.h \
+ /home/jakub/Git/GraphColor/GlucoseMiniSat/parallel/../mtl/XAlloc.h \
+ /home/jakub/Git/GraphColor/GlucoseMiniSat/parallel/../mtl/Map.h \
+ /home/jakub/Git/GraphColor/GlucoseMiniSat/parallel/../mtl/Alloc.h \
+ /home/jakub/Git/GraphColor/GlucoseMiniSat/parallel/../core/Solver.h \
+ /home/jakub/Git/GraphColor/GlucoseMiniSat/parallel/../mtl/Heap.h \
+ /home/jakub/Git/GraphColor/GlucoseMiniSat/parallel/../utils/Options.h \
+ /home/jakub/Git/GraphColor/GlucoseMiniSat/parallel/../utils/ParseUtils.h \
+ /home/jakub/Git/GraphColor/GlucoseMiniSat/parallel/../core/BoundedQueue.h \
+ /home/jakub/Git/GraphColor/GlucoseMiniSat/parallel/../core/Constants.h \
+ /home/jakub/Git/GraphColor/GlucoseMiniSat/parallel/../mtl/Clone.h \
+ /home/jakub/Git/GraphColor/GlucoseMiniSat/parallel/../core/SolverStats.h \
+ /home/jakub/Git/GraphColor/GlucoseMiniSat/parallel/../simp/SimpSolver.h \
+ /home/jakub/Git/GraphColor/GlucoseMiniSat/parallel/../mtl/Queue.h \
+ /home/jakub/Git/GraphColor/GlucoseMiniSat/parallel/../parallel/SharedCompanion.h \
+ /home/jakub/Git/GraphColor/GlucoseMiniSat/parallel/../parallel/SolverCompanion.h \
+ /home/jakub/Git/GraphColor/GlucoseMiniSat/parallel/../parallel/ClausesBuffer.h \
+ /home/jakub/Git/GraphColor/GlucoseMiniSat/parallel/../mtl/Sort.h
+/home/jakub/Git/GraphColor/GlucoseMiniSat/parallel/SolverCompanion.o /home/jakub/Git/GraphColor/GlucoseMiniSat/parallel/SolverCompanion.or /home/jakub/Git/GraphColor/GlucoseMiniSat/parallel/SolverCompanion.od /home/jakub/Git/GraphColor/GlucoseMiniSat/parallel/SolverCompanion.op: \
+ /home/jakub/Git/GraphColor/GlucoseMiniSat/parallel/SolverCompanion.cc \
+ /home/jakub/Git/GraphColor/GlucoseMiniSat/parallel/../parallel/SolverCompanion.h \
+ /home/jakub/Git/GraphColor/GlucoseMiniSat/parallel/../mtl/Vec.h \
+ /home/jakub/Git/GraphColor/GlucoseMiniSat/parallel/../mtl/IntTypes.h \
+ /home/jakub/Git/GraphColor/GlucoseMiniSat/parallel/../mtl/XAlloc.h
+/home/jakub/Git/GraphColor/GlucoseMiniSat/parallel/Main.o /home/jakub/Git/GraphColor/GlucoseMiniSat/parallel/Main.or /home/jakub/Git/GraphColor/GlucoseMiniSat/parallel/Main.od /home/jakub/Git/GraphColor/GlucoseMiniSat/parallel/Main.op: /home/jakub/Git/GraphColor/GlucoseMiniSat/parallel/Main.cc \
+ /home/jakub/Git/GraphColor/GlucoseMiniSat/parallel/../utils/System.h \
+ /home/jakub/Git/GraphColor/GlucoseMiniSat/parallel/../mtl/IntTypes.h \
+ /home/jakub/Git/GraphColor/GlucoseMiniSat/parallel/../utils/ParseUtils.h \
+ /home/jakub/Git/GraphColor/GlucoseMiniSat/parallel/../utils/Options.h \
+ /home/jakub/Git/GraphColor/GlucoseMiniSat/parallel/../mtl/Vec.h \
+ /home/jakub/Git/GraphColor/GlucoseMiniSat/parallel/../mtl/XAlloc.h \
+ /home/jakub/Git/GraphColor/GlucoseMiniSat/parallel/../core/Dimacs.h \
+ /home/jakub/Git/GraphColor/GlucoseMiniSat/parallel/../core/SolverTypes.h \
+ /home/jakub/Git/GraphColor/GlucoseMiniSat/parallel/../mtl/Alg.h \
+ /home/jakub/Git/GraphColor/GlucoseMiniSat/parallel/../mtl/Map.h \
+ /home/jakub/Git/GraphColor/GlucoseMiniSat/parallel/../mtl/Alloc.h \
+ /home/jakub/Git/GraphColor/GlucoseMiniSat/parallel/../simp/SimpSolver.h \
+ /home/jakub/Git/GraphColor/GlucoseMiniSat/parallel/../mtl/Queue.h \
+ /home/jakub/Git/GraphColor/GlucoseMiniSat/parallel/../core/Solver.h \
+ /home/jakub/Git/GraphColor/GlucoseMiniSat/parallel/../mtl/Heap.h \
+ /home/jakub/Git/GraphColor/GlucoseMiniSat/parallel/../core/BoundedQueue.h \
+ /home/jakub/Git/GraphColor/GlucoseMiniSat/parallel/../core/Constants.h \
+ /home/jakub/Git/GraphColor/GlucoseMiniSat/parallel/../mtl/Clone.h \
+ /home/jakub/Git/GraphColor/GlucoseMiniSat/parallel/../core/SolverStats.h \
+ /home/jakub/Git/GraphColor/GlucoseMiniSat/parallel/../parallel/ParallelSolver.h \
+ /home/jakub/Git/GraphColor/GlucoseMiniSat/parallel/../parallel/SharedCompanion.h \
+ /home/jakub/Git/GraphColor/GlucoseMiniSat/parallel/../parallel/SolverCompanion.h \
+ /home/jakub/Git/GraphColor/GlucoseMiniSat/parallel/../parallel/ClausesBuffer.h \
+ /home/jakub/Git/GraphColor/GlucoseMiniSat/parallel/../parallel/MultiSolvers.h
+/home/jstrmen/ulozisko/GraphColoring/SAT/Glucose_minisat/glucose-syrup-4.1/simp/SimpSolver.o /home/jstrmen/ulozisko/GraphColoring/SAT/Glucose_minisat/glucose-syrup-4.1/simp/SimpSolver.or /home/jstrmen/ulozisko/GraphColoring/SAT/Glucose_minisat/glucose-syrup-4.1/simp/SimpSolver.od /home/jstrmen/ulozisko/GraphColoring/SAT/Glucose_minisat/glucose-syrup-4.1/simp/SimpSolver.op: \
+ /home/jstrmen/ulozisko/GraphColoring/SAT/Glucose_minisat/glucose-syrup-4.1/simp/SimpSolver.cc \
+ /home/jstrmen/ulozisko/GraphColoring/SAT/Glucose_minisat/glucose-syrup-4.1/simp/../mtl/Sort.h \
+ /home/jstrmen/ulozisko/GraphColoring/SAT/Glucose_minisat/glucose-syrup-4.1/simp/../mtl/Vec.h \
+ /home/jstrmen/ulozisko/GraphColoring/SAT/Glucose_minisat/glucose-syrup-4.1/simp/../mtl/IntTypes.h \
+ /home/jstrmen/ulozisko/GraphColoring/SAT/Glucose_minisat/glucose-syrup-4.1/simp/../mtl/XAlloc.h \
+ /home/jstrmen/ulozisko/GraphColoring/SAT/Glucose_minisat/glucose-syrup-4.1/simp/../simp/SimpSolver.h \
+ /home/jstrmen/ulozisko/GraphColoring/SAT/Glucose_minisat/glucose-syrup-4.1/simp/../mtl/Queue.h \
+ /home/jstrmen/ulozisko/GraphColoring/SAT/Glucose_minisat/glucose-syrup-4.1/simp/../core/Solver.h \
+ /home/jstrmen/ulozisko/GraphColoring/SAT/Glucose_minisat/glucose-syrup-4.1/simp/../mtl/Heap.h \
+ /home/jstrmen/ulozisko/GraphColoring/SAT/Glucose_minisat/glucose-syrup-4.1/simp/../mtl/Alg.h \
+ /home/jstrmen/ulozisko/GraphColoring/SAT/Glucose_minisat/glucose-syrup-4.1/simp/../utils/Options.h \
+ /home/jstrmen/ulozisko/GraphColoring/SAT/Glucose_minisat/glucose-syrup-4.1/simp/../utils/ParseUtils.h \
+ /home/jstrmen/ulozisko/GraphColoring/SAT/Glucose_minisat/glucose-syrup-4.1/simp/../core/SolverTypes.h \
+ /home/jstrmen/ulozisko/GraphColoring/SAT/Glucose_minisat/glucose-syrup-4.1/simp/../mtl/Map.h \
+ /home/jstrmen/ulozisko/GraphColoring/SAT/Glucose_minisat/glucose-syrup-4.1/simp/../mtl/Alloc.h \
+ /home/jstrmen/ulozisko/GraphColoring/SAT/Glucose_minisat/glucose-syrup-4.1/simp/../core/BoundedQueue.h \
+ /home/jstrmen/ulozisko/GraphColoring/SAT/Glucose_minisat/glucose-syrup-4.1/simp/../core/Constants.h \
+ /home/jstrmen/ulozisko/GraphColoring/SAT/Glucose_minisat/glucose-syrup-4.1/simp/../mtl/Clone.h \
+ /home/jstrmen/ulozisko/GraphColoring/SAT/Glucose_minisat/glucose-syrup-4.1/simp/../core/SolverStats.h \
+ /home/jstrmen/ulozisko/GraphColoring/SAT/Glucose_minisat/glucose-syrup-4.1/simp/../utils/System.h
+/home/jstrmen/ulozisko/GraphColoring/SAT/Glucose_minisat/glucose-syrup-4.1/simp/Main.o /home/jstrmen/ulozisko/GraphColoring/SAT/Glucose_minisat/glucose-syrup-4.1/simp/Main.or /home/jstrmen/ulozisko/GraphColoring/SAT/Glucose_minisat/glucose-syrup-4.1/simp/Main.od /home/jstrmen/ulozisko/GraphColoring/SAT/Glucose_minisat/glucose-syrup-4.1/simp/Main.op: \
+ /home/jstrmen/ulozisko/GraphColoring/SAT/Glucose_minisat/glucose-syrup-4.1/simp/Main.cc \
+ /home/jstrmen/ulozisko/GraphColoring/SAT/Glucose_minisat/glucose-syrup-4.1/simp/../utils/System.h \
+ /home/jstrmen/ulozisko/GraphColoring/SAT/Glucose_minisat/glucose-syrup-4.1/simp/../mtl/IntTypes.h \
+ /home/jstrmen/ulozisko/GraphColoring/SAT/Glucose_minisat/glucose-syrup-4.1/simp/../utils/ParseUtils.h \
+ /home/jstrmen/ulozisko/GraphColoring/SAT/Glucose_minisat/glucose-syrup-4.1/simp/../utils/Options.h \
+ /home/jstrmen/ulozisko/GraphColoring/SAT/Glucose_minisat/glucose-syrup-4.1/simp/../mtl/Vec.h \
+ /home/jstrmen/ulozisko/GraphColoring/SAT/Glucose_minisat/glucose-syrup-4.1/simp/../mtl/XAlloc.h \
+ /home/jstrmen/ulozisko/GraphColoring/SAT/Glucose_minisat/glucose-syrup-4.1/simp/../core/Dimacs.h \
+ /home/jstrmen/ulozisko/GraphColoring/SAT/Glucose_minisat/glucose-syrup-4.1/simp/../core/SolverTypes.h \
+ /home/jstrmen/ulozisko/GraphColoring/SAT/Glucose_minisat/glucose-syrup-4.1/simp/../mtl/Alg.h \
+ /home/jstrmen/ulozisko/GraphColoring/SAT/Glucose_minisat/glucose-syrup-4.1/simp/../mtl/Map.h \
+ /home/jstrmen/ulozisko/GraphColoring/SAT/Glucose_minisat/glucose-syrup-4.1/simp/../mtl/Alloc.h \
+ /home/jstrmen/ulozisko/GraphColoring/SAT/Glucose_minisat/glucose-syrup-4.1/simp/../simp/SimpSolver.h \
+ /home/jstrmen/ulozisko/GraphColoring/SAT/Glucose_minisat/glucose-syrup-4.1/simp/../mtl/Queue.h \
+ /home/jstrmen/ulozisko/GraphColoring/SAT/Glucose_minisat/glucose-syrup-4.1/simp/../core/Solver.h \
+ /home/jstrmen/ulozisko/GraphColoring/SAT/Glucose_minisat/glucose-syrup-4.1/simp/../mtl/Heap.h \
+ /home/jstrmen/ulozisko/GraphColoring/SAT/Glucose_minisat/glucose-syrup-4.1/simp/../core/BoundedQueue.h \
+ /home/jstrmen/ulozisko/GraphColoring/SAT/Glucose_minisat/glucose-syrup-4.1/simp/../core/Constants.h \
+ /home/jstrmen/ulozisko/GraphColoring/SAT/Glucose_minisat/glucose-syrup-4.1/simp/../mtl/Clone.h \
+ /home/jstrmen/ulozisko/GraphColoring/SAT/Glucose_minisat/glucose-syrup-4.1/simp/../core/SolverStats.h

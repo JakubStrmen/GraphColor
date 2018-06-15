@@ -117,6 +117,12 @@
 		<Unit filename="/home/jakub/Git/GraphColor/src/GraphNew.h">
 			<Option target="GraphColor"/>
 		</Unit>
+		<Unit filename="/home/jakub/Git/GraphColor/src/SATSolver.cpp">
+			<Option target="GraphColor"/>
+		</Unit>
+		<Unit filename="/home/jakub/Git/GraphColor/src/SATSolver.h">
+			<Option target="GraphColor"/>
+		</Unit>
 		<Unit filename="/home/jakub/Git/GraphColor/src/Vertex.cpp">
 			<Option target="GraphColor"/>
 		</Unit>

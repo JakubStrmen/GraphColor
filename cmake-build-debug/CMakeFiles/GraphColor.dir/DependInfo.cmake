@@ -19,6 +19,7 @@ set(CMAKE_DEPENDS_CHECK_CXX
   "/home/jakub/Git/GraphColor/src/Filter.cpp" "/home/jakub/Git/GraphColor/cmake-build-debug/CMakeFiles/GraphColor.dir/src/Filter.cpp.o"
   "/home/jakub/Git/GraphColor/src/Graph.cpp" "/home/jakub/Git/GraphColor/cmake-build-debug/CMakeFiles/GraphColor.dir/src/Graph.cpp.o"
   "/home/jakub/Git/GraphColor/src/GraphNew.cpp" "/home/jakub/Git/GraphColor/cmake-build-debug/CMakeFiles/GraphColor.dir/src/GraphNew.cpp.o"
+  "/home/jakub/Git/GraphColor/src/SATSolver.cpp" "/home/jakub/Git/GraphColor/cmake-build-debug/CMakeFiles/GraphColor.dir/src/SATSolver.cpp.o"
   "/home/jakub/Git/GraphColor/src/Vertex.cpp" "/home/jakub/Git/GraphColor/cmake-build-debug/CMakeFiles/GraphColor.dir/src/Vertex.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
