@@ -23,8 +23,9 @@ OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWA
 
 #include <stdio.h>
 
-#include "../GlucoseMiniSat/utils/ParseUtils.h"
-#include "../GlucoseMiniSat/core/SolverTypes.h"
+//#include "../GlucoseMiniSat/utils/ParseUtils.h"
+#include "../utils/ParseUtils.h"
+#include "SolverTypes.h"
 
 namespace Glucose {
 
@@ -83,7 +84,14 @@ static void parse_DIMACS(gzFile input_stream, Solver& S) {
     StreamBuffer in(input_stream);
     parse_DIMACS_main(in, S); }
 
+template<class Solver>
+static void parse_DIMACS(FILE input_stream, Solver& S) {
+    StreamBuffer in(input_stream);
+    parse_DIMACS_main(in, S); }
 //=================================================================================================
 }
+
+
+
 
 #endif

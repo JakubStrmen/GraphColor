@@ -7,11 +7,11 @@ C_FLAGS =  -fopenmp -g
 
 C_DEFINES = 
 
-C_INCLUDES = 
+C_INCLUDES = -I/home/jakub/Git/GraphColor/GlucoseMiniSat/core -I/home/jakub/Git/GraphColor/GlucoseMiniSat/mtl -I/home/jakub/Git/GraphColor/core -I/home/jakub/Git/GraphColor/mtl -I/home/jakub/Git/GraphColor/parallel -I/home/jakub/Git/GraphColor/simp -I/home/jakub/Git/GraphColor/utils 
 
-CXX_FLAGS =  -fopenmp -g   -std=gnu++11
+CXX_FLAGS =  -lz -Wall -fopenmp -g   -std=gnu++11
 
 CXX_DEFINES = 
 
-CXX_INCLUDES = 
+CXX_INCLUDES = -I/home/jakub/Git/GraphColor/GlucoseMiniSat/core -I/home/jakub/Git/GraphColor/GlucoseMiniSat/mtl -I/home/jakub/Git/GraphColor/core -I/home/jakub/Git/GraphColor/mtl -I/home/jakub/Git/GraphColor/parallel -I/home/jakub/Git/GraphColor/simp -I/home/jakub/Git/GraphColor/utils 
 

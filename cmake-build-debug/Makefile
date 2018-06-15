@@ -123,6 +123,289 @@ GraphColor/fast:
 	$(MAKE) -f CMakeFiles/GraphColor.dir/build.make CMakeFiles/GraphColor.dir/build
 .PHONY : GraphColor/fast
 
+#=============================================================================
+# Target rules for targets named GlucoseMiniSat
+
+# Build rule for target.
+GlucoseMiniSat: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 GlucoseMiniSat
+.PHONY : GlucoseMiniSat
+
+# fast build rule for target.
+GlucoseMiniSat/fast:
+	$(MAKE) -f GlucoseMiniSat/CMakeFiles/GlucoseMiniSat.dir/build.make GlucoseMiniSat/CMakeFiles/GlucoseMiniSat.dir/build
+.PHONY : GlucoseMiniSat/fast
+
+GlucoseMiniSat/core/Solver.o: GlucoseMiniSat/core/Solver.cc.o
+
+.PHONY : GlucoseMiniSat/core/Solver.o
+
+# target to build an object file
+GlucoseMiniSat/core/Solver.cc.o:
+	$(MAKE) -f CMakeFiles/GraphColor.dir/build.make CMakeFiles/GraphColor.dir/GlucoseMiniSat/core/Solver.cc.o
+.PHONY : GlucoseMiniSat/core/Solver.cc.o
+
+GlucoseMiniSat/core/Solver.i: GlucoseMiniSat/core/Solver.cc.i
+
+.PHONY : GlucoseMiniSat/core/Solver.i
+
+# target to preprocess a source file
+GlucoseMiniSat/core/Solver.cc.i:
+	$(MAKE) -f CMakeFiles/GraphColor.dir/build.make CMakeFiles/GraphColor.dir/GlucoseMiniSat/core/Solver.cc.i
+.PHONY : GlucoseMiniSat/core/Solver.cc.i
+
+GlucoseMiniSat/core/Solver.s: GlucoseMiniSat/core/Solver.cc.s
+
+.PHONY : GlucoseMiniSat/core/Solver.s
+
+# target to generate assembly for a file
+GlucoseMiniSat/core/Solver.cc.s:
+	$(MAKE) -f CMakeFiles/GraphColor.dir/build.make CMakeFiles/GraphColor.dir/GlucoseMiniSat/core/Solver.cc.s
+.PHONY : GlucoseMiniSat/core/Solver.cc.s
+
+GlucoseMiniSat/parallel/ClausesBuffer.o: GlucoseMiniSat/parallel/ClausesBuffer.cc.o
+
+.PHONY : GlucoseMiniSat/parallel/ClausesBuffer.o
+
+# target to build an object file
+GlucoseMiniSat/parallel/ClausesBuffer.cc.o:
+	$(MAKE) -f CMakeFiles/GraphColor.dir/build.make CMakeFiles/GraphColor.dir/GlucoseMiniSat/parallel/ClausesBuffer.cc.o
+.PHONY : GlucoseMiniSat/parallel/ClausesBuffer.cc.o
+
+GlucoseMiniSat/parallel/ClausesBuffer.i: GlucoseMiniSat/parallel/ClausesBuffer.cc.i
+
+.PHONY : GlucoseMiniSat/parallel/ClausesBuffer.i
+
+# target to preprocess a source file
+GlucoseMiniSat/parallel/ClausesBuffer.cc.i:
+	$(MAKE) -f CMakeFiles/GraphColor.dir/build.make CMakeFiles/GraphColor.dir/GlucoseMiniSat/parallel/ClausesBuffer.cc.i
+.PHONY : GlucoseMiniSat/parallel/ClausesBuffer.cc.i
+
+GlucoseMiniSat/parallel/ClausesBuffer.s: GlucoseMiniSat/parallel/ClausesBuffer.cc.s
+
+.PHONY : GlucoseMiniSat/parallel/ClausesBuffer.s
+
+# target to generate assembly for a file
+GlucoseMiniSat/parallel/ClausesBuffer.cc.s:
+	$(MAKE) -f CMakeFiles/GraphColor.dir/build.make CMakeFiles/GraphColor.dir/GlucoseMiniSat/parallel/ClausesBuffer.cc.s
+.PHONY : GlucoseMiniSat/parallel/ClausesBuffer.cc.s
+
+GlucoseMiniSat/parallel/MultiSolvers.o: GlucoseMiniSat/parallel/MultiSolvers.cc.o
+
+.PHONY : GlucoseMiniSat/parallel/MultiSolvers.o
+
+# target to build an object file
+GlucoseMiniSat/parallel/MultiSolvers.cc.o:
+	$(MAKE) -f CMakeFiles/GraphColor.dir/build.make CMakeFiles/GraphColor.dir/GlucoseMiniSat/parallel/MultiSolvers.cc.o
+.PHONY : GlucoseMiniSat/parallel/MultiSolvers.cc.o
+
+GlucoseMiniSat/parallel/MultiSolvers.i: GlucoseMiniSat/parallel/MultiSolvers.cc.i
+
+.PHONY : GlucoseMiniSat/parallel/MultiSolvers.i
+
+# target to preprocess a source file
+GlucoseMiniSat/parallel/MultiSolvers.cc.i:
+	$(MAKE) -f CMakeFiles/GraphColor.dir/build.make CMakeFiles/GraphColor.dir/GlucoseMiniSat/parallel/MultiSolvers.cc.i
+.PHONY : GlucoseMiniSat/parallel/MultiSolvers.cc.i
+
+GlucoseMiniSat/parallel/MultiSolvers.s: GlucoseMiniSat/parallel/MultiSolvers.cc.s
+
+.PHONY : GlucoseMiniSat/parallel/MultiSolvers.s
+
+# target to generate assembly for a file
+GlucoseMiniSat/parallel/MultiSolvers.cc.s:
+	$(MAKE) -f CMakeFiles/GraphColor.dir/build.make CMakeFiles/GraphColor.dir/GlucoseMiniSat/parallel/MultiSolvers.cc.s
+.PHONY : GlucoseMiniSat/parallel/MultiSolvers.cc.s
+
+GlucoseMiniSat/parallel/ParallelSolver.o: GlucoseMiniSat/parallel/ParallelSolver.cc.o
+
+.PHONY : GlucoseMiniSat/parallel/ParallelSolver.o
+
+# target to build an object file
+GlucoseMiniSat/parallel/ParallelSolver.cc.o:
+	$(MAKE) -f CMakeFiles/GraphColor.dir/build.make CMakeFiles/GraphColor.dir/GlucoseMiniSat/parallel/ParallelSolver.cc.o
+.PHONY : GlucoseMiniSat/parallel/ParallelSolver.cc.o
+
+GlucoseMiniSat/parallel/ParallelSolver.i: GlucoseMiniSat/parallel/ParallelSolver.cc.i
+
+.PHONY : GlucoseMiniSat/parallel/ParallelSolver.i
+
+# target to preprocess a source file
+GlucoseMiniSat/parallel/ParallelSolver.cc.i:
+	$(MAKE) -f CMakeFiles/GraphColor.dir/build.make CMakeFiles/GraphColor.dir/GlucoseMiniSat/parallel/ParallelSolver.cc.i
+.PHONY : GlucoseMiniSat/parallel/ParallelSolver.cc.i
+
+GlucoseMiniSat/parallel/ParallelSolver.s: GlucoseMiniSat/parallel/ParallelSolver.cc.s
+
+.PHONY : GlucoseMiniSat/parallel/ParallelSolver.s
+
+# target to generate assembly for a file
+GlucoseMiniSat/parallel/ParallelSolver.cc.s:
+	$(MAKE) -f CMakeFiles/GraphColor.dir/build.make CMakeFiles/GraphColor.dir/GlucoseMiniSat/parallel/ParallelSolver.cc.s
+.PHONY : GlucoseMiniSat/parallel/ParallelSolver.cc.s
+
+GlucoseMiniSat/parallel/SharedCompanion.o: GlucoseMiniSat/parallel/SharedCompanion.cc.o
+
+.PHONY : GlucoseMiniSat/parallel/SharedCompanion.o
+
+# target to build an object file
+GlucoseMiniSat/parallel/SharedCompanion.cc.o:
+	$(MAKE) -f CMakeFiles/GraphColor.dir/build.make CMakeFiles/GraphColor.dir/GlucoseMiniSat/parallel/SharedCompanion.cc.o
+.PHONY : GlucoseMiniSat/parallel/SharedCompanion.cc.o
+
+GlucoseMiniSat/parallel/SharedCompanion.i: GlucoseMiniSat/parallel/SharedCompanion.cc.i
+
+.PHONY : GlucoseMiniSat/parallel/SharedCompanion.i
+
+# target to preprocess a source file
+GlucoseMiniSat/parallel/SharedCompanion.cc.i:
+	$(MAKE) -f CMakeFiles/GraphColor.dir/build.make CMakeFiles/GraphColor.dir/GlucoseMiniSat/parallel/SharedCompanion.cc.i
+.PHONY : GlucoseMiniSat/parallel/SharedCompanion.cc.i
+
+GlucoseMiniSat/parallel/SharedCompanion.s: GlucoseMiniSat/parallel/SharedCompanion.cc.s
+
+.PHONY : GlucoseMiniSat/parallel/SharedCompanion.s
+
+# target to generate assembly for a file
+GlucoseMiniSat/parallel/SharedCompanion.cc.s:
+	$(MAKE) -f CMakeFiles/GraphColor.dir/build.make CMakeFiles/GraphColor.dir/GlucoseMiniSat/parallel/SharedCompanion.cc.s
+.PHONY : GlucoseMiniSat/parallel/SharedCompanion.cc.s
+
+GlucoseMiniSat/parallel/SolverCompanion.o: GlucoseMiniSat/parallel/SolverCompanion.cc.o
+
+.PHONY : GlucoseMiniSat/parallel/SolverCompanion.o
+
+# target to build an object file
+GlucoseMiniSat/parallel/SolverCompanion.cc.o:
+	$(MAKE) -f CMakeFiles/GraphColor.dir/build.make CMakeFiles/GraphColor.dir/GlucoseMiniSat/parallel/SolverCompanion.cc.o
+.PHONY : GlucoseMiniSat/parallel/SolverCompanion.cc.o
+
+GlucoseMiniSat/parallel/SolverCompanion.i: GlucoseMiniSat/parallel/SolverCompanion.cc.i
+
+.PHONY : GlucoseMiniSat/parallel/SolverCompanion.i
+
+# target to preprocess a source file
+GlucoseMiniSat/parallel/SolverCompanion.cc.i:
+	$(MAKE) -f CMakeFiles/GraphColor.dir/build.make CMakeFiles/GraphColor.dir/GlucoseMiniSat/parallel/SolverCompanion.cc.i
+.PHONY : GlucoseMiniSat/parallel/SolverCompanion.cc.i
+
+GlucoseMiniSat/parallel/SolverCompanion.s: GlucoseMiniSat/parallel/SolverCompanion.cc.s
+
+.PHONY : GlucoseMiniSat/parallel/SolverCompanion.s
+
+# target to generate assembly for a file
+GlucoseMiniSat/parallel/SolverCompanion.cc.s:
+	$(MAKE) -f CMakeFiles/GraphColor.dir/build.make CMakeFiles/GraphColor.dir/GlucoseMiniSat/parallel/SolverCompanion.cc.s
+.PHONY : GlucoseMiniSat/parallel/SolverCompanion.cc.s
+
+GlucoseMiniSat/parallel/SolverConfiguration.o: GlucoseMiniSat/parallel/SolverConfiguration.cc.o
+
+.PHONY : GlucoseMiniSat/parallel/SolverConfiguration.o
+
+# target to build an object file
+GlucoseMiniSat/parallel/SolverConfiguration.cc.o:
+	$(MAKE) -f CMakeFiles/GraphColor.dir/build.make CMakeFiles/GraphColor.dir/GlucoseMiniSat/parallel/SolverConfiguration.cc.o
+.PHONY : GlucoseMiniSat/parallel/SolverConfiguration.cc.o
+
+GlucoseMiniSat/parallel/SolverConfiguration.i: GlucoseMiniSat/parallel/SolverConfiguration.cc.i
+
+.PHONY : GlucoseMiniSat/parallel/SolverConfiguration.i
+
+# target to preprocess a source file
+GlucoseMiniSat/parallel/SolverConfiguration.cc.i:
+	$(MAKE) -f CMakeFiles/GraphColor.dir/build.make CMakeFiles/GraphColor.dir/GlucoseMiniSat/parallel/SolverConfiguration.cc.i
+.PHONY : GlucoseMiniSat/parallel/SolverConfiguration.cc.i
+
+GlucoseMiniSat/parallel/SolverConfiguration.s: GlucoseMiniSat/parallel/SolverConfiguration.cc.s
+
+.PHONY : GlucoseMiniSat/parallel/SolverConfiguration.s
+
+# target to generate assembly for a file
+GlucoseMiniSat/parallel/SolverConfiguration.cc.s:
+	$(MAKE) -f CMakeFiles/GraphColor.dir/build.make CMakeFiles/GraphColor.dir/GlucoseMiniSat/parallel/SolverConfiguration.cc.s
+.PHONY : GlucoseMiniSat/parallel/SolverConfiguration.cc.s
+
+GlucoseMiniSat/simp/SimpSolver.o: GlucoseMiniSat/simp/SimpSolver.cc.o
+
+.PHONY : GlucoseMiniSat/simp/SimpSolver.o
+
+# target to build an object file
+GlucoseMiniSat/simp/SimpSolver.cc.o:
+	$(MAKE) -f CMakeFiles/GraphColor.dir/build.make CMakeFiles/GraphColor.dir/GlucoseMiniSat/simp/SimpSolver.cc.o
+.PHONY : GlucoseMiniSat/simp/SimpSolver.cc.o
+
+GlucoseMiniSat/simp/SimpSolver.i: GlucoseMiniSat/simp/SimpSolver.cc.i
+
+.PHONY : GlucoseMiniSat/simp/SimpSolver.i
+
+# target to preprocess a source file
+GlucoseMiniSat/simp/SimpSolver.cc.i:
+	$(MAKE) -f CMakeFiles/GraphColor.dir/build.make CMakeFiles/GraphColor.dir/GlucoseMiniSat/simp/SimpSolver.cc.i
+.PHONY : GlucoseMiniSat/simp/SimpSolver.cc.i
+
+GlucoseMiniSat/simp/SimpSolver.s: GlucoseMiniSat/simp/SimpSolver.cc.s
+
+.PHONY : GlucoseMiniSat/simp/SimpSolver.s
+
+# target to generate assembly for a file
+GlucoseMiniSat/simp/SimpSolver.cc.s:
+	$(MAKE) -f CMakeFiles/GraphColor.dir/build.make CMakeFiles/GraphColor.dir/GlucoseMiniSat/simp/SimpSolver.cc.s
+.PHONY : GlucoseMiniSat/simp/SimpSolver.cc.s
+
+GlucoseMiniSat/utils/Options.o: GlucoseMiniSat/utils/Options.cc.o
+
+.PHONY : GlucoseMiniSat/utils/Options.o
+
+# target to build an object file
+GlucoseMiniSat/utils/Options.cc.o:
+	$(MAKE) -f CMakeFiles/GraphColor.dir/build.make CMakeFiles/GraphColor.dir/GlucoseMiniSat/utils/Options.cc.o
+.PHONY : GlucoseMiniSat/utils/Options.cc.o
+
+GlucoseMiniSat/utils/Options.i: GlucoseMiniSat/utils/Options.cc.i
+
+.PHONY : GlucoseMiniSat/utils/Options.i
+
+# target to preprocess a source file
+GlucoseMiniSat/utils/Options.cc.i:
+	$(MAKE) -f CMakeFiles/GraphColor.dir/build.make CMakeFiles/GraphColor.dir/GlucoseMiniSat/utils/Options.cc.i
+.PHONY : GlucoseMiniSat/utils/Options.cc.i
+
+GlucoseMiniSat/utils/Options.s: GlucoseMiniSat/utils/Options.cc.s
+
+.PHONY : GlucoseMiniSat/utils/Options.s
+
+# target to generate assembly for a file
+GlucoseMiniSat/utils/Options.cc.s:
+	$(MAKE) -f CMakeFiles/GraphColor.dir/build.make CMakeFiles/GraphColor.dir/GlucoseMiniSat/utils/Options.cc.s
+.PHONY : GlucoseMiniSat/utils/Options.cc.s
+
+GlucoseMiniSat/utils/System.o: GlucoseMiniSat/utils/System.cc.o
+
+.PHONY : GlucoseMiniSat/utils/System.o
+
+# target to build an object file
+GlucoseMiniSat/utils/System.cc.o:
+	$(MAKE) -f CMakeFiles/GraphColor.dir/build.make CMakeFiles/GraphColor.dir/GlucoseMiniSat/utils/System.cc.o
+.PHONY : GlucoseMiniSat/utils/System.cc.o
+
+GlucoseMiniSat/utils/System.i: GlucoseMiniSat/utils/System.cc.i
+
+.PHONY : GlucoseMiniSat/utils/System.i
+
+# target to preprocess a source file
+GlucoseMiniSat/utils/System.cc.i:
+	$(MAKE) -f CMakeFiles/GraphColor.dir/build.make CMakeFiles/GraphColor.dir/GlucoseMiniSat/utils/System.cc.i
+.PHONY : GlucoseMiniSat/utils/System.cc.i
+
+GlucoseMiniSat/utils/System.s: GlucoseMiniSat/utils/System.cc.s
+
+.PHONY : GlucoseMiniSat/utils/System.s
+
+# target to generate assembly for a file
+GlucoseMiniSat/utils/System.cc.s:
+	$(MAKE) -f CMakeFiles/GraphColor.dir/build.make CMakeFiles/GraphColor.dir/GlucoseMiniSat/utils/System.cc.s
+.PHONY : GlucoseMiniSat/utils/System.cc.s
+
 main.o: main.cpp.o
 
 .PHONY : main.o
@@ -375,6 +658,37 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... GraphColor"
+	@echo "... GlucoseMiniSat"
+	@echo "... GlucoseMiniSat/core/Solver.o"
+	@echo "... GlucoseMiniSat/core/Solver.i"
+	@echo "... GlucoseMiniSat/core/Solver.s"
+	@echo "... GlucoseMiniSat/parallel/ClausesBuffer.o"
+	@echo "... GlucoseMiniSat/parallel/ClausesBuffer.i"
+	@echo "... GlucoseMiniSat/parallel/ClausesBuffer.s"
+	@echo "... GlucoseMiniSat/parallel/MultiSolvers.o"
+	@echo "... GlucoseMiniSat/parallel/MultiSolvers.i"
+	@echo "... GlucoseMiniSat/parallel/MultiSolvers.s"
+	@echo "... GlucoseMiniSat/parallel/ParallelSolver.o"
+	@echo "... GlucoseMiniSat/parallel/ParallelSolver.i"
+	@echo "... GlucoseMiniSat/parallel/ParallelSolver.s"
+	@echo "... GlucoseMiniSat/parallel/SharedCompanion.o"
+	@echo "... GlucoseMiniSat/parallel/SharedCompanion.i"
+	@echo "... GlucoseMiniSat/parallel/SharedCompanion.s"
+	@echo "... GlucoseMiniSat/parallel/SolverCompanion.o"
+	@echo "... GlucoseMiniSat/parallel/SolverCompanion.i"
+	@echo "... GlucoseMiniSat/parallel/SolverCompanion.s"
+	@echo "... GlucoseMiniSat/parallel/SolverConfiguration.o"
+	@echo "... GlucoseMiniSat/parallel/SolverConfiguration.i"
+	@echo "... GlucoseMiniSat/parallel/SolverConfiguration.s"
+	@echo "... GlucoseMiniSat/simp/SimpSolver.o"
+	@echo "... GlucoseMiniSat/simp/SimpSolver.i"
+	@echo "... GlucoseMiniSat/simp/SimpSolver.s"
+	@echo "... GlucoseMiniSat/utils/Options.o"
+	@echo "... GlucoseMiniSat/utils/Options.i"
+	@echo "... GlucoseMiniSat/utils/Options.s"
+	@echo "... GlucoseMiniSat/utils/System.o"
+	@echo "... GlucoseMiniSat/utils/System.i"
+	@echo "... GlucoseMiniSat/utils/System.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"

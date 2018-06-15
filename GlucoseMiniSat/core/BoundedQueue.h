@@ -51,7 +51,7 @@ OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWA
 #ifndef BoundedQueue_h
 #define BoundedQueue_h
 
-#include "../GlucoseMiniSat/mtl/Vec.h"
+#include "Vec.h"
 
 //=================================================================================================
 

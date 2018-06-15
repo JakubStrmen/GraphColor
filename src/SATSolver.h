@@ -5,6 +5,7 @@
 #ifndef GRAPHCOLOR_SATSOLVER_H
 #define GRAPHCOLOR_SATSOLVER_H
 
+#include "../core/Solver.h"
 #include "../GlucoseMiniSat/core/Solver.h"
 
 //using namespace Glucose;
@@ -21,8 +22,8 @@ public:
 
     void glucoseParallel();
 
-    static Glucose::Solver* solver;
-    static const char* _certified = "CORE -- CERTIFIED UNSAT";
+
+
 
 
 };

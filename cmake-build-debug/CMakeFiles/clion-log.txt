@@ -1,4 +1,21 @@
 /home/jakub/Programs/clion-2018.1/bin/cmake/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" /home/jakub/Git/GraphColor
+CMake Warning at CMakeLists.txt:14 (find_package):
+  By not providing "Findzlib.cmake" in CMAKE_MODULE_PATH this project has
+  asked CMake to find a package configuration file provided by "zlib", but
+  CMake did not find one.
+
+  Could not find a package configuration file provided by "zlib" with any of
+  the following names:
+
+    zlibConfig.cmake
+    zlib-config.cmake
+
+  Add the installation prefix of "zlib" to CMAKE_PREFIX_PATH or set
+  "zlib_DIR" to a directory containing one of the above files.  If "zlib"
+  provides a separate development package or SDK, be sure it has been
+  installed.
+
+
 -- Configuring done
 -- Generating done
 -- Build files have been written to: /home/jakub/Git/GraphColor/cmake-build-debug

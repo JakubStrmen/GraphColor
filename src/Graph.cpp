@@ -704,13 +704,23 @@ void Graph::doSATSolve() {
     char *arg1 = const_cast<char *>("/home/jakub/Git/GraphColor/SATtests/input.cnf");
     char *arg2 = "/home/jakub/Git/GraphColor/SATtests/output.txt";
 
+//    char *arg1 = "input.cnf";
+//    char *arg2 = "output.txt";
+
     char **myArgV;
 
-    myArgV[0] = arg1;
-    myArgV[1] = arg2;
+    myArgV[0] = "/home/jakub/Git/GraphColor/cmake-build-debug/GraphColor";
+    myArgV[1] = arg1;
+    myArgV[2] = arg2;
 
+    int myArgc = 3;
 
-    mySolver->glucoseSimp(2, myArgV);
+//    std::cout<<myArgc<<"\n";
+//    for(int i=0; i<myArgc; i++){
+//        std::cout<< i << ": " << myArgV[i] <<"\n";
+//    }
+
+    mySolver->glucoseSimp(3, myArgV);
 
 
 }

@@ -55,7 +55,7 @@ OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWA
  * The implementaton is trivial. Just keep track of watched Solvers by the companion.
  **/
 
-#include "../GlucoseMiniSat/parallel/SolverCompanion.h"
+#include "../parallel/SolverCompanion.h"
 
 using namespace Glucose;
 

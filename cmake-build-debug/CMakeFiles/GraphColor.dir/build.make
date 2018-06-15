@@ -273,6 +273,246 @@ CMakeFiles/GraphColor.dir/src/SATSolver.cpp.o.provides: CMakeFiles/GraphColor.di
 CMakeFiles/GraphColor.dir/src/SATSolver.cpp.o.provides.build: CMakeFiles/GraphColor.dir/src/SATSolver.cpp.o
 
 
+CMakeFiles/GraphColor.dir/GlucoseMiniSat/core/Solver.cc.o: CMakeFiles/GraphColor.dir/flags.make
+CMakeFiles/GraphColor.dir/GlucoseMiniSat/core/Solver.cc.o: ../GlucoseMiniSat/core/Solver.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/jakub/Git/GraphColor/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/GraphColor.dir/GlucoseMiniSat/core/Solver.cc.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/GraphColor.dir/GlucoseMiniSat/core/Solver.cc.o -c /home/jakub/Git/GraphColor/GlucoseMiniSat/core/Solver.cc
+
+CMakeFiles/GraphColor.dir/GlucoseMiniSat/core/Solver.cc.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/GraphColor.dir/GlucoseMiniSat/core/Solver.cc.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/jakub/Git/GraphColor/GlucoseMiniSat/core/Solver.cc > CMakeFiles/GraphColor.dir/GlucoseMiniSat/core/Solver.cc.i
+
+CMakeFiles/GraphColor.dir/GlucoseMiniSat/core/Solver.cc.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/GraphColor.dir/GlucoseMiniSat/core/Solver.cc.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/jakub/Git/GraphColor/GlucoseMiniSat/core/Solver.cc -o CMakeFiles/GraphColor.dir/GlucoseMiniSat/core/Solver.cc.s
+
+CMakeFiles/GraphColor.dir/GlucoseMiniSat/core/Solver.cc.o.requires:
+
+.PHONY : CMakeFiles/GraphColor.dir/GlucoseMiniSat/core/Solver.cc.o.requires
+
+CMakeFiles/GraphColor.dir/GlucoseMiniSat/core/Solver.cc.o.provides: CMakeFiles/GraphColor.dir/GlucoseMiniSat/core/Solver.cc.o.requires
+	$(MAKE) -f CMakeFiles/GraphColor.dir/build.make CMakeFiles/GraphColor.dir/GlucoseMiniSat/core/Solver.cc.o.provides.build
+.PHONY : CMakeFiles/GraphColor.dir/GlucoseMiniSat/core/Solver.cc.o.provides
+
+CMakeFiles/GraphColor.dir/GlucoseMiniSat/core/Solver.cc.o.provides.build: CMakeFiles/GraphColor.dir/GlucoseMiniSat/core/Solver.cc.o
+
+
+CMakeFiles/GraphColor.dir/GlucoseMiniSat/parallel/ClausesBuffer.cc.o: CMakeFiles/GraphColor.dir/flags.make
+CMakeFiles/GraphColor.dir/GlucoseMiniSat/parallel/ClausesBuffer.cc.o: ../GlucoseMiniSat/parallel/ClausesBuffer.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/jakub/Git/GraphColor/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/GraphColor.dir/GlucoseMiniSat/parallel/ClausesBuffer.cc.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/GraphColor.dir/GlucoseMiniSat/parallel/ClausesBuffer.cc.o -c /home/jakub/Git/GraphColor/GlucoseMiniSat/parallel/ClausesBuffer.cc
+
+CMakeFiles/GraphColor.dir/GlucoseMiniSat/parallel/ClausesBuffer.cc.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/GraphColor.dir/GlucoseMiniSat/parallel/ClausesBuffer.cc.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/jakub/Git/GraphColor/GlucoseMiniSat/parallel/ClausesBuffer.cc > CMakeFiles/GraphColor.dir/GlucoseMiniSat/parallel/ClausesBuffer.cc.i
+
+CMakeFiles/GraphColor.dir/GlucoseMiniSat/parallel/ClausesBuffer.cc.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/GraphColor.dir/GlucoseMiniSat/parallel/ClausesBuffer.cc.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/jakub/Git/GraphColor/GlucoseMiniSat/parallel/ClausesBuffer.cc -o CMakeFiles/GraphColor.dir/GlucoseMiniSat/parallel/ClausesBuffer.cc.s
+
+CMakeFiles/GraphColor.dir/GlucoseMiniSat/parallel/ClausesBuffer.cc.o.requires:
+
+.PHONY : CMakeFiles/GraphColor.dir/GlucoseMiniSat/parallel/ClausesBuffer.cc.o.requires
+
+CMakeFiles/GraphColor.dir/GlucoseMiniSat/parallel/ClausesBuffer.cc.o.provides: CMakeFiles/GraphColor.dir/GlucoseMiniSat/parallel/ClausesBuffer.cc.o.requires
+	$(MAKE) -f CMakeFiles/GraphColor.dir/build.make CMakeFiles/GraphColor.dir/GlucoseMiniSat/parallel/ClausesBuffer.cc.o.provides.build
+.PHONY : CMakeFiles/GraphColor.dir/GlucoseMiniSat/parallel/ClausesBuffer.cc.o.provides
+
+CMakeFiles/GraphColor.dir/GlucoseMiniSat/parallel/ClausesBuffer.cc.o.provides.build: CMakeFiles/GraphColor.dir/GlucoseMiniSat/parallel/ClausesBuffer.cc.o
+
+
+CMakeFiles/GraphColor.dir/GlucoseMiniSat/parallel/MultiSolvers.cc.o: CMakeFiles/GraphColor.dir/flags.make
+CMakeFiles/GraphColor.dir/GlucoseMiniSat/parallel/MultiSolvers.cc.o: ../GlucoseMiniSat/parallel/MultiSolvers.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/jakub/Git/GraphColor/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object CMakeFiles/GraphColor.dir/GlucoseMiniSat/parallel/MultiSolvers.cc.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/GraphColor.dir/GlucoseMiniSat/parallel/MultiSolvers.cc.o -c /home/jakub/Git/GraphColor/GlucoseMiniSat/parallel/MultiSolvers.cc
+
+CMakeFiles/GraphColor.dir/GlucoseMiniSat/parallel/MultiSolvers.cc.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/GraphColor.dir/GlucoseMiniSat/parallel/MultiSolvers.cc.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/jakub/Git/GraphColor/GlucoseMiniSat/parallel/MultiSolvers.cc > CMakeFiles/GraphColor.dir/GlucoseMiniSat/parallel/MultiSolvers.cc.i
+
+CMakeFiles/GraphColor.dir/GlucoseMiniSat/parallel/MultiSolvers.cc.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/GraphColor.dir/GlucoseMiniSat/parallel/MultiSolvers.cc.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/jakub/Git/GraphColor/GlucoseMiniSat/parallel/MultiSolvers.cc -o CMakeFiles/GraphColor.dir/GlucoseMiniSat/parallel/MultiSolvers.cc.s
+
+CMakeFiles/GraphColor.dir/GlucoseMiniSat/parallel/MultiSolvers.cc.o.requires:
+
+.PHONY : CMakeFiles/GraphColor.dir/GlucoseMiniSat/parallel/MultiSolvers.cc.o.requires
+
+CMakeFiles/GraphColor.dir/GlucoseMiniSat/parallel/MultiSolvers.cc.o.provides: CMakeFiles/GraphColor.dir/GlucoseMiniSat/parallel/MultiSolvers.cc.o.requires
+	$(MAKE) -f CMakeFiles/GraphColor.dir/build.make CMakeFiles/GraphColor.dir/GlucoseMiniSat/parallel/MultiSolvers.cc.o.provides.build
+.PHONY : CMakeFiles/GraphColor.dir/GlucoseMiniSat/parallel/MultiSolvers.cc.o.provides
+
+CMakeFiles/GraphColor.dir/GlucoseMiniSat/parallel/MultiSolvers.cc.o.provides.build: CMakeFiles/GraphColor.dir/GlucoseMiniSat/parallel/MultiSolvers.cc.o
+
+
+CMakeFiles/GraphColor.dir/GlucoseMiniSat/parallel/ParallelSolver.cc.o: CMakeFiles/GraphColor.dir/flags.make
+CMakeFiles/GraphColor.dir/GlucoseMiniSat/parallel/ParallelSolver.cc.o: ../GlucoseMiniSat/parallel/ParallelSolver.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/jakub/Git/GraphColor/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object CMakeFiles/GraphColor.dir/GlucoseMiniSat/parallel/ParallelSolver.cc.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/GraphColor.dir/GlucoseMiniSat/parallel/ParallelSolver.cc.o -c /home/jakub/Git/GraphColor/GlucoseMiniSat/parallel/ParallelSolver.cc
+
+CMakeFiles/GraphColor.dir/GlucoseMiniSat/parallel/ParallelSolver.cc.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/GraphColor.dir/GlucoseMiniSat/parallel/ParallelSolver.cc.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/jakub/Git/GraphColor/GlucoseMiniSat/parallel/ParallelSolver.cc > CMakeFiles/GraphColor.dir/GlucoseMiniSat/parallel/ParallelSolver.cc.i
+
+CMakeFiles/GraphColor.dir/GlucoseMiniSat/parallel/ParallelSolver.cc.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/GraphColor.dir/GlucoseMiniSat/parallel/ParallelSolver.cc.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/jakub/Git/GraphColor/GlucoseMiniSat/parallel/ParallelSolver.cc -o CMakeFiles/GraphColor.dir/GlucoseMiniSat/parallel/ParallelSolver.cc.s
+
+CMakeFiles/GraphColor.dir/GlucoseMiniSat/parallel/ParallelSolver.cc.o.requires:
+
+.PHONY : CMakeFiles/GraphColor.dir/GlucoseMiniSat/parallel/ParallelSolver.cc.o.requires
+
+CMakeFiles/GraphColor.dir/GlucoseMiniSat/parallel/ParallelSolver.cc.o.provides: CMakeFiles/GraphColor.dir/GlucoseMiniSat/parallel/ParallelSolver.cc.o.requires
+	$(MAKE) -f CMakeFiles/GraphColor.dir/build.make CMakeFiles/GraphColor.dir/GlucoseMiniSat/parallel/ParallelSolver.cc.o.provides.build
+.PHONY : CMakeFiles/GraphColor.dir/GlucoseMiniSat/parallel/ParallelSolver.cc.o.provides
+
+CMakeFiles/GraphColor.dir/GlucoseMiniSat/parallel/ParallelSolver.cc.o.provides.build: CMakeFiles/GraphColor.dir/GlucoseMiniSat/parallel/ParallelSolver.cc.o
+
+
+CMakeFiles/GraphColor.dir/GlucoseMiniSat/parallel/SharedCompanion.cc.o: CMakeFiles/GraphColor.dir/flags.make
+CMakeFiles/GraphColor.dir/GlucoseMiniSat/parallel/SharedCompanion.cc.o: ../GlucoseMiniSat/parallel/SharedCompanion.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/jakub/Git/GraphColor/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object CMakeFiles/GraphColor.dir/GlucoseMiniSat/parallel/SharedCompanion.cc.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/GraphColor.dir/GlucoseMiniSat/parallel/SharedCompanion.cc.o -c /home/jakub/Git/GraphColor/GlucoseMiniSat/parallel/SharedCompanion.cc
+
+CMakeFiles/GraphColor.dir/GlucoseMiniSat/parallel/SharedCompanion.cc.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/GraphColor.dir/GlucoseMiniSat/parallel/SharedCompanion.cc.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/jakub/Git/GraphColor/GlucoseMiniSat/parallel/SharedCompanion.cc > CMakeFiles/GraphColor.dir/GlucoseMiniSat/parallel/SharedCompanion.cc.i
+
+CMakeFiles/GraphColor.dir/GlucoseMiniSat/parallel/SharedCompanion.cc.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/GraphColor.dir/GlucoseMiniSat/parallel/SharedCompanion.cc.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/jakub/Git/GraphColor/GlucoseMiniSat/parallel/SharedCompanion.cc -o CMakeFiles/GraphColor.dir/GlucoseMiniSat/parallel/SharedCompanion.cc.s
+
+CMakeFiles/GraphColor.dir/GlucoseMiniSat/parallel/SharedCompanion.cc.o.requires:
+
+.PHONY : CMakeFiles/GraphColor.dir/GlucoseMiniSat/parallel/SharedCompanion.cc.o.requires
+
+CMakeFiles/GraphColor.dir/GlucoseMiniSat/parallel/SharedCompanion.cc.o.provides: CMakeFiles/GraphColor.dir/GlucoseMiniSat/parallel/SharedCompanion.cc.o.requires
+	$(MAKE) -f CMakeFiles/GraphColor.dir/build.make CMakeFiles/GraphColor.dir/GlucoseMiniSat/parallel/SharedCompanion.cc.o.provides.build
+.PHONY : CMakeFiles/GraphColor.dir/GlucoseMiniSat/parallel/SharedCompanion.cc.o.provides
+
+CMakeFiles/GraphColor.dir/GlucoseMiniSat/parallel/SharedCompanion.cc.o.provides.build: CMakeFiles/GraphColor.dir/GlucoseMiniSat/parallel/SharedCompanion.cc.o
+
+
+CMakeFiles/GraphColor.dir/GlucoseMiniSat/parallel/SolverCompanion.cc.o: CMakeFiles/GraphColor.dir/flags.make
+CMakeFiles/GraphColor.dir/GlucoseMiniSat/parallel/SolverCompanion.cc.o: ../GlucoseMiniSat/parallel/SolverCompanion.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/jakub/Git/GraphColor/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building CXX object CMakeFiles/GraphColor.dir/GlucoseMiniSat/parallel/SolverCompanion.cc.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/GraphColor.dir/GlucoseMiniSat/parallel/SolverCompanion.cc.o -c /home/jakub/Git/GraphColor/GlucoseMiniSat/parallel/SolverCompanion.cc
+
+CMakeFiles/GraphColor.dir/GlucoseMiniSat/parallel/SolverCompanion.cc.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/GraphColor.dir/GlucoseMiniSat/parallel/SolverCompanion.cc.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/jakub/Git/GraphColor/GlucoseMiniSat/parallel/SolverCompanion.cc > CMakeFiles/GraphColor.dir/GlucoseMiniSat/parallel/SolverCompanion.cc.i
+
+CMakeFiles/GraphColor.dir/GlucoseMiniSat/parallel/SolverCompanion.cc.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/GraphColor.dir/GlucoseMiniSat/parallel/SolverCompanion.cc.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/jakub/Git/GraphColor/GlucoseMiniSat/parallel/SolverCompanion.cc -o CMakeFiles/GraphColor.dir/GlucoseMiniSat/parallel/SolverCompanion.cc.s
+
+CMakeFiles/GraphColor.dir/GlucoseMiniSat/parallel/SolverCompanion.cc.o.requires:
+
+.PHONY : CMakeFiles/GraphColor.dir/GlucoseMiniSat/parallel/SolverCompanion.cc.o.requires
+
+CMakeFiles/GraphColor.dir/GlucoseMiniSat/parallel/SolverCompanion.cc.o.provides: CMakeFiles/GraphColor.dir/GlucoseMiniSat/parallel/SolverCompanion.cc.o.requires
+	$(MAKE) -f CMakeFiles/GraphColor.dir/build.make CMakeFiles/GraphColor.dir/GlucoseMiniSat/parallel/SolverCompanion.cc.o.provides.build
+.PHONY : CMakeFiles/GraphColor.dir/GlucoseMiniSat/parallel/SolverCompanion.cc.o.provides
+
+CMakeFiles/GraphColor.dir/GlucoseMiniSat/parallel/SolverCompanion.cc.o.provides.build: CMakeFiles/GraphColor.dir/GlucoseMiniSat/parallel/SolverCompanion.cc.o
+
+
+CMakeFiles/GraphColor.dir/GlucoseMiniSat/parallel/SolverConfiguration.cc.o: CMakeFiles/GraphColor.dir/flags.make
+CMakeFiles/GraphColor.dir/GlucoseMiniSat/parallel/SolverConfiguration.cc.o: ../GlucoseMiniSat/parallel/SolverConfiguration.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/jakub/Git/GraphColor/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building CXX object CMakeFiles/GraphColor.dir/GlucoseMiniSat/parallel/SolverConfiguration.cc.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/GraphColor.dir/GlucoseMiniSat/parallel/SolverConfiguration.cc.o -c /home/jakub/Git/GraphColor/GlucoseMiniSat/parallel/SolverConfiguration.cc
+
+CMakeFiles/GraphColor.dir/GlucoseMiniSat/parallel/SolverConfiguration.cc.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/GraphColor.dir/GlucoseMiniSat/parallel/SolverConfiguration.cc.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/jakub/Git/GraphColor/GlucoseMiniSat/parallel/SolverConfiguration.cc > CMakeFiles/GraphColor.dir/GlucoseMiniSat/parallel/SolverConfiguration.cc.i
+
+CMakeFiles/GraphColor.dir/GlucoseMiniSat/parallel/SolverConfiguration.cc.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/GraphColor.dir/GlucoseMiniSat/parallel/SolverConfiguration.cc.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/jakub/Git/GraphColor/GlucoseMiniSat/parallel/SolverConfiguration.cc -o CMakeFiles/GraphColor.dir/GlucoseMiniSat/parallel/SolverConfiguration.cc.s
+
+CMakeFiles/GraphColor.dir/GlucoseMiniSat/parallel/SolverConfiguration.cc.o.requires:
+
+.PHONY : CMakeFiles/GraphColor.dir/GlucoseMiniSat/parallel/SolverConfiguration.cc.o.requires
+
+CMakeFiles/GraphColor.dir/GlucoseMiniSat/parallel/SolverConfiguration.cc.o.provides: CMakeFiles/GraphColor.dir/GlucoseMiniSat/parallel/SolverConfiguration.cc.o.requires
+	$(MAKE) -f CMakeFiles/GraphColor.dir/build.make CMakeFiles/GraphColor.dir/GlucoseMiniSat/parallel/SolverConfiguration.cc.o.provides.build
+.PHONY : CMakeFiles/GraphColor.dir/GlucoseMiniSat/parallel/SolverConfiguration.cc.o.provides
+
+CMakeFiles/GraphColor.dir/GlucoseMiniSat/parallel/SolverConfiguration.cc.o.provides.build: CMakeFiles/GraphColor.dir/GlucoseMiniSat/parallel/SolverConfiguration.cc.o
+
+
+CMakeFiles/GraphColor.dir/GlucoseMiniSat/simp/SimpSolver.cc.o: CMakeFiles/GraphColor.dir/flags.make
+CMakeFiles/GraphColor.dir/GlucoseMiniSat/simp/SimpSolver.cc.o: ../GlucoseMiniSat/simp/SimpSolver.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/jakub/Git/GraphColor/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Building CXX object CMakeFiles/GraphColor.dir/GlucoseMiniSat/simp/SimpSolver.cc.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/GraphColor.dir/GlucoseMiniSat/simp/SimpSolver.cc.o -c /home/jakub/Git/GraphColor/GlucoseMiniSat/simp/SimpSolver.cc
+
+CMakeFiles/GraphColor.dir/GlucoseMiniSat/simp/SimpSolver.cc.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/GraphColor.dir/GlucoseMiniSat/simp/SimpSolver.cc.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/jakub/Git/GraphColor/GlucoseMiniSat/simp/SimpSolver.cc > CMakeFiles/GraphColor.dir/GlucoseMiniSat/simp/SimpSolver.cc.i
+
+CMakeFiles/GraphColor.dir/GlucoseMiniSat/simp/SimpSolver.cc.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/GraphColor.dir/GlucoseMiniSat/simp/SimpSolver.cc.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/jakub/Git/GraphColor/GlucoseMiniSat/simp/SimpSolver.cc -o CMakeFiles/GraphColor.dir/GlucoseMiniSat/simp/SimpSolver.cc.s
+
+CMakeFiles/GraphColor.dir/GlucoseMiniSat/simp/SimpSolver.cc.o.requires:
+
+.PHONY : CMakeFiles/GraphColor.dir/GlucoseMiniSat/simp/SimpSolver.cc.o.requires
+
+CMakeFiles/GraphColor.dir/GlucoseMiniSat/simp/SimpSolver.cc.o.provides: CMakeFiles/GraphColor.dir/GlucoseMiniSat/simp/SimpSolver.cc.o.requires
+	$(MAKE) -f CMakeFiles/GraphColor.dir/build.make CMakeFiles/GraphColor.dir/GlucoseMiniSat/simp/SimpSolver.cc.o.provides.build
+.PHONY : CMakeFiles/GraphColor.dir/GlucoseMiniSat/simp/SimpSolver.cc.o.provides
+
+CMakeFiles/GraphColor.dir/GlucoseMiniSat/simp/SimpSolver.cc.o.provides.build: CMakeFiles/GraphColor.dir/GlucoseMiniSat/simp/SimpSolver.cc.o
+
+
+CMakeFiles/GraphColor.dir/GlucoseMiniSat/utils/Options.cc.o: CMakeFiles/GraphColor.dir/flags.make
+CMakeFiles/GraphColor.dir/GlucoseMiniSat/utils/Options.cc.o: ../GlucoseMiniSat/utils/Options.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/jakub/Git/GraphColor/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_18) "Building CXX object CMakeFiles/GraphColor.dir/GlucoseMiniSat/utils/Options.cc.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/GraphColor.dir/GlucoseMiniSat/utils/Options.cc.o -c /home/jakub/Git/GraphColor/GlucoseMiniSat/utils/Options.cc
+
+CMakeFiles/GraphColor.dir/GlucoseMiniSat/utils/Options.cc.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/GraphColor.dir/GlucoseMiniSat/utils/Options.cc.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/jakub/Git/GraphColor/GlucoseMiniSat/utils/Options.cc > CMakeFiles/GraphColor.dir/GlucoseMiniSat/utils/Options.cc.i
+
+CMakeFiles/GraphColor.dir/GlucoseMiniSat/utils/Options.cc.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/GraphColor.dir/GlucoseMiniSat/utils/Options.cc.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/jakub/Git/GraphColor/GlucoseMiniSat/utils/Options.cc -o CMakeFiles/GraphColor.dir/GlucoseMiniSat/utils/Options.cc.s
+
+CMakeFiles/GraphColor.dir/GlucoseMiniSat/utils/Options.cc.o.requires:
+
+.PHONY : CMakeFiles/GraphColor.dir/GlucoseMiniSat/utils/Options.cc.o.requires
+
+CMakeFiles/GraphColor.dir/GlucoseMiniSat/utils/Options.cc.o.provides: CMakeFiles/GraphColor.dir/GlucoseMiniSat/utils/Options.cc.o.requires
+	$(MAKE) -f CMakeFiles/GraphColor.dir/build.make CMakeFiles/GraphColor.dir/GlucoseMiniSat/utils/Options.cc.o.provides.build
+.PHONY : CMakeFiles/GraphColor.dir/GlucoseMiniSat/utils/Options.cc.o.provides
+
+CMakeFiles/GraphColor.dir/GlucoseMiniSat/utils/Options.cc.o.provides.build: CMakeFiles/GraphColor.dir/GlucoseMiniSat/utils/Options.cc.o
+
+
+CMakeFiles/GraphColor.dir/GlucoseMiniSat/utils/System.cc.o: CMakeFiles/GraphColor.dir/flags.make
+CMakeFiles/GraphColor.dir/GlucoseMiniSat/utils/System.cc.o: ../GlucoseMiniSat/utils/System.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/jakub/Git/GraphColor/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_19) "Building CXX object CMakeFiles/GraphColor.dir/GlucoseMiniSat/utils/System.cc.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/GraphColor.dir/GlucoseMiniSat/utils/System.cc.o -c /home/jakub/Git/GraphColor/GlucoseMiniSat/utils/System.cc
+
+CMakeFiles/GraphColor.dir/GlucoseMiniSat/utils/System.cc.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/GraphColor.dir/GlucoseMiniSat/utils/System.cc.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/jakub/Git/GraphColor/GlucoseMiniSat/utils/System.cc > CMakeFiles/GraphColor.dir/GlucoseMiniSat/utils/System.cc.i
+
+CMakeFiles/GraphColor.dir/GlucoseMiniSat/utils/System.cc.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/GraphColor.dir/GlucoseMiniSat/utils/System.cc.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/jakub/Git/GraphColor/GlucoseMiniSat/utils/System.cc -o CMakeFiles/GraphColor.dir/GlucoseMiniSat/utils/System.cc.s
+
+CMakeFiles/GraphColor.dir/GlucoseMiniSat/utils/System.cc.o.requires:
+
+.PHONY : CMakeFiles/GraphColor.dir/GlucoseMiniSat/utils/System.cc.o.requires
+
+CMakeFiles/GraphColor.dir/GlucoseMiniSat/utils/System.cc.o.provides: CMakeFiles/GraphColor.dir/GlucoseMiniSat/utils/System.cc.o.requires
+	$(MAKE) -f CMakeFiles/GraphColor.dir/build.make CMakeFiles/GraphColor.dir/GlucoseMiniSat/utils/System.cc.o.provides.build
+.PHONY : CMakeFiles/GraphColor.dir/GlucoseMiniSat/utils/System.cc.o.provides
+
+CMakeFiles/GraphColor.dir/GlucoseMiniSat/utils/System.cc.o.provides.build: CMakeFiles/GraphColor.dir/GlucoseMiniSat/utils/System.cc.o
+
+
 # Object files for target GraphColor
 GraphColor_OBJECTS = \
 "CMakeFiles/GraphColor.dir/main.cpp.o" \
@@ -283,7 +523,17 @@ GraphColor_OBJECTS = \
 "CMakeFiles/GraphColor.dir/src/BreadthFirst.cpp.o" \
 "CMakeFiles/GraphColor.dir/src/Vertex.cpp.o" \
 "CMakeFiles/GraphColor.dir/src/GraphNew.cpp.o" \
-"CMakeFiles/GraphColor.dir/src/SATSolver.cpp.o"
+"CMakeFiles/GraphColor.dir/src/SATSolver.cpp.o" \
+"CMakeFiles/GraphColor.dir/GlucoseMiniSat/core/Solver.cc.o" \
+"CMakeFiles/GraphColor.dir/GlucoseMiniSat/parallel/ClausesBuffer.cc.o" \
+"CMakeFiles/GraphColor.dir/GlucoseMiniSat/parallel/MultiSolvers.cc.o" \
+"CMakeFiles/GraphColor.dir/GlucoseMiniSat/parallel/ParallelSolver.cc.o" \
+"CMakeFiles/GraphColor.dir/GlucoseMiniSat/parallel/SharedCompanion.cc.o" \
+"CMakeFiles/GraphColor.dir/GlucoseMiniSat/parallel/SolverCompanion.cc.o" \
+"CMakeFiles/GraphColor.dir/GlucoseMiniSat/parallel/SolverConfiguration.cc.o" \
+"CMakeFiles/GraphColor.dir/GlucoseMiniSat/simp/SimpSolver.cc.o" \
+"CMakeFiles/GraphColor.dir/GlucoseMiniSat/utils/Options.cc.o" \
+"CMakeFiles/GraphColor.dir/GlucoseMiniSat/utils/System.cc.o"
 
 # External object files for target GraphColor
 GraphColor_EXTERNAL_OBJECTS =
@@ -297,9 +547,19 @@ GraphColor: CMakeFiles/GraphColor.dir/src/BreadthFirst.cpp.o
 GraphColor: CMakeFiles/GraphColor.dir/src/Vertex.cpp.o
 GraphColor: CMakeFiles/GraphColor.dir/src/GraphNew.cpp.o
 GraphColor: CMakeFiles/GraphColor.dir/src/SATSolver.cpp.o
+GraphColor: CMakeFiles/GraphColor.dir/GlucoseMiniSat/core/Solver.cc.o
+GraphColor: CMakeFiles/GraphColor.dir/GlucoseMiniSat/parallel/ClausesBuffer.cc.o
+GraphColor: CMakeFiles/GraphColor.dir/GlucoseMiniSat/parallel/MultiSolvers.cc.o
+GraphColor: CMakeFiles/GraphColor.dir/GlucoseMiniSat/parallel/ParallelSolver.cc.o
+GraphColor: CMakeFiles/GraphColor.dir/GlucoseMiniSat/parallel/SharedCompanion.cc.o
+GraphColor: CMakeFiles/GraphColor.dir/GlucoseMiniSat/parallel/SolverCompanion.cc.o
+GraphColor: CMakeFiles/GraphColor.dir/GlucoseMiniSat/parallel/SolverConfiguration.cc.o
+GraphColor: CMakeFiles/GraphColor.dir/GlucoseMiniSat/simp/SimpSolver.cc.o
+GraphColor: CMakeFiles/GraphColor.dir/GlucoseMiniSat/utils/Options.cc.o
+GraphColor: CMakeFiles/GraphColor.dir/GlucoseMiniSat/utils/System.cc.o
 GraphColor: CMakeFiles/GraphColor.dir/build.make
 GraphColor: CMakeFiles/GraphColor.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/jakub/Git/GraphColor/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Linking CXX executable GraphColor"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/jakub/Git/GraphColor/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_20) "Linking CXX executable GraphColor"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/GraphColor.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -316,6 +576,16 @@ CMakeFiles/GraphColor.dir/requires: CMakeFiles/GraphColor.dir/src/BreadthFirst.c
 CMakeFiles/GraphColor.dir/requires: CMakeFiles/GraphColor.dir/src/Vertex.cpp.o.requires
 CMakeFiles/GraphColor.dir/requires: CMakeFiles/GraphColor.dir/src/GraphNew.cpp.o.requires
 CMakeFiles/GraphColor.dir/requires: CMakeFiles/GraphColor.dir/src/SATSolver.cpp.o.requires
+CMakeFiles/GraphColor.dir/requires: CMakeFiles/GraphColor.dir/GlucoseMiniSat/core/Solver.cc.o.requires
+CMakeFiles/GraphColor.dir/requires: CMakeFiles/GraphColor.dir/GlucoseMiniSat/parallel/ClausesBuffer.cc.o.requires
+CMakeFiles/GraphColor.dir/requires: CMakeFiles/GraphColor.dir/GlucoseMiniSat/parallel/MultiSolvers.cc.o.requires
+CMakeFiles/GraphColor.dir/requires: CMakeFiles/GraphColor.dir/GlucoseMiniSat/parallel/ParallelSolver.cc.o.requires
+CMakeFiles/GraphColor.dir/requires: CMakeFiles/GraphColor.dir/GlucoseMiniSat/parallel/SharedCompanion.cc.o.requires
+CMakeFiles/GraphColor.dir/requires: CMakeFiles/GraphColor.dir/GlucoseMiniSat/parallel/SolverCompanion.cc.o.requires
+CMakeFiles/GraphColor.dir/requires: CMakeFiles/GraphColor.dir/GlucoseMiniSat/parallel/SolverConfiguration.cc.o.requires
+CMakeFiles/GraphColor.dir/requires: CMakeFiles/GraphColor.dir/GlucoseMiniSat/simp/SimpSolver.cc.o.requires
+CMakeFiles/GraphColor.dir/requires: CMakeFiles/GraphColor.dir/GlucoseMiniSat/utils/Options.cc.o.requires
+CMakeFiles/GraphColor.dir/requires: CMakeFiles/GraphColor.dir/GlucoseMiniSat/utils/System.cc.o.requires
 
 .PHONY : CMakeFiles/GraphColor.dir/requires
 

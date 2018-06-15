@@ -12,8 +12,25 @@ set(CMAKE_C_COMPILER_ID "GNU")
 
 # The include file search paths:
 set(CMAKE_C_TARGET_INCLUDE_PATH
+  "../GlucoseMiniSat/core"
+  "../GlucoseMiniSat/mtl"
+  "../core"
+  "../mtl"
+  "../parallel"
+  "../simp"
+  "../utils"
   )
 set(CMAKE_DEPENDS_CHECK_CXX
+  "/home/jakub/Git/GraphColor/GlucoseMiniSat/core/Solver.cc" "/home/jakub/Git/GraphColor/cmake-build-debug/CMakeFiles/GraphColor.dir/GlucoseMiniSat/core/Solver.cc.o"
+  "/home/jakub/Git/GraphColor/GlucoseMiniSat/parallel/ClausesBuffer.cc" "/home/jakub/Git/GraphColor/cmake-build-debug/CMakeFiles/GraphColor.dir/GlucoseMiniSat/parallel/ClausesBuffer.cc.o"
+  "/home/jakub/Git/GraphColor/GlucoseMiniSat/parallel/MultiSolvers.cc" "/home/jakub/Git/GraphColor/cmake-build-debug/CMakeFiles/GraphColor.dir/GlucoseMiniSat/parallel/MultiSolvers.cc.o"
+  "/home/jakub/Git/GraphColor/GlucoseMiniSat/parallel/ParallelSolver.cc" "/home/jakub/Git/GraphColor/cmake-build-debug/CMakeFiles/GraphColor.dir/GlucoseMiniSat/parallel/ParallelSolver.cc.o"
+  "/home/jakub/Git/GraphColor/GlucoseMiniSat/parallel/SharedCompanion.cc" "/home/jakub/Git/GraphColor/cmake-build-debug/CMakeFiles/GraphColor.dir/GlucoseMiniSat/parallel/SharedCompanion.cc.o"
+  "/home/jakub/Git/GraphColor/GlucoseMiniSat/parallel/SolverCompanion.cc" "/home/jakub/Git/GraphColor/cmake-build-debug/CMakeFiles/GraphColor.dir/GlucoseMiniSat/parallel/SolverCompanion.cc.o"
+  "/home/jakub/Git/GraphColor/GlucoseMiniSat/parallel/SolverConfiguration.cc" "/home/jakub/Git/GraphColor/cmake-build-debug/CMakeFiles/GraphColor.dir/GlucoseMiniSat/parallel/SolverConfiguration.cc.o"
+  "/home/jakub/Git/GraphColor/GlucoseMiniSat/simp/SimpSolver.cc" "/home/jakub/Git/GraphColor/cmake-build-debug/CMakeFiles/GraphColor.dir/GlucoseMiniSat/simp/SimpSolver.cc.o"
+  "/home/jakub/Git/GraphColor/GlucoseMiniSat/utils/Options.cc" "/home/jakub/Git/GraphColor/cmake-build-debug/CMakeFiles/GraphColor.dir/GlucoseMiniSat/utils/Options.cc.o"
+  "/home/jakub/Git/GraphColor/GlucoseMiniSat/utils/System.cc" "/home/jakub/Git/GraphColor/cmake-build-debug/CMakeFiles/GraphColor.dir/GlucoseMiniSat/utils/System.cc.o"
   "/home/jakub/Git/GraphColor/main.cpp" "/home/jakub/Git/GraphColor/cmake-build-debug/CMakeFiles/GraphColor.dir/main.cpp.o"
   "/home/jakub/Git/GraphColor/src/BreadthFirst.cpp" "/home/jakub/Git/GraphColor/cmake-build-debug/CMakeFiles/GraphColor.dir/src/BreadthFirst.cpp.o"
   "/home/jakub/Git/GraphColor/src/Filter.cpp" "/home/jakub/Git/GraphColor/cmake-build-debug/CMakeFiles/GraphColor.dir/src/Filter.cpp.o"
@@ -26,6 +43,13 @@ set(CMAKE_CXX_COMPILER_ID "GNU")
 
 # The include file search paths:
 set(CMAKE_CXX_TARGET_INCLUDE_PATH
+  "../GlucoseMiniSat/core"
+  "../GlucoseMiniSat/mtl"
+  "../core"
+  "../mtl"
+  "../parallel"
+  "../simp"
+  "../utils"
   )
 
 # Targets to which this target links.

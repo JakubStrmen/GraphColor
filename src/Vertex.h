@@ -7,7 +7,7 @@
 
 
 class Vertex {
-#define MAX_DEGREE = 3
+#define MAX_DEGREE 3
 
 public:
     Vertex();

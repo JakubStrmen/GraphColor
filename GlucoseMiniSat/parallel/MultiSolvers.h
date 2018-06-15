@@ -50,7 +50,7 @@ OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWA
 #ifndef MultiSolvers_h
 #define MultiSolvers_h
 
-#include "../GlucoseMiniSat/parallel/ParallelSolver.h"
+#include "../parallel/ParallelSolver.h"
 
 namespace Glucose {
     class SolverConfiguration;

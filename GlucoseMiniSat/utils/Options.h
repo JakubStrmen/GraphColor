@@ -25,9 +25,9 @@ OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWA
 #include <math.h>
 #include <string.h>
 
-#include "../GlucoseMiniSat/mtl/IntTypes.h"
-#include "../GlucoseMiniSat/mtl/Vec.h"
-#include "../GlucoseMiniSat/utils/ParseUtils.h"
+#include "IntTypes.h"
+#include "Vec.h"
+#include "ParseUtils.h"
 
 namespace Glucose {
 

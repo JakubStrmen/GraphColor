@@ -21,8 +21,8 @@
 #include "../GlucoseMiniSat/simp/SimpSolver.h"
 #include "../GlucoseMiniSat/core/SolverTypes.h"
 
-
-
+static const char* _certified = "CORE -- CERTIFIED UNSAT";
+static Glucose::Solver* solver;
 
 using namespace Glucose;
 
@@ -34,6 +34,12 @@ SATSolver::~SATSolver() {
 
 }
 
+/**
+ * function to perform UNSAT solving - using Glucose simp
+ * @param argc
+ * @param argv
+ * @return
+ */
 int SATSolver::glucoseSimp(int argc, char** argv) {
 
     try {
@@ -123,17 +129,21 @@ int SATSolver::glucoseSimp(int argc, char** argv) {
         if (argc == 1)
             printf("c Reading from standard input... Use '--help' for help.\n");
 
-        gzFile in = (argc == 1) ? gzdopen(0, "rb") : gzopen(argv[1], "rb");
-        if (in == NULL)
-            printf("ERROR! Could not open file: %s\n", argc == 1 ? "<stdin>" : argv[1]), exit(1);
+//        TODO - problem with gzopen, gzread ... zlib library
+//        asi spravit tak aby to necitalo zo suboru ale priamo z pamate ... ???
+//        gzFile in = (argc == 1) ? gzdopen(0, "rb") : gzopen(argv[1], "rb");
+
+//        if (in == NULL)
+//            printf("ERROR! Could not open file: %s\n", argc == 1 ? "<stdin>" : argv[1]), exit(1);
 
         if (S.verbosity > 0){
             printf("c ========================================[ Problem Statistics ]===========================================\n");
             printf("c |                                                                                                       |\n"); }
 
         FILE* res = (argc >= 3) ? fopen(argv[argc-1], "wb") : NULL;
-        parse_DIMACS(in, S);
-        gzclose(in);
+//        parse_DIMACS(in, S);
+        parse_DIMACS(reinterpret_cast<gzFile>(res), S);
+        //        gzclose(in);
 
         if (S.verbosity > 0){
             printf("c |  Number of variables:  %12d                                                                   |\n", S.nVars());
@@ -228,8 +238,6 @@ int SATSolver::glucoseSimp(int argc, char** argv) {
 }
 
 
-
-
 void SATSolver::printStats(Solver& solver)
 {
     double cpu_time = cpuTime();
@@ -256,17 +264,14 @@ void SATSolver::printStats(Solver& solver)
     printf("c CPU time              : %g s\n", cpu_time);
 }
 
-
-
-
 // Terminate by notifying the solver and back out gracefully. This is mainly to have a test-case
 // for this feature of the Solver as it may take longer than an immediate call to '_exit()'.
-static void SATSolver::SIGINT_interrupt(int signum) { solver->interrupt(); }
+void SATSolver::SIGINT_interrupt(int signum) { solver->interrupt(); }
 
 // Note that '_exit()' rather than 'exit()' has to be used. The reason is that 'exit()' calls
 // destructors and may cause deadlocks if a malloc/free function happens to be running (these
 // functions are guarded by locks for multithreaded use).
-static void SATSolver::SIGINT_exit(int signum) {
+void SATSolver::SIGINT_exit(int signum) {
     printf("\n"); printf("*** INTERRUPTED ***\n");
     if (solver->verbosity > 0){
         printStats(*solver);
