@@ -11,17 +11,20 @@
  * Created on March 7, 2018, 10:44 AM
  */
 
+
+#include <chrono>
+#include <ctime>
+#include <fstream>
+#include <bitset>
+#include <cstring>
+
 #include "../include/Graph.h"
 #include "iostream"
 #include "cstdlib"
 #include "cstdio"
 #include "../include/depthFirst.h"
 #include "../include/BreadthFirst.h"
-#include <chrono>
-#include <ctime>
-#include <fstream>
-#include <bitset>
-#include <cstring>
+#include "SATSolver.h"
 
 #define COLORS 3
 
@@ -696,6 +699,18 @@ bool Graph::testIreducibility() {
 
 void Graph::doSATSolve() {
 
+    SATSolver *mySolver = new SATSolver();
+
+    char *arg1 = const_cast<char *>("/home/jakub/Git/GraphColor/SATtests/input.cnf");
+    char *arg2 = "/home/jakub/Git/GraphColor/SATtests/output.txt";
+
+    char **myArgV;
+
+    myArgV[0] = arg1;
+    myArgV[1] = arg2;
+
+
+    mySolver->glucoseSimp(2, myArgV);
 
 
 }

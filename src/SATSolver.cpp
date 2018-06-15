@@ -2,8 +2,29 @@
 // Created by jakub on 6/15/18.
 //
 
-#include <stdint-gcc.h>
+//#include <stdint-gcc.h>
+//#include <cinttypes>
+#include <errno.h>
+#include <signal.h>
+#include <zlib.h>
+#include <sys/resource.h>
+
+#include <cinttypes>
+
 #include "SATSolver.h"
+#include "../GlucoseMiniSat/mtl/Vec.h"
+#include "../GlucoseMiniSat/mtl/XAlloc.h"
+#include "../GlucoseMiniSat/utils/System.h"
+#include "../GlucoseMiniSat/utils/ParseUtils.h"
+#include "../GlucoseMiniSat/utils/Options.h"
+#include "../GlucoseMiniSat/core/Dimacs.h"
+#include "../GlucoseMiniSat/simp/SimpSolver.h"
+#include "../GlucoseMiniSat/core/SolverTypes.h"
+
+
+
+
+using namespace Glucose;
 
 SATSolver::SATSolver() {
 
@@ -13,7 +34,7 @@ SATSolver::~SATSolver() {
 
 }
 
-void SATSolver::glucoseSimp() {
+int SATSolver::glucoseSimp(int argc, char** argv) {
 
     try {
         printf("c\nc This is glucose 4.0 --  based on MiniSAT (Many thanks to MiniSAT team)\nc\n");
@@ -206,6 +227,55 @@ void SATSolver::glucoseSimp() {
 
 }
 
+
+
+
+void SATSolver::printStats(Solver& solver)
+{
+    double cpu_time = cpuTime();
+    double mem_used = 0;//memUsedPeak();
+    printf("c restarts              : %" PRIu64" (%" PRIu64" conflicts in avg)\n", solver.starts,(solver.starts>0 ?solver.conflicts/solver.starts : 0));
+    printf("c blocked restarts      : %" PRIu64" (multiple: %" PRIu64") \n", solver.stats[nbstopsrestarts],solver.stats[nbstopsrestartssame]);
+    printf("c last block at restart : %" PRIu64"\n",solver.stats[lastblockatrestart]);
+    printf("c nb ReduceDB           : %" PRIu64"\n", solver.stats[nbReduceDB]);
+    printf("c nb removed Clauses    : %" PRIu64"\n",solver.stats[nbRemovedClauses]);
+    printf("c nb learnts DL2        : %" PRIu64"\n", solver.stats[nbDL2]);
+    printf("c nb learnts size 2     : %" PRIu64"\n", solver.stats[nbBin]);
+    printf("c nb learnts size 1     : %" PRIu64"\n", solver.stats[nbUn]);
+    if(solver.chanseokStrategy)
+        printf("c nb permanent learnts  : %" PRIu64"\n", solver.stats[nbPermanentLearnts]);
+
+    printf("c conflicts             : %-12" PRIu64"   (%.0f /sec)\n", solver.conflicts   , solver.conflicts   /cpu_time);
+    printf("c decisions             : %-12" PRIu64"   (%4.2f %% random) (%.0f /sec)\n", solver.decisions, (float)solver.stats[rnd_decisions]*100 / (float)solver.decisions, solver.decisions   /cpu_time);
+    printf("c propagations          : %-12" PRIu64"   (%.0f /sec)\n", solver.propagations, solver.propagations/cpu_time);
+    //    printf("c conflict literals     : %-12" PRIu64"   (%4.2f %% deleted)\n", solver.stats[tot_literals], (solver.stats[max_literals] - solver.stats[tot_literals])*100 / (double)solver.stats[max_literals]);
+    //    printf("c Average resolutions   : %-12" PRIu64"   (%.0f seen ones)\n",solver.stats[sumRes]/solver.conflicts,((double)solver.stats[sumResSeen])/solver.conflicts);
+    printf("c nb reduced Clauses    : %" PRIu64"\n",solver.stats[nbReducedClauses]);
+
+    if (mem_used != 0) printf("Memory used           : %.2f MB\n", mem_used);
+    printf("c CPU time              : %g s\n", cpu_time);
+}
+
+
+
+
+// Terminate by notifying the solver and back out gracefully. This is mainly to have a test-case
+// for this feature of the Solver as it may take longer than an immediate call to '_exit()'.
+static void SATSolver::SIGINT_interrupt(int signum) { solver->interrupt(); }
+
+// Note that '_exit()' rather than 'exit()' has to be used. The reason is that 'exit()' calls
+// destructors and may cause deadlocks if a malloc/free function happens to be running (these
+// functions are guarded by locks for multithreaded use).
+static void SATSolver::SIGINT_exit(int signum) {
+    printf("\n"); printf("*** INTERRUPTED ***\n");
+    if (solver->verbosity > 0){
+        printStats(*solver);
+        printf("\n"); printf("*** INTERRUPTED ***\n"); }
+    _exit(1); }
+
+
+
 void SATSolver::glucoseParallel() {
 
+    Solver sol;
 }

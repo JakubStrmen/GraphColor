@@ -1,0 +1,40 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/jakub/Git/GraphColor/include/depthFirst.h
+
+/home/jakub/Git/GraphColor/include/mystack.h
+
+/home/jakub/Git/GraphColor/src/depthFirst.c
+stdio.h
+-
+stdlib.h
+-
+stdbool.h
+-
+time.h
+-
+omp.h
+-
+sys/types.h
+-
+unistd.h
+-
+../include/mystack.h
+/home/jakub/Git/GraphColor/include/mystack.h
+../include/depthFirst.h
+/home/jakub/Git/GraphColor/include/depthFirst.h
+
+/home/jakub/Git/GraphColor/src/mystack.c
+stdio.h
+-
+stdlib.h
+-
+../include/mystack.h
+/home/jakub/Git/GraphColor/include/mystack.h
+

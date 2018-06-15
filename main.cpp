@@ -42,14 +42,15 @@ int main(int argc, char** argv) {
     //const char *inputFile =  "/home/jakub/NetBeansProjects/GraphColor/GraphInput/output";
 
 
-    // TODO - check if path is OK
-    std::string path = "/media/jakub/C6B00449B0044303/CLionProjects/GraphColor/GraphInput/";
+    // TODO - check if path is OK - if there is file
+    std::string path = "/home/jakub/Git/GraphColor/GraphInput/";
     //std::string path = "/home/js/CLionProjects/GraphColor/GraphInput/";
     //std::string file = "Generated_graphs.30.05.sn.cyc4.g6";
     //std::string file = "graph_6700_snark_18vert.g6";
     //std::string file = "graphG6.g6";
     //std::string file = "graph_flowerSnarkJ5_20vert.g6";
     std::string file = "graph_1108_snark56Vert.g6";
+
 
     std::string inputFile = path + file;
 
@@ -64,6 +65,10 @@ int main(int argc, char** argv) {
 
 
     Graph *graph1 = new Graph(inputFile, "g6file");
+
+    graph1->doSATSolve();
+
+
     //graph1->showGraph();
 
     /*
@@ -80,8 +85,8 @@ int main(int argc, char** argv) {
 
      */
 
-    graph1->showGraph();
-    graph1->DepthFirstSearchColoring(0);
+//    graph1->showGraph();
+//    graph1->DepthFirstSearchColoring(0);
 
 
 

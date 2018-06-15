@@ -5,25 +5,24 @@
 #ifndef GRAPHCOLOR_SATSOLVER_H
 #define GRAPHCOLOR_SATSOLVER_H
 
-#include <errno.h>
+#include "../GlucoseMiniSat/core/Solver.h"
 
-#include <signal.h>
-#include <zlib.h>
-#include <sys/resource.h>
-
-#include "../GlucoseMiniSat/utils/System.h"
-#include "../GlucoseMiniSat/utils/ParseUtils.h"
-#include "../GlucoseMiniSat/utils/Options.h"
-#include "../GlucoseMiniSat/core/Dimacs.h"
-#include "../GlucoseMiniSat/simp/SimpSolver.h"
+//using namespace Glucose;
 
 class SATSolver {
 public:
     SATSolver();
     virtual ~SATSolver();
 
-    void glucoseSimp();
+    int glucoseSimp(int argc, char** argv);
+    static void printStats(Glucose::Solver& solver);
+    static void SIGINT_interrupt(int signum);
+    static void SIGINT_exit(int signum);
+
     void glucoseParallel();
+
+    static Glucose::Solver* solver;
+    static const char* _certified = "CORE -- CERTIFIED UNSAT";
 
 
 };
