@@ -5,13 +5,13 @@ set(CMAKE_CXX_STANDARD 11)
 
 # added -lz
 set(GCC_COVERAGE_COMPILE_FLAGS "-lz")
-set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -lz -Wall")
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -lz ")
 
 #set(CMAKE_SHARED_LINKER_FLAGS "${CMAKE_CXX_FLAGS} -lz -Wall "      )
 
 #SET_TARGET_PROPERTIES(zlib PROPERTIES LINK_FLAGS -Wl,-lz)
 
-#find_package (zlib)
+#find_package (zlib-1.2.11)
 
 # added -fopenmp
 include(FindOpenMP)
@@ -24,7 +24,6 @@ else(OPENMP_FOUND)
 endif(OPENMP_FOUND)
 
 
-
 add_subdirectory (GlucoseMiniSat)
 
 include_directories( /home/jakub/Git/GraphColor/GlucoseMiniSat/core )
@@ -35,7 +34,7 @@ include_directories(parallel)
 include_directories(simp)
 include_directories(utils)
 
-set(SOURCE_FILES
+set(GLUCOSE_FILES
         GlucoseMiniSat/core/BoundedQueue.h
         GlucoseMiniSat/core/Constants.h
         GlucoseMiniSat/core/Dimacs.h
@@ -92,6 +91,6 @@ add_executable(GraphColor
         src/GraphNew.h
         src/SATSolver.cpp
         src/SATSolver.h
-        /usr/include/zlib.h
-        ${SOURCE_FILES})
+
+        ${GLUCOSE_FILES})
 

@@ -709,9 +709,10 @@ void Graph::doSATSolve() {
 
     char **myArgV;
 
-    myArgV[0] = "/home/jakub/Git/GraphColor/cmake-build-debug/GraphColor";
-    myArgV[1] = arg1;
-    myArgV[2] = arg2;
+    // simulating int argc, char* argv
+//    myArgV[0] = "/home/jakub/Git/GraphColor/cmake-build-debug/GraphColor";
+//    myArgV[1] = arg1;
+//    myArgV[2] = arg2;
 
     int myArgc = 3;
 
@@ -720,7 +721,14 @@ void Graph::doSATSolve() {
 //        std::cout<< i << ": " << myArgV[i] <<"\n";
 //    }
 
-    mySolver->glucoseSimp(3, myArgV);
+    std::ifstream inputFile(arg1);
+    char c;
+    inputFile.get(c);
+    std::cout<<c << "\n";
+    std::cout<<inputFile.get() << "\n";
+
+
+//    mySolver->glucoseSimp(3, myArgV);
 
 
 }

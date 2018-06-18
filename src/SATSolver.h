@@ -5,6 +5,7 @@
 #ifndef GRAPHCOLOR_SATSOLVER_H
 #define GRAPHCOLOR_SATSOLVER_H
 
+#include <fstream>
 #include "../core/Solver.h"
 #include "../GlucoseMiniSat/core/Solver.h"
 
@@ -19,6 +20,8 @@ public:
     static void printStats(Glucose::Solver& solver);
     static void SIGINT_interrupt(int signum);
     static void SIGINT_exit(int signum);
+
+    static void parseDimacs(std::ifstream in, Glucose::Solver& S);
 
     void glucoseParallel();
 

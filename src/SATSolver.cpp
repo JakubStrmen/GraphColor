@@ -1,15 +1,66 @@
 //
 // Created by jakub on 6/15/18.
 //
+// copied and modified from ...
+/***************************************************************************************[Main.cc]
+ Glucose -- Copyright (c) 2009-2014, Gilles Audemard, Laurent Simon
+                                CRIL - Univ. Artois, France
+                                LRI  - Univ. Paris Sud, France (2009-2013)
+                                Labri - Univ. Bordeaux, France
+
+ Syrup (Glucose Parallel) -- Copyright (c) 2013-2014, Gilles Audemard, Laurent Simon
+                                CRIL - Univ. Artois, France
+                                Labri - Univ. Bordeaux, France
+
+Glucose sources are based on MiniSat (see below MiniSat copyrights). Permissions and copyrights of
+Glucose (sources until 2013, Glucose 3.0, single core) are exactly the same as Minisat on which it
+is based on. (see below).
+
+Glucose-Syrup sources are based on another copyright. Permissions and copyrights for the parallel
+version of Glucose-Syrup (the "Software") are granted, free of charge, to deal with the Software
+without restriction, including the rights to use, copy, modify, merge, publish, distribute,
+sublicence, and/or sell copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+- The above and below copyrights notices and this permission notice shall be included in all
+copies or substantial portions of the Software;
+- The parallel version of Glucose (all files modified since Glucose 3.0 releases, 2013) cannot
+be used in any competitive event (sat competitions/evaluations) without the express permission of
+the authors (Gilles Audemard / Laurent Simon). This is also the case for any competitive event
+using Glucose Parallel as an embedded SAT engine (single core or not).
+
+
+--------------- Original Minisat Copyrights
+
+Copyright (c) 2003-2006, Niklas Een, Niklas Sorensson
+Copyright (c) 2007-2010, Niklas Sorensson
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and
+associated documentation files (the "Software"), to deal in the Software without restriction,
+including without limitation the rights to use, copy, modify, merge, publish, distribute,
+sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all copies or
+substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT
+NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND
+NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM,
+DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT
+OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+ **************************************************************************************************/
 
 //#include <stdint-gcc.h>
 //#include <cinttypes>
 #include <errno.h>
 #include <signal.h>
-#include <zlib.h>
+//#include <zlib.h>
 #include <sys/resource.h>
 
-#include <cinttypes>
+//#include <cinttypes>
+//#include "../zlib-1.2.11/zlib.h"
+
 
 #include "SATSolver.h"
 #include "../GlucoseMiniSat/mtl/Vec.h"
@@ -129,6 +180,8 @@ int SATSolver::glucoseSimp(int argc, char** argv) {
         if (argc == 1)
             printf("c Reading from standard input... Use '--help' for help.\n");
 
+//        ===============================================
+
 //        TODO - problem with gzopen, gzread ... zlib library
 //        asi spravit tak aby to necitalo zo suboru ale priamo z pamate ... ???
 //        gzFile in = (argc == 1) ? gzdopen(0, "rb") : gzopen(argv[1], "rb");
@@ -136,14 +189,17 @@ int SATSolver::glucoseSimp(int argc, char** argv) {
 //        if (in == NULL)
 //            printf("ERROR! Could not open file: %s\n", argc == 1 ? "<stdin>" : argv[1]), exit(1);
 
-        if (S.verbosity > 0){
-            printf("c ========================================[ Problem Statistics ]===========================================\n");
-            printf("c |                                                                                                       |\n"); }
-
+//        if (S.verbosity > 0){
+//            printf("c ========================================[ Problem Statistics ]===========================================\n");
+//            printf("c |                                                                                                       |\n"); }
+//
         FILE* res = (argc >= 3) ? fopen(argv[argc-1], "wb") : NULL;
 //        parse_DIMACS(in, S);
-        parse_DIMACS(reinterpret_cast<gzFile>(res), S);
-        //        gzclose(in);
+//        parse_DIMACS(reinterpret_cast<gzFile>(res), S);
+//                gzclose(in);
+
+//              ===========================================
+
 
         if (S.verbosity > 0){
             printf("c |  Number of variables:  %12d                                                                   |\n", S.nVars());
@@ -279,8 +335,165 @@ void SATSolver::SIGINT_exit(int signum) {
     _exit(1); }
 
 
-
 void SATSolver::glucoseParallel() {
 
     Solver sol;
 }
+
+
+
+// DIMACS Parser:
+//=================================================================================================
+
+void SATSolver::parseDimacs(std::ifstream in, Glucose::Solver& S) {
+    std::string line;
+//    std::ifstream myfile;
+    vec<Lit> lits;
+    int vars    = 0;
+    int clauses = 0;
+    int cnt     = 0;
+
+    for (;;){
+        skipWhitespace(in);
+        //read character from input stream
+        char c;
+        in.get(c);
+        if (in.eof()) {break;}
+        else if (c == 'p'){
+            if (eagerMatch(in, "p cnf")){
+                vars    = parseInt(in);
+                clauses = parseInt(in);
+                // SATRACE'06 hack
+                // if (clauses > 4000000)
+                //     S.eliminate(true);
+            }else{
+                printf("PARSE ERROR! Unexpected char: %c\n", c), exit(3);
+            }
+        } else if (c == 'c' || c == 'p'){
+            std::getline(in, line);
+//            skipLine(in);
+        }
+        else{
+            cnt++;
+            readClause(in, S, lits);
+            S.addClause_(lits); }
+    }
+    if (vars != S.nVars())
+        fprintf(stderr, "WARNING! DIMACS header mismatch: wrong number of variables.\n");
+    if (cnt  != clauses)
+        fprintf(stderr, "WARNING! DIMACS header mismatch: wrong number of clauses.\n");
+//
+//
+//
+//
+//
+//
+//
+//
+//    vec<Lit> lits;
+//    int vars    = 0;
+//    int clauses = 0;
+//    int cnt     = 0;
+//    for (;;){
+//        skipWhitespace(in);
+//        if (*in == EOF) break;
+//        else if (*in == 'p'){
+//            if (eagerMatch(in, "p cnf")){
+//                vars    = parseInt(in);
+//                clauses = parseInt(in);
+//                // SATRACE'06 hack
+//                // if (clauses > 4000000)
+//                //     S.eliminate(true);
+//            }else{
+//                printf("PARSE ERROR! Unexpected char: %c\n", *in), exit(3);
+//            }
+//        } else if (*in == 'c' || *in == 'p')
+//            skipLine(in);
+//        else{
+//            cnt++;
+//            readClause(in, S, lits);
+//            S.addClause_(lits); }
+//    }
+//    if (vars != S.nVars())
+//        fprintf(stderr, "WARNING! DIMACS header mismatch: wrong number of variables.\n");
+//    if (cnt  != clauses)
+//        fprintf(stderr, "WARNING! DIMACS header mismatch: wrong number of clauses.\n");
+
+
+}
+
+// TODO - reimplement other parsing functions
+
+
+template<class B, class Solver>
+static void readClause(B& in, Solver& S, vec<Lit>& lits) {
+    int     parsed_lit, var;
+    lits.clear();
+    for (;;){
+        parsed_lit = parseInt(in);
+        if (parsed_lit == 0) break;
+        var = abs(parsed_lit)-1;
+        while (var >= S.nVars()) S.newVar();
+        lits.push( (parsed_lit > 0) ? mkLit(var) : ~mkLit(var) );
+    }
+}
+
+// Generic parse functions parametrized over the input-stream type.
+
+
+template<class B>
+static void skipWhitespace(B& in) {
+    while ((*in >= 9 && *in <= 13) || *in == 32)
+        ++in; }
+
+
+template<class B>
+static void skipLine(B& in) {
+    for (;;){
+        if (isEof(in)) return;
+        if (*in == '\n') { ++in; return; }
+        ++in; } }
+
+template<class B>
+static int parseInt(B& in) {
+    int     val = 0;
+    bool    neg = false;
+    skipWhitespace(in);
+    if      (*in == '-') neg = true, ++in;
+    else if (*in == '+') ++in;
+    if (*in < '0' || *in > '9') fprintf(stderr, "PARSE ERROR! Unexpected char: %c\n", *in), exit(3);
+    while (*in >= '0' && *in <= '9')
+        val = val*10 + (*in - '0'),
+                ++in;
+    return neg ? -val : val; }
+
+
+// String matching: in case of a match the input iterator will be advanced the corresponding
+// number of characters.
+template<class B>
+static bool match(B& in, const char* str) {
+    int i;
+    for (i = 0; str[i] != '\0'; i++)
+        if (in[i] != str[i])
+            return false;
+
+    in += i;
+
+    return true;
+}
+
+// String matching: consumes characters eagerly, but does not require random access iterator.
+template<class B>
+static bool eagerMatch(B& in, const char* str) {
+    for (; *str != '\0'; ++str, ++in)
+        if (*str != *in)
+            return false;
+    return true; }
+
+
+
+//=================================================================================================
+//-------------------------------------------------------------------------------------------------
+
+
+
