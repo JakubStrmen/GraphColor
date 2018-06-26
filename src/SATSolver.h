@@ -21,11 +21,14 @@ public:
     static void SIGINT_interrupt(int signum);
     static void SIGINT_exit(int signum);
 
-    static void parseDimacs(std::ifstream in, Glucose::Solver& S);
+    void parseDimacs(std::ifstream& in, Glucose::Solver& S);
 
     void glucoseParallel();
 
 
+private:
+    static int parseInt(std::string inputString);
+    static void readClause(std::stringstream& input, Glucose::Solver& S, Glucose::vec<Glucose::Lit>& lits);
 
 
 

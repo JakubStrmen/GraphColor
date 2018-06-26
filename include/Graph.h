@@ -43,6 +43,8 @@ public:
 
     void doSATSolve();
 
+    void test();
+
 
     //for method from Nauty&Traces - showg.c
     #define BIAS6 63

@@ -54,23 +54,13 @@ int main(int argc, char** argv) {
 
     std::string inputFile = path + file;
 
-    /*
-    Filter *filter1 = new Filter(inputFile);
-    
-    filter1->startWork();
-    delete filter1;
-     
-     */
-
-
-    std::cout<<argc<<"\n";
-    for(int i=0; i<argc; i++){
-        std::cout<< i << ": " << argv[i] <<"\n";
-    }
 
     Graph *graph1 = new Graph(inputFile, "g6file");
 
     graph1->doSATSolve();
+
+
+
 
 
     //graph1->showGraph();
@@ -116,8 +106,6 @@ int main(int argc, char** argv) {
     std::cout<<"Hello!" << std::endl;
 
 //    delete graph1;
-
-
 
     //std::cout<< sizeof(Graph)<<"\n";
 

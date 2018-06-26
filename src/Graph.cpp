@@ -17,6 +17,7 @@
 #include <fstream>
 #include <bitset>
 #include <cstring>
+#include <sstream>
 
 #include "../include/Graph.h"
 #include "iostream"
@@ -709,26 +710,28 @@ void Graph::doSATSolve() {
 
     char **myArgV;
 
-    // simulating int argc, char* argv
-//    myArgV[0] = "/home/jakub/Git/GraphColor/cmake-build-debug/GraphColor";
-//    myArgV[1] = arg1;
-//    myArgV[2] = arg2;
+//     simulating int argc, char* argv
+    myArgV[0] = "/home/jakub/Git/GraphColor/cmake-build-debug/GraphColor";
+    myArgV[1] = arg1;
+    myArgV[2] = arg2;
 
     int myArgc = 3;
 
-//    std::cout<<myArgc<<"\n";
-//    for(int i=0; i<myArgc; i++){
-//        std::cout<< i << ": " << myArgV[i] <<"\n";
-//    }
 
-    std::ifstream inputFile(arg1);
-    char c;
-    inputFile.get(c);
-    std::cout<<c << "\n";
-    std::cout<<inputFile.get() << "\n";
+//    std::ifstream inputFile(arg1);
+//    char c;
+//    inputFile.get(c);
+//    std::cout<<c << "\n";
+//    std::cout<<inputFile.get() << "\n";
 
 
-//    mySolver->glucoseSimp(3, myArgV);
+    mySolver->glucoseSimp(3, myArgV);
+
+
+}
+
+
+void Graph::test() {
 
 
 }

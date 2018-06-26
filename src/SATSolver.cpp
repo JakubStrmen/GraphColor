@@ -57,6 +57,7 @@ OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWA
 #include <signal.h>
 //#include <zlib.h>
 #include <sys/resource.h>
+#include <sstream>
 
 //#include <cinttypes>
 //#include "../zlib-1.2.11/zlib.h"
@@ -200,6 +201,12 @@ int SATSolver::glucoseSimp(int argc, char** argv) {
 
 //              ===========================================
 
+        // with own implementation of parser ...
+        std::ifstream inputFile(argv[1]);
+        parseDimacs(inputFile, S);
+
+
+
 
         if (S.verbosity > 0){
             printf("c |  Number of variables:  %12d                                                                   |\n", S.nVars());
@@ -342,53 +349,62 @@ void SATSolver::glucoseParallel() {
 
 
 
-// DIMACS Parser:
+// DIMACS Parser: reimplemented - using ifstream
 //=================================================================================================
 
-void SATSolver::parseDimacs(std::ifstream in, Glucose::Solver& S) {
-    std::string line;
+void SATSolver::parseDimacs(/*gzFile input_stream*/ std::ifstream &in, Glucose::Solver& S) {
 //    std::ifstream myfile;
     vec<Lit> lits;
     int vars    = 0;
     int clauses = 0;
     int cnt     = 0;
 
-    for (;;){
-        skipWhitespace(in);
-        //read character from input stream
-        char c;
-        in.get(c);
-        if (in.eof()) {break;}
-        else if (c == 'p'){
-            if (eagerMatch(in, "p cnf")){
-                vars    = parseInt(in);
-                clauses = parseInt(in);
+    std::string line;
+    std::string word;
+    std::string word2;
+
+    while (!in.eof()){
+        std::getline(in, line);
+        std::stringstream lineStream(line);
+
+        word = "";
+        lineStream>>word;
+
+        // ignore whitespace - if word not changed by reading - line is empty
+        if(word=="") continue;
+
+        if (word == "p"){
+            lineStream>>word2;
+            word = word +" "+word2;
+            if (/*eagerMatch(in, "p cnf")*/ word=="p cnf"){
+                lineStream>>vars;
+                lineStream>>clauses;
+//                vars    = parseInt(in);
+//                clauses = parseInt(in);
                 // SATRACE'06 hack
                 // if (clauses > 4000000)
                 //     S.eliminate(true);
             }else{
-                printf("PARSE ERROR! Unexpected char: %c\n", c), exit(3);
+                printf("PARSE ERROR! Unexpected char: %c\n", word), exit(3);
             }
-        } else if (c == 'c' || c == 'p'){
-            std::getline(in, line);
-//            skipLine(in);
+        } else if (word=="c" || word=="p"){
+            //just go for new line from input
+            continue;
         }
         else{
+            // reinit stringstream with whole line
+            std::stringstream lineStream2(line);
+
             cnt++;
-            readClause(in, S, lits);
+            readClause(lineStream2, S, lits);
             S.addClause_(lits); }
+
     }
     if (vars != S.nVars())
         fprintf(stderr, "WARNING! DIMACS header mismatch: wrong number of variables.\n");
     if (cnt  != clauses)
         fprintf(stderr, "WARNING! DIMACS header mismatch: wrong number of clauses.\n");
-//
-//
-//
-//
-//
-//
-//
+
 //
 //    vec<Lit> lits;
 //    int vars    = 0;
@@ -422,75 +438,51 @@ void SATSolver::parseDimacs(std::ifstream in, Glucose::Solver& S) {
 
 }
 
-// TODO - reimplement other parsing functions
+// just returns whole inputString as int ...
+int SATSolver::parseInt(std::string inputString) {
+    int     val = 0;
+    bool    neg = false;
+
+    // if minus sign before number -> set neg as true
+    if      (inputString.at(0) == '-') neg = true, inputString.erase(0,1);
+    else if (inputString.at(0) == '+') inputString.erase(0,1);
+
+    // foreach char in inputString do:
+    for(char& c : inputString) {
+        if (c < '0' || c > '9') fprintf(stderr, "PARSE ERROR! Unexpected char: %c\n", c), exit(3);
+        val = val*10 + (c - '0');
+    }
+    return neg ? -val : val;
 
 
-template<class B, class Solver>
-static void readClause(B& in, Solver& S, vec<Lit>& lits) {
-    int     parsed_lit, var;
+//    int     val = 0;
+//    bool    neg = false;
+//    skipWhitespace(in);
+//    if      (*in == '-') neg = true, ++in;
+//    else if (*in == '+') ++in;
+//    if (*in < '0' || *in > '9') fprintf(stderr, "PARSE ERROR! Unexpected char: %c\n", *in), exit(3);
+//    while (*in >= '0' && *in <= '9')
+//        val = val*10 + (*in - '0'),
+//                ++in;
+//    return neg ? -val : val;
+
+}
+
+void SATSolver::readClause(std::stringstream &input, Glucose::Solver &S, Glucose::vec<Glucose::Lit> &lits) {
+    std::string word;
+
+    int parsed_lit, var;
     lits.clear();
+
     for (;;){
-        parsed_lit = parseInt(in);
+        input>>word;
+        parsed_lit = parseInt(word);
         if (parsed_lit == 0) break;
         var = abs(parsed_lit)-1;
         while (var >= S.nVars()) S.newVar();
         lits.push( (parsed_lit > 0) ? mkLit(var) : ~mkLit(var) );
     }
 }
-
-// Generic parse functions parametrized over the input-stream type.
-
-
-template<class B>
-static void skipWhitespace(B& in) {
-    while ((*in >= 9 && *in <= 13) || *in == 32)
-        ++in; }
-
-
-template<class B>
-static void skipLine(B& in) {
-    for (;;){
-        if (isEof(in)) return;
-        if (*in == '\n') { ++in; return; }
-        ++in; } }
-
-template<class B>
-static int parseInt(B& in) {
-    int     val = 0;
-    bool    neg = false;
-    skipWhitespace(in);
-    if      (*in == '-') neg = true, ++in;
-    else if (*in == '+') ++in;
-    if (*in < '0' || *in > '9') fprintf(stderr, "PARSE ERROR! Unexpected char: %c\n", *in), exit(3);
-    while (*in >= '0' && *in <= '9')
-        val = val*10 + (*in - '0'),
-                ++in;
-    return neg ? -val : val; }
-
-
-// String matching: in case of a match the input iterator will be advanced the corresponding
-// number of characters.
-template<class B>
-static bool match(B& in, const char* str) {
-    int i;
-    for (i = 0; str[i] != '\0'; i++)
-        if (in[i] != str[i])
-            return false;
-
-    in += i;
-
-    return true;
-}
-
-// String matching: consumes characters eagerly, but does not require random access iterator.
-template<class B>
-static bool eagerMatch(B& in, const char* str) {
-    for (; *str != '\0'; ++str, ++in)
-        if (*str != *in)
-            return false;
-    return true; }
-
-
 
 //=================================================================================================
 //-------------------------------------------------------------------------------------------------
