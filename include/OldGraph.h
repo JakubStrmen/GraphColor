@@ -13,35 +13,37 @@
 
 #include <iostream>
 #include <vector>
+#include "../src/Graph.h"
 
 
 #ifndef GRAPHCOLOR_H
 #define GRAPHCOLOR_H
 
-class Graph {
+class OldGraph {
 public:
-    Graph();
-    Graph(short int *, int);
-    Graph(const char *inputFile, const char *format);
-    Graph(std::string inputFile, const char *format);
-    //Graph(const Graph& orig);
-    virtual ~Graph();
+    OldGraph();
+    OldGraph(short int *, int);
+    OldGraph(const char *inputFile, const char *format);
+    OldGraph(std::string inputFile, const char *format);
+    //OldGraph(const OldGraph& orig);
+    virtual ~OldGraph();
     void showGraph(short int *, int);
     void showGraph();
     void showMatrix(int *, int, int);
     int DepthFirstSearchColoring(int);
     int BreadthFirstSearchColoring(short int);
-    void writeGraphToFile(short int *, int, const char *);
+    void writeGraphToFile(const char *outputFile);
     int getGraphSize();
     void showColoredGraph();
-    Graph removeVertex(int);
-    std::vector<Graph> removeEveryAdjacentPair();
-    std::vector<Graph> removeEveryNotAdjacentPair();
+    OldGraph removeVertex(int);
+    std::vector<OldGraph> removeEveryAdjacentPair();
+    std::vector<OldGraph> removeEveryNotAdjacentPair();
     bool testCriticality();
     bool testCoCriticality();
     bool testIreducibility();
 
     void doSATSolve();
+    Graph readFromG6Gile();
 
     void test();
 

@@ -5,10 +5,10 @@
 #ifndef GRAPHCOLOR_BREADTHFIRST2_H
 #define GRAPHCOLOR_BREADTHFIRST2_H
 
-#include "Graph.h"
+#include "OldGraph.h"
 
 
-class BreadthFirst : public Graph {
+class BreadthFirst : public OldGraph {
 public:
     BreadthFirst(short int *, int);
     BreadthFirst(const BreadthFirst& orig);

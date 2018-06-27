@@ -11,3 +11,7 @@ Vertex::Vertex() {
 Vertex::~Vertex() {
 
 }
+
+void Vertex::setMyEdge(Undirected_edge *edge) {
+    myEdge = edge;
+}

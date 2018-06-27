@@ -71,12 +71,12 @@ set(GLUCOSE_FILES
         GlucoseMiniSat/utils/Options.h
         GlucoseMiniSat/utils/ParseUtils.h
         GlucoseMiniSat/utils/System.cc
-        GlucoseMiniSat/utils/System.h)
+        GlucoseMiniSat/utils/System.h src/Edge.cpp src/Edge.h src/Graph.cpp src/Graph.h src/GraphFunctions.cpp src/GraphFunctions.h)
 
 add_executable(GraphColor
         main.cpp
-        src/Graph.cpp
-        include/Graph.h
+        src/OldGraph.cpp
+        include/OldGraph.h
         src/depthFirst.c
         include/depthFirst.h
         src/mystack.c

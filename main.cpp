@@ -14,20 +14,13 @@
 #include <cstdlib>
 #include <cstdio>
 #include <iostream>
-#include "include/Graph.h"
+#include <fstream>
+#include "include/OldGraph.h"
 #include "include/Filter.h"
 #include "include/BreadthFirst.h"
+#include "src/Graph.h"
+#include "src/GraphFunctions.h"
 
-
-
-
-
-
-//using namespace std;
-
-/*
- * 
- */
 
 /*
 extern "C" {
@@ -37,10 +30,16 @@ extern "C" {
 }
 */
 
-int main(int argc, char** argv) {
+//using namespace std;
+
+/*
+ * 
+ */
+
+// mostly testing functions
+void workWithOldGraph(){
 
     //const char *inputFile =  "/home/jakub/NetBeansProjects/GraphColor/GraphInput/output";
-
 
     // TODO - check if path is OK - if there is file
     std::string path = "/home/jakub/Git/GraphColor/GraphInput/";
@@ -50,18 +49,12 @@ int main(int argc, char** argv) {
     //std::string file = "graphG6.g6";
     //std::string file = "graph_flowerSnarkJ5_20vert.g6";
     std::string file = "graph_1108_snark56Vert.g6";
-
-
     std::string inputFile = path + file;
 
+    OldGraph *graph1 = new OldGraph(inputFile, "g6file");
+//    graph1->doSATSolve();
 
-    Graph *graph1 = new Graph(inputFile, "g6file");
-
-    graph1->doSATSolve();
-
-
-
-
+    graph1->showGraph();
 
     //graph1->showGraph();
 
@@ -71,10 +64,10 @@ int main(int argc, char** argv) {
     graph1->showColoredGraph();
 
     graph1->showGraph();
-    std::vector<Graph> output= graph1->removeEveryAdjacentPair();
+    std::vector<OldGraph> output= graph1->removeEveryAdjacentPair();
     std::cout<< output.size()<<"\n";
     //output[0].showGraph();
-    std::vector<Graph> output2= graph1->removeEveryNotAdjacentPair();
+    std::vector<OldGraph> output2= graph1->removeEveryNotAdjacentPair();
     std::cout<< output2.size()<<"\n";
 
      */
@@ -107,7 +100,42 @@ int main(int argc, char** argv) {
 
 //    delete graph1;
 
-    //std::cout<< sizeof(Graph)<<"\n";
+    //std::cout<< sizeof(OldGraph)<<"\n";
+
+}
+
+int main(int argc, char** argv) {
+
+    std::string path = "/home/jakub/Git/GraphColor/GraphInput/";
+    std::string file = "graph_6700_snark_18vert.g6";
+    std::string inputFile = path + file;
+
+
+//    workWithOldGraph();
+//    std::vector<int> graph = {0};
+//    GraphFunctions::readGraphFromG6File(inputFile, graph);
+
+    std::string line;
+    std::ifstream myfile;
+
+    myfile.open(inputFile);
+    // read line from input file
+    std::getline(myfile, line);
+    myfile.close();
+
+
+    Graph myGraph(line);
+
+    myGraph.printEdges();
+
+
+
+    OldGraph graph2(inputFile, "g6file");
+    graph2.writeGraphToFile("graph_6700_snakr_adjMatrix");
+
+
+
+//    std::for_each()
 
 
     return 0;

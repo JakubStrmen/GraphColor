@@ -86,8 +86,10 @@ SATSolver::~SATSolver() {
 
 }
 
+// TODO - reimplement - using not inputFile but just input stream or so
 /**
  * function to perform UNSAT solving - using Glucose simp
+ * params like in main function
  * @param argc
  * @param argv
  * @return
