@@ -107,7 +107,14 @@ void workWithOldGraph(){
 int main(int argc, char** argv) {
 
     std::string path = "/home/jakub/Git/GraphColor/GraphInput/";
-    std::string file = "graph_6700_snark_18vert.g6";
+//    std::string file = "graph_6700_snark_18vert.g6";
+    std::string file = "graph_1108_snark56Vert.g6";
+//    std::string file = "graph_951_noSnark_112vert.g6";
+//    std::string file = "graph_746_6vert_3Colorable.g6";
+//    std::string file = "graph_1122_120vert_3Colorable.g6";
+
+
+
     std::string inputFile = path + file;
 
 
@@ -126,13 +133,12 @@ int main(int argc, char** argv) {
 
     Graph myGraph(line);
 
-//    myGraph.printEdges();
+    Graph reducedGraph = GraphFunctions::reduceEdge3Col_Vert3Col(myGraph);
 
-    Graph newGraph = GraphFunctions::reduceEdge3Col_Vert3Col(myGraph);
-
+    GraphFunctions::do3COL_withSAT(reducedGraph);
 //    myGraph.printEdges();
-    newGraph.printEdges();
-    newGraph.printVertices();
+//    reducedGraph.printEdges();
+//    reducedGraph.printVertices();
 //    myGraph.printVertices();
 
 
@@ -142,7 +148,6 @@ int main(int argc, char** argv) {
 
 
 
-//    OldGraph graph2(inputFile, "g6file");
 //    graph2.writeGraphToFile("graph_6700_snakr_adjMatrix");
 
 

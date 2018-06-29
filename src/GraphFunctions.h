@@ -25,7 +25,9 @@ public:
     static void readGraphFromG6File(std::string, std::vector<int> &adjMatrix);
 
     static Graph reduceEdge3Col_Vert3Col(Graph inputGraph);
-    static Glucose::Solver reduceVert3Col_SAT(Graph inputGraph);
+    static void reduceVert3Col_SAT(Graph &inputGraph, Glucose::Solver& solver);
+
+    static void do3COL_withSAT(Graph &inputGraph);
 
     static bool findEdge(int from, int to, std::vector<Undirected_edge> &edges);
     static bool findEdge(int from, int to, int& position, std::vector<Undirected_edge> &edges);

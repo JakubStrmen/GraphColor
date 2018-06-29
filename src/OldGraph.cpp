@@ -670,7 +670,7 @@ void OldGraph::doSATSolve() {
 //    std::cout<<inputFile.get() << "\n";
 
 
-    mySolver->glucoseSimp(3, myArgV);
+    mySolver->glucoseSimpFromFile(3, myArgV);
 
 
 }

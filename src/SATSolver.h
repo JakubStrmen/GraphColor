@@ -8,6 +8,7 @@
 #include <fstream>
 #include "../core/Solver.h"
 #include "../GlucoseMiniSat/core/Solver.h"
+#include "Graph.h"
 
 //using namespace Glucose;
 
@@ -16,7 +17,9 @@ public:
     SATSolver();
     virtual ~SATSolver();
 
-    int glucoseSimp(int argc, char** argv);
+    int glucoseSimpFromFile(int argc, char **argv);
+    //3coloring of graph based on Glucose Simp SAT Solver
+    int doSATSolve3COL(Graph &inputGraph);
     static void printStats(Glucose::Solver& solver);
     static void SIGINT_interrupt(int signum);
     static void SIGINT_exit(int signum);

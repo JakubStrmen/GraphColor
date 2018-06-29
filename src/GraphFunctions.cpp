@@ -3,6 +3,7 @@
 //
 
 #include "GraphFunctions.h"
+#include "SATSolver.h"
 #include <iostream>
 #include <bitset>
 #include <fstream>
@@ -249,6 +250,159 @@ Graph GraphFunctions::reduceEdge3Col_Vert3Col(Graph inputGraph) {
 
 
 
-Glucose::Solver GraphFunctions::reduceVert3Col_SAT(Graph inputGraph) {
-    return Glucose::Solver();
+// to simplify work
+struct SATvertex{
+    int vertex;
+    std::vector<int> vars;
+};
+//TODO - not working correctly
+// for now, done for vertex - 3Coloring
+void GraphFunctions::reduceVert3Col_SAT(Graph &inputGraph, Glucose::Solver& solver) {
+    Glucose::vec<Glucose::Lit> lits;
+    int vars    = 0;
+    int clauses = 0;
+    int cnt     = 0;
+
+
+    //generate clauses from input graph
+    vars = inputGraph.getNoVertices()*3+1;
+    clauses = (5*inputGraph.getNoVertices()) + (3*inputGraph.getNoEdges());
+
+//    std::vector<Vertex> inputVert = inputGraph.getVertices();
+    std::vector<Undirected_edge> inputEdges = inputGraph.getEdges();
+
+    //for local store of vertices vars
+    std::vector<SATvertex> SATvertices;
+    SATvertices.reserve(inputGraph.getNoVertices());
+
+    //add clauses for vertices
+    {
+        //for local store of inserting lits
+        std::vector<int > parsed_lits;
+        parsed_lits.reserve(3);
+
+
+        // add clauses for every vertex
+        // every vertex has to be coloured with one and only one colour
+        for (int i = 0; i < inputGraph.getNoVertices(); ++i) {
+            // init vars for vert
+            SATvertex vert;
+            vert.vars.reserve(3);
+            for (int k = 0; k < 3; ++k) {
+                //var indexes from 0 -> numOfVertices*3
+                vert.vars.push_back(((i*3)+k)+1); // +1 to avoid having 0 as var
+            }
+            SATvertices.push_back(vert);
+            while (vert.vars.at(2) >= solver.nVars()) solver.newVar();
+
+
+            // for each vertex add 5 clauses - not in loop
+            int parsed_lit, var;
+            lits.clear();
+
+            //first clause (xi0 OR xi1 OR xi2)
+            parsed_lits.push_back(SATvertices[i].vars[0]);
+            parsed_lits.push_back(SATvertices[i].vars[1]);
+            parsed_lits.push_back(SATvertices[i].vars[2]);
+            for (int l = 0; l < parsed_lits.size(); ++l) {
+                var = abs(parsed_lits[l]); // not -1  -> vars from 0, not from 1 as from dimacs file
+                lits.push( (parsed_lits[l] > 0) ? Glucose::mkLit(var) : ~Glucose::mkLit(var) );
+            }
+            parsed_lits.clear();
+            cnt++;
+            solver.addClause(lits);
+
+
+            //second clause (-xi0 OR -xi1 OR xi2)
+            lits.clear();
+            parsed_lits.push_back(-SATvertices[i].vars[0]);
+            parsed_lits.push_back(-SATvertices[i].vars[1]);
+            parsed_lits.push_back(SATvertices[i].vars[2]);
+            for (int l = 0; l < parsed_lits.size(); ++l) {
+                var = abs(parsed_lits[l]); // not -1  -> vars from 0, not from 1 as from dimacs file
+                lits.push( (parsed_lits[l] > 0) ? Glucose::mkLit(var) : ~Glucose::mkLit(var) );
+            }
+            parsed_lits.clear();
+            cnt++;
+            solver.addClause(lits);
+
+            //third clause (-xi0 OR xi1 OR -xi2)
+            lits.clear();
+            parsed_lits.push_back(-SATvertices[i].vars[0]);
+            parsed_lits.push_back(SATvertices[i].vars[1]);
+            parsed_lits.push_back(-SATvertices[i].vars[2]);
+            for (int l = 0; l < parsed_lits.size(); ++l) {
+                var = abs(parsed_lits[l]); // not -1  -> vars indexed from 0, not from 1 as from dimacs file
+                lits.push( (parsed_lits[l] > 0) ? Glucose::mkLit(var) : ~Glucose::mkLit(var) );
+            }
+            parsed_lits.clear();
+            cnt++;
+            solver.addClause(lits);
+
+            //fourth clause (xi0 OR -xi1 OR -xi2)
+            lits.clear();
+            parsed_lits.push_back(SATvertices[i].vars[0]);
+            parsed_lits.push_back(-SATvertices[i].vars[1]);
+            parsed_lits.push_back(-SATvertices[i].vars[2]);
+            for (int l = 0; l < parsed_lits.size(); ++l) {
+                var = abs(parsed_lits[l]); // not -1  -> vars indexed from 0, not from 1 as from dimacs file
+                lits.push( (parsed_lits[l] > 0) ? Glucose::mkLit(var) : ~Glucose::mkLit(var) );
+            }
+            parsed_lits.clear();
+            cnt++;
+            solver.addClause(lits);
+
+            //fifth clause (-xi0 OR -xi1 OR -xi2)
+            lits.clear();
+            parsed_lits.push_back(-SATvertices[i].vars[0]);
+            parsed_lits.push_back(-SATvertices[i].vars[1]);
+            parsed_lits.push_back(-SATvertices[i].vars[2]);
+            for (int l = 0; l < parsed_lits.size(); ++l) {
+                var = abs(parsed_lits[l]); // not -1  -> vars indexed from 0, not from 1 as from dimacs file
+                lits.push( (parsed_lits[l] > 0) ? Glucose::mkLit(var) : ~Glucose::mkLit(var) );
+            }
+            parsed_lits.clear();
+            cnt++;
+            solver.addClause(lits);
+
+        }
+    }
+
+    //add clauses for edges
+    int edgeCount = 0;
+    for(Undirected_edge inEdge: inputEdges){
+
+        // every of 3 colors
+        for (int i = 0; i < 3; ++i) {
+            int parsed_lit1, parsed_lit2, var;
+            lits.clear();
+
+            parsed_lit1 = -SATvertices[inEdge.from()].vars[i];
+            parsed_lit2 = -SATvertices[inEdge.to()].vars[i];
+
+            var = abs(parsed_lit1); // not -1  -> vars from 0, not from 1 as from dimacs file
+            lits.push( (parsed_lit1 > 0) ? Glucose::mkLit(var) : ~Glucose::mkLit(var) );
+            var = abs(parsed_lit2); // not -1  -> vars from 0, not from 1 as from dimacs file
+            lits.push( (parsed_lit2 > 0) ? Glucose::mkLit(var) : ~Glucose::mkLit(var) );
+            cnt++;
+            solver.addClause(lits);
+
+        }
+    }
+
+    if (vars != solver.nVars())
+        fprintf(stderr, "WARNING! DIMACS header mismatch: wrong number of variables.\n");
+    if (cnt  != clauses)
+        fprintf(stderr, "WARNING! DIMACS header mismatch: wrong number of clauses.\n");
+
+
 }
+
+void GraphFunctions::do3COL_withSAT(Graph &inputGraph) {
+
+    SATSolver solver;
+    solver.doSATSolve3COL(inputGraph);
+
+}
+
+
