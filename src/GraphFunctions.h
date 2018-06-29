@@ -8,6 +8,7 @@
 
 #include <string>
 #include <vector>
+#include <Solver.h>
 #include "Graph.h"
 
 class GraphFunctions {
@@ -23,6 +24,15 @@ public:
     static void readGraphFromG6String(std::string g6String, std::vector<int> &adjMatrix, int &graphSize);
     static void readGraphFromG6File(std::string, std::vector<int> &adjMatrix);
 
+    static Graph reduceEdge3Col_Vert3Col(Graph inputGraph);
+    static Glucose::Solver reduceVert3Col_SAT(Graph inputGraph);
+
+    static bool findEdge(int from, int to, std::vector<Undirected_edge> &edges);
+    static bool findEdge(int from, int to, int& position, std::vector<Undirected_edge> &edges);
+    static bool findVertex(int vertexId, std::vector<Vertex> &vertices);
+    static void addVertex(Vertex newVertex, std::vector<Vertex> &vertices);
+    static void addEdge(int fromVertex, int toVertex, std::vector<Undirected_edge> &edges);
+    static void addEdge(Undirected_edge newEdge, std::vector<Undirected_edge> &edges);
 private:
     static int getGraphSizeG6(const char *);
 

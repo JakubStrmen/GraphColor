@@ -137,3 +137,118 @@ int GraphFunctions::getGraphSizeG6(const char *s){
     return n;
 
 }
+
+// TODO - how to do this at best?
+
+void GraphFunctions::addEdge(int fromVertex, int toVertex, std::vector<Undirected_edge> &edges) {
+    if(!findEdge(fromVertex, toVertex, edges)){
+        Undirected_edge newEdge(fromVertex, toVertex);
+        edges.push_back(newEdge);
+    }
+}
+
+void GraphFunctions::addEdge(Undirected_edge newEdge, std::vector<Undirected_edge> &edges) {
+    if(!findEdge(newEdge.from(), newEdge.to(), edges)){
+        edges.push_back(newEdge);
+    }
+}
+
+void GraphFunctions::addVertex(Vertex newVertex, std::vector<Vertex> &vertices) {
+    if (!findVertex(newVertex.getId(), vertices)) vertices.push_back(newVertex);
+}
+
+// returns position of edge in vector
+bool GraphFunctions::findEdge(int from, int to, std::vector<Undirected_edge> &edges) {
+    if (from > to)
+        std::swap(from, to);
+
+    for (int i=0; i<edges.size(); i++){
+        if(from == edges[i].from() && to==edges[i].to()){
+            return true;
+        }
+    }
+    return false;
+}
+
+bool GraphFunctions::findEdge(int from, int to, int &position, std::vector<Undirected_edge> &edges) {
+    if (from > to)
+        std::swap(from, to);
+
+    for (int i=0; i<edges.size(); i++){
+        if(from == edges[i].from() && to==edges[i].to()){
+            position = i;
+            return true;
+        }
+    }
+    return false;
+}
+
+bool GraphFunctions::findVertex(int vertexId, std::vector<Vertex> &vertices) {
+    for (Vertex vertex : vertices){
+        if (vertex.getId()==vertexId) return true;
+    }
+    return false;
+}
+
+
+// TODO - complexity??
+Graph GraphFunctions::reduceEdge3Col_Vert3Col(Graph inputGraph) {
+    // approx max number of edges in new graph = 3*inputGraph.vertices.size --for cubic graph
+    // number of vertices in new graph = inputGraph.edges.size
+    int reserveEdges = 3* inputGraph.getNoEdges();
+    int reserveVertices = inputGraph.getNoVertices();
+
+    // load edges and vertices from input graph
+    std::vector<Undirected_edge> inputEdges = inputGraph.getEdges();
+    std::vector<Vertex> inputVertices = inputGraph.getVertices();
+
+    //init edges and vertices for output graph
+    std::vector<Undirected_edge> outEdges;
+        outEdges.reserve(reserveEdges);
+    std::vector<Vertex> outVertices;
+        outVertices.reserve(reserveVertices);
+
+    int counter=0;
+    for (Undirected_edge inEdge : inputEdges){
+        int edgePosition = counter;
+        int otherEdgePosition;
+        Vertex newVertex(counter, 4); // alloc 4 for transformed cubic graph
+
+        int i =-1;
+        // for every edge with common vertex - add outEdge
+        for(Undirected_edge otherEdge : inputEdges){
+            i++;
+            // if the same edge - continue
+            if (inEdge==otherEdge) continue;
+
+            //if have in common FROM vertex
+            if(inEdge.from()==otherEdge.from() || inEdge.from()==otherEdge.to()){
+                otherEdgePosition = inputGraph.getEdgePosition(otherEdge);
+                Undirected_edge outEdge(counter, otherEdgePosition);
+                addEdge(outEdge, outEdges);
+                newVertex.addNeighbor(otherEdgePosition);
+            }else
+            // else if have in common TO vertex
+            if (inEdge.to()==otherEdge.from() || inEdge.to()==otherEdge.to()){
+                otherEdgePosition = inputGraph.getEdgePosition(otherEdge);
+                Undirected_edge outEdge(counter, otherEdgePosition);
+                addEdge(outEdge, outEdges);
+                newVertex.addNeighbor(otherEdgePosition);
+            }
+
+        }
+
+        outVertices.push_back(newVertex);
+        counter++;
+    }
+
+    Graph outputGraph(outEdges, outVertices);
+
+    return outputGraph;
+}
+
+
+
+Glucose::Solver GraphFunctions::reduceVert3Col_SAT(Graph inputGraph) {
+    return Glucose::Solver();
+}

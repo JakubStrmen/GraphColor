@@ -126,12 +126,24 @@ int main(int argc, char** argv) {
 
     Graph myGraph(line);
 
-    myGraph.printEdges();
+//    myGraph.printEdges();
+
+    Graph newGraph = GraphFunctions::reduceEdge3Col_Vert3Col(myGraph);
+
+//    myGraph.printEdges();
+    newGraph.printEdges();
+    newGraph.printVertices();
+//    myGraph.printVertices();
+
+
+//    std::cout<<myGraph.ve
 
 
 
-    OldGraph graph2(inputFile, "g6file");
-    graph2.writeGraphToFile("graph_6700_snakr_adjMatrix");
+
+
+//    OldGraph graph2(inputFile, "g6file");
+//    graph2.writeGraphToFile("graph_6700_snakr_adjMatrix");
 
 
 

@@ -15,13 +15,22 @@ class Vertex {
 
 public:
     Vertex();
+    Vertex(int _id);
+    Vertex(int _id, int allocNumber);
     virtual ~Vertex();
 
 
 //    Vertex* neighbors[MAX_DEGREE];
 
     void setMyEdge(Undirected_edge *edge);
+    void addNeighbor(int neighbor);
+    int getId();
+
+    std::vector<int> getNeighbors();
+    std::string toString();
+
 private:
+    int id;
     std::vector<int> neighbors;
 
     // pointre na hrany zatial vynechame

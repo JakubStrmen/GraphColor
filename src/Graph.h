@@ -8,31 +8,62 @@
 
 #include <vector>
 #include <map>
+#include <unordered_set>
+#include <string>
+#include <unordered_map>
 #include "Edge.h"
 #include "Vertex.h"
 
-// should be universal class for graphs
+
+// should be universal class for graphs (undirected)
 class Graph {
+    typedef std::pair<int, int> edgeKey;
 public:
     Graph();
+    Graph(int reserveNoEdges, int reserveNoVertices);
+    Graph(std::vector<Undirected_edge> edges, std::vector<Vertex> vertices);
 
     Graph(std::string graphInG6String);
 
     virtual ~Graph();
 
-    void addVertex(int idOfVertex);
-    void addEdge(int fromVertex, int toVertex);
 
+
+    bool findEdge(int from, int to);
+    bool findEdge(int from, int to, int& position);
+    bool findVertex(int vertexId);
+    Vertex getVertex(int vertexId);
+    int getEdgePosition(Undirected_edge edge);
     void printEdges();
+    void printVertices();
+
+    std::vector<Undirected_edge> getEdges();
+    std::vector<Vertex> getVertices();
+
+    int getNoEdges();
+    int getNoVertices();
+
+    //TODO - shrink to fit - if still using vectors
 
 private:
+    int numOfEdges;
+    int numOfVertices;
     int graphSize;
     Vertex vertex;
     // TODO - to discuss - if map/vector
-    std::map<int, Vertex> vertices;
+    std::map<int, Vertex> verticesMap;
+    std::vector<Vertex> verticesVector;
     std::vector<Undirected_edge> edges;
 
-    void initializeGraphFromG6(std::string inputString);
+    std::unordered_map<std::string, Undirected_edge> edges2;
+
+    void initGraphFromG6String(std::string inputString);
+    void initEdges(std::vector<int> &graphVector);
+    void initEdgesAndVertices(std::vector<int> &graphVector);
+
+    void addVertex(Vertex newVertex);
+    void addEdge(int fromVertex, int toVertex);
+    void addEdge(Undirected_edge newEdge);
 
 };
 
