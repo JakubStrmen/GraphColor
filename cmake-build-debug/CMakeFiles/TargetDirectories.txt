@@ -1,6 +1,0 @@
-/home/jakub/Git/GraphColor/cmake-build-debug/CMakeFiles/rebuild_cache.dir
-/home/jakub/Git/GraphColor/cmake-build-debug/CMakeFiles/edit_cache.dir
-/home/jakub/Git/GraphColor/cmake-build-debug/CMakeFiles/GraphColor.dir
-/home/jakub/Git/GraphColor/cmake-build-debug/GlucoseMiniSat/CMakeFiles/rebuild_cache.dir
-/home/jakub/Git/GraphColor/cmake-build-debug/GlucoseMiniSat/CMakeFiles/edit_cache.dir
-/home/jakub/Git/GraphColor/cmake-build-debug/GlucoseMiniSat/CMakeFiles/GlucoseMiniSat.dir
