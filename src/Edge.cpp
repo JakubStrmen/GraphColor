@@ -11,6 +11,7 @@ Undirected_edge::Undirected_edge(vertex_type const &from,
         : m_from(from), m_to(to) {
     if (from > to)
         std::swap(m_from, m_to);
+    init();
 };
 
 Undirected_edge &Undirected_edge::
@@ -65,3 +66,24 @@ bool Undirected_edge::is_independent_of(Undirected_edge const &other) const {
     return m_from == other.m_from or m_to == other.m_to or m_from == other.m_to or
            m_to == other.m_from;
 }
+
+// =================================
+
+void Undirected_edge::init() {
+    _coloured = false;
+    _colour=-1;
+}
+
+void Undirected_edge::setColour(int newColour) {
+    _colour=newColour;
+    _coloured = true;
+}
+
+int Undirected_edge::getColour() {
+    return _colour;
+}
+
+bool Undirected_edge::coloured() {
+    return _coloured;
+}
+

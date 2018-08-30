@@ -133,9 +133,14 @@ int main(int argc, char** argv) {
 
     Graph myGraph(line);
 
-    Graph reducedGraph = GraphFunctions::reduceEdge3Col_Vert3Col(myGraph);
+//    Graph reducedGraph = GraphFunctions::reduceEdge3Col_Vert3Col(myGraph);
+//    GraphFunctions::do3COL_withSAT(reducedGraph);
 
-    GraphFunctions::do3COL_withSAT(reducedGraph);
+//    std::cout<<myGraph.toString();
+
+    GraphFunctions::edge3COLBFS(myGraph);
+//    myGraph.printEdges();
+
 //    myGraph.printEdges();
 //    reducedGraph.printEdges();
 //    reducedGraph.printVertices();

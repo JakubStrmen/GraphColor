@@ -11,12 +11,12 @@ Graph::Graph() {
 }
 
 Graph::Graph(int maxNoEdges, int maxNoVertices) {
-    edges.reserve(maxNoEdges);
+    edgesVector.reserve(maxNoEdges);
     verticesVector.reserve(maxNoVertices);
 }
 
 Graph::Graph(std::vector<Undirected_edge> _edges, std::vector<Vertex> _vertices) {
-    edges=_edges;
+    edgesVector=_edges;
     verticesVector=_vertices;
 }
 
@@ -33,13 +33,13 @@ Graph::~Graph() {
 void Graph::addEdge(int fromVertex, int toVertex) {
     if(!findEdge(fromVertex, toVertex)){
         Undirected_edge newEdge(fromVertex, toVertex);
-        edges.push_back(newEdge);
+        edgesVector.push_back(newEdge);
     }
 }
 
 void Graph::addEdge(Undirected_edge newEdge) {
     if(!findEdge(newEdge.from(), newEdge.to())){
-        edges.push_back(newEdge);
+        edgesVector.push_back(newEdge);
     }
 }
 
@@ -94,7 +94,7 @@ void Graph::initEdgesAndVertices(std::vector<int> &graphVector) {
     // at beginning - reserve enough space for edges (to avoid reallocation)
     // enough just for cubic graphs
     int maxNoEdges = graphSize*2;
-    edges.reserve(maxNoEdges);
+    edgesVector.reserve(maxNoEdges);
     //reserve space for vertices
     verticesVector.reserve(graphSize);
 
@@ -109,17 +109,18 @@ void Graph::initEdgesAndVertices(std::vector<int> &graphVector) {
             //also add neighbor to vertex
             if(graphVector[offset]==1){
                 // if edge not already there - add
+                Undirected_edge edge(i, j);
                 if(!findEdge(i, j)) {
-                    Undirected_edge edge(i, j);
-                    edges.push_back(edge);
+                    edgesVector.push_back(edge);
                 }
                 vertex.addNeighbor(j);
+                vertex.addEdge(edge);
             }
         }
         verticesVector.push_back(vertex);
     }
     //at the end free unused space
-    edges.shrink_to_fit();
+    edgesVector.shrink_to_fit();
 
 
 }
@@ -128,11 +129,11 @@ void Graph::initEdgesAndVertices(std::vector<int> &graphVector) {
 
 void Graph::printEdges() {
 
-    for(Undirected_edge edge : edges){
+    for(Undirected_edge edge : edgesVector){
         std::cout<<edge.from() << " : " <<edge.to() << "\n";
     }
 
-    std::cout<<"number of edges: " << edges.size() << "\n";
+    std::cout<<"number of edges: " << edgesVector.size() << "\n";
 
 }
 
@@ -150,8 +151,8 @@ bool Graph::findEdge(int from, int to) {
     if (from > to)
         std::swap(from, to);
 
-    for (int i=0; i<edges.size(); i++){
-        if(from == edges[i].from() && to==edges[i].to()){
+    for (int i=0; i<edgesVector.size(); i++){
+        if(from == edgesVector[i].from() && to==edgesVector[i].to()){
             return true;
         }
     }
@@ -162,8 +163,8 @@ bool Graph::findEdge(int from, int to, int &position) {
     if (from > to)
         std::swap(from, to);
 
-    for (int i=0; i<edges.size(); i++){
-        if(from == edges[i].from() && to==edges[i].to()){
+    for (int i=0; i<edgesVector.size(); i++){
+        if(from == edgesVector[i].from() && to==edgesVector[i].to()){
             position = i;
             return true;
         }
@@ -195,7 +196,7 @@ Vertex Graph::getVertex(int vertexId) {
 
 // returns number of edges
 int Graph::getNoEdges() {
-    return edges.size();
+    return edgesVector.size();
 }
 
 // returns number of vertices in vector
@@ -204,13 +205,33 @@ int Graph::getNoVertices() {
 }
 
 std::vector<Undirected_edge> Graph::getEdges() {
-    return edges;
+    return edgesVector;
 }
 
 std::vector<Vertex> Graph::getVertices() {
     return verticesVector;
 }
 
+std::string Graph::toString() {
+    std::string output="";
+    for (int j = 0; j < graphSize; ++j) {
+        output+=verticesVector[j].toString();
+        output+="\n";
+    }
+
+    return output;
+}
+
+// ---- also verticesVector???
+void Graph::colourEdge(Undirected_edge &edge, int colour) {
+    // at first - colour edge in vector of edges
+    edge.setColour(colour);
+
+    // then - change also info about edges in verticesMap
+    verticesMap.at(edge.from()).colourEdge(edge, colour);
+    verticesMap.at(edge.to()).colourEdge(edge, colour);
+
+}
 
 
 

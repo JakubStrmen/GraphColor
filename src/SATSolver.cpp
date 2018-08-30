@@ -201,9 +201,7 @@ int SATSolver::doSATSolve3COL(Graph &inputGraph) {
 
 //===========================================
 
-        // with own implementation of parser ... using ifstream
-        // fill Solver somewhere else
-
+        // fill Solver with clauses based on input graph
         GraphFunctions::reduceVert3Col_SAT(inputGraph, S);
 
 

@@ -7,14 +7,16 @@
 #include <iostream>
 #include <bitset>
 #include <fstream>
+#include <algorithm>
 
 
-GraphFunctions::GraphFunctions() {
 
-}
-
-GraphFunctions::~GraphFunctions() {
-
+GraphFunctions::Vertex_coloring::Vertex_coloring(Vertex parent) {
+    core=parent;
+    availableColors.reserve(COLORS);
+    for (int i = 0; i < COLORS; ++i) {
+        availableColors.push_back(i);
+    }
 }
 
 void GraphFunctions::readGraphFromG6File(std::string inputFile, std::vector<int> &adjMatrix){
@@ -250,12 +252,12 @@ Graph GraphFunctions::reduceEdge3Col_Vert3Col(Graph inputGraph) {
 
 
 
-// to simplify work
+// to simplify work - for local store of variables of every vertex of graph
 struct SATvertex{
     int vertex;
     std::vector<int> vars;
 };
-//TODO - not working correctly
+//TODO - not working correctly - resolved?
 // for now, done for vertex - 3Coloring
 void GraphFunctions::reduceVert3Col_SAT(Graph &inputGraph, Glucose::Solver& solver) {
     Glucose::vec<Glucose::Lit> lits;
@@ -377,6 +379,7 @@ void GraphFunctions::reduceVert3Col_SAT(Graph &inputGraph, Glucose::Solver& solv
             int parsed_lit1, parsed_lit2, var;
             lits.clear();
 
+            //adds negated literals for current edge and current color
             parsed_lit1 = -SATvertices[inEdge.from()].vars[i];
             parsed_lit2 = -SATvertices[inEdge.to()].vars[i];
 
@@ -398,10 +401,120 @@ void GraphFunctions::reduceVert3Col_SAT(Graph &inputGraph, Glucose::Solver& solv
 
 }
 
+/**
+ * performs vertex 3 colouring using SAT
+ * @param inputGraph
+ */
 void GraphFunctions::do3COL_withSAT(Graph &inputGraph) {
 
     SATSolver solver;
     solver.doSATSolve3COL(inputGraph);
+
+}
+
+void GraphFunctions::edge3COLBFS(Graph inputGraph) {
+    edge3COLBFS(inputGraph, 0);
+}
+
+void GraphFunctions::edge3COLBFS(Graph inputGraph, int firstVertex) {
+    //preprocessing
+    std::map<int, Vertex_coloring> vertices;
+    std::map<Undirected_edge, Undirected_edge> edges;
+    int noVertices = inputGraph.getNoVertices();
+
+    std::vector<Vertex> tempVert(inputGraph.getVertices());
+
+    for (int i = 0; i < noVertices; ++i) {
+        Vertex_coloring vert(tempVert[i]);
+        std::pair<int, Vertex_coloring> pair(tempVert[i].getId(), vert);
+        vertices.insert(pair);
+
+    }
+
+    for(Undirected_edge edge: inputGraph.getEdges()){
+        std::pair<Undirected_edge, Undirected_edge> pair(edge, edge);
+        edges.insert(pair);
+    }
+
+    // colouriser
+
+
+    // ----------
+    for (int j = 0; j < COLORS; ++j) {
+        int colour = j;
+        vertices.at(firstVertex).core.setColour(colour);
+        // recursive call
+
+    }
+
+    BFScolouriser colouriser;
+    colouriser.queue.push(firstVertex);
+    colouriser.edge3COLBFSrecursive(vertices);
+
+//    Undirected_edge edge(0, 1);
+//    int farba = 3;
+//    std::pair<Undirected_edge, Undirected_edge > pair(edge, edge);
+//    std::map<Undirected_edge, Undirected_edge> edgesMap;
+//    edgesMap.insert(pair);
+//
+//    std::cout << edgesMap.at(edge).getColour() << "\n";
+//
+//    Undirected_edge edge2(0, 2);
+//    edge2.setColour(4);
+//    std::pair<Undirected_edge, Undirected_edge > pair2(edge2, edge2);
+//    edgesMap.insert(pair2);
+//
+//    std::cout << edgesMap.at(edge2).getColour() << "\n";
+
+
+}
+
+
+bool GraphFunctions::colourVertex(std::map<int, Vertex> &vertices, Vertex &vertex, int colour) {
+    std::vector<int> neighbors(vertex.getNeighbors());
+
+    for(int neighbor: neighbors){
+        if(vertices.at(neighbor).getColour()==colour){
+            return false;
+        }
+    }
+
+
+}
+
+void GraphFunctions::colourEdgesOfVertex(Vertex_coloring &vertex, std::map<Undirected_edge, Undirected_edge> edges, std::map<int, Vertex_coloring> vertices) {
+
+    for(Undirected_edge edge: vertex.core.getEdges()){
+//        Undirected_edge tempEdge = edges.at(edge);
+        int to;
+        // if edge not already colored
+        if (!edges.at(edge).coloured()){
+            (vertex.core.getId()==edge.from()) ? to=edge.to() : to = edge.from();
+            Vertex_coloring *toVert = &vertices.at(to);
+
+            // find intersection of available colors for both vertices
+            std::sort(vertex.availableColors.begin(), vertex.availableColors.end());
+            std::sort(toVert->availableColors.begin(), toVert->availableColors.end());
+            std::vector<int> result(COLORS);
+            std::set_intersection(vertex.availableColors.begin(), vertex.availableColors.end(), toVert->availableColors.begin(), toVert->availableColors.end(), result.begin());
+
+            if (!result.empty()) {
+                edges.at(edge).setColour(result[0]);
+                // remove from available colors recently used color
+//                toVert->availableColors.
+
+            }
+
+        }
+    }
+}
+
+
+void GraphFunctions::BFScolouriser::edge3COLBFSrecursive(std::map<int, Vertex_coloring> &inVertices) {
+//    std::map<int, Vertex> vertices(inVertices);
+
+//    int cislo = queue.front();
+//    std::cout<< cislo << "\n";
 
 }
 

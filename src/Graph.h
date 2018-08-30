@@ -36,6 +36,7 @@ public:
     int getEdgePosition(Undirected_edge edge);
     void printEdges();
     void printVertices();
+    std::string toString();
 
     std::vector<Undirected_edge> getEdges();
     std::vector<Vertex> getVertices();
@@ -43,28 +44,31 @@ public:
     int getNoEdges();
     int getNoVertices();
 
-    //TODO - shrink to fit - if still using vectors
+    void colourEdge(Undirected_edge &edge, int colour);
 
+    //TODO - shrink to fit - if still using vectors
 private:
     int numOfEdges;
     int numOfVertices;
+
     int graphSize;
     Vertex vertex;
     // TODO - to discuss - if map/vector
     std::map<int, Vertex> verticesMap;
     std::vector<Vertex> verticesVector;
-    std::vector<Undirected_edge> edges;
+
+    std::vector<Undirected_edge> edgesVector;
+    std::map<Undirected_edge, Undirected_edge> edgesMap;
 
     std::unordered_map<std::string, Undirected_edge> edges2;
-
     void initGraphFromG6String(std::string inputString);
     void initEdges(std::vector<int> &graphVector);
-    void initEdgesAndVertices(std::vector<int> &graphVector);
 
+    void initEdgesAndVertices(std::vector<int> &graphVector);
     void addVertex(Vertex newVertex);
     void addEdge(int fromVertex, int toVertex);
-    void addEdge(Undirected_edge newEdge);
 
+    void addEdge(Undirected_edge newEdge);
 };
 
 

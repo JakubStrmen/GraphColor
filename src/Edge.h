@@ -37,8 +37,17 @@ public:
     friend std::ostream &operator<<(std::ostream &, Undirected_edge const &);
     bool is_independent_of(Undirected_edge const &) const;
 
+    void setColour(int newColour);
+    int getColour();
+    bool coloured();
+
+
 private:
     vertex_type m_from, m_to;
+    int _colour;
+    bool _coloured;
+
+    void init();
 };
 
 #endif // UNDIRECTED_EDGE_HPP
