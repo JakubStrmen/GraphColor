@@ -41,6 +41,8 @@ public:
     int getColour();
     bool coloured();
 
+    std::string toString();
+
 
 private:
     vertex_type m_from, m_to;

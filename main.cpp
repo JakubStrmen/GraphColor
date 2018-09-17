@@ -15,11 +15,13 @@
 #include <cstdio>
 #include <iostream>
 #include <fstream>
+#include <chrono>
 #include "include/OldGraph.h"
 #include "include/Filter.h"
 #include "include/BreadthFirst.h"
 #include "src/Graph.h"
 #include "src/GraphFunctions.h"
+#include <list>
 
 
 /*
@@ -104,12 +106,28 @@ void workWithOldGraph(){
 
 }
 
+/**
+ * reading BA graph format -> solving with SAT
+ */
+void functionsExamples(){
+    // ---------------
+    // ba format
+    // read from BA file
+    std::string input_path = "/home/jakub/Git/GraphColor/GraphInput/";
+    std::string ba_file_name = "PSC6XJ5.118";
+    Graph baGraph = GraphFunctions::graphFrom_BAfile(input_path+ba_file_name);
+    // reduce to vertex coloring problem
+    Graph reducedBAgraph = GraphFunctions::reduceEdge3Col_Vert3Col(baGraph);
+    // solve 3coloring of reduced graph using SAT solver
+    GraphFunctions::do3COL_withSAT(reducedBAgraph);
+}
+
 int main(int argc, char** argv) {
 
     std::string path = "/home/jakub/Git/GraphColor/GraphInput/";
 //    std::string file = "graph_6700_snark_18vert.g6";
-    std::string file = "graph_1108_snark56Vert.g6";
-//    std::string file = "graph_951_noSnark_112vert.g6";
+//    std::string file = "graph_1108_snark56Vert.g6";
+    std::string file = "graph_951_noSnark_112vert.g6";
 //    std::string file = "graph_746_6vert_3Colorable.g6";
 //    std::string file = "graph_1122_120vert_3Colorable.g6";
 
@@ -130,15 +148,24 @@ int main(int argc, char** argv) {
     std::getline(myfile, line);
     myfile.close();
 
-
-    Graph myGraph(line);
+    Graph myGraph  = GraphFunctions::readGraphFromG6String(line);
+//    std::cout<<myGraph.toString();
 
 //    Graph reducedGraph = GraphFunctions::reduceEdge3Col_Vert3Col(myGraph);
 //    GraphFunctions::do3COL_withSAT(reducedGraph);
 
-//    std::cout<<myGraph.toString();
 
+
+
+    //for time measurement
+    auto start = std::chrono::high_resolution_clock::now();
     GraphFunctions::edge3COLBFS(myGraph);
+    auto end = std::chrono::high_resolution_clock::now();
+    std::chrono::duration<double> elapsed3 = end - start;
+    std::cout << "Duration BFS: " << elapsed3.count() << std::endl;
+
+
+
 //    myGraph.printEdges();
 
 //    myGraph.printEdges();

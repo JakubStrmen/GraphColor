@@ -2,6 +2,7 @@
 // Created by Jan Karabas on 23/05/17.
 //
 
+#include <sstream>
 #include "Edge.h"
 
 // TODO - could be better documented ...
@@ -85,5 +86,11 @@ int Undirected_edge::getColour() {
 
 bool Undirected_edge::coloured() {
     return _coloured;
+}
+
+std::string Undirected_edge::toString() {
+    std::stringstream sstream;
+    sstream<<from() << " : " << to() << " --- (" << getColour() << ")";
+    return sstream.str();
 }
 

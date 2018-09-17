@@ -51,12 +51,18 @@ std::string Vertex::toString() {
     std::stringstream sstream;
     sstream<<id << ": ";
 
-    for (int i = 0; i < edges.size(); ++i) {
-        sstream<<edges[i]<<"("<< edges[i].getColour()<< ")";
-        if(i==edges.size()-1) break;
+//    for (int i = 0; i < edges.size(); ++i) {
+//        sstream<<edges[i]<<"("<< edges[i].getColour()<< ")";
+//        if(i==edges.size()-1) break;
+//        sstream<<", ";
+//
+//    }
+    for (int i = 0; i < neighbors.size(); ++i) {
+        sstream<<neighbors[i];
+        if(i==neighbors.size()-1) break;
         sstream<<", ";
-
     }
+
     return sstream.str();
 }
 

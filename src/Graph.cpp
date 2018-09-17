@@ -10,21 +10,18 @@ Graph::Graph() {
 
 }
 
-Graph::Graph(int maxNoEdges, int maxNoVertices) {
-    edgesVector.reserve(maxNoEdges);
-    verticesVector.reserve(maxNoVertices);
-}
+//Graph::Graph(int maxNoVertices, int maxNoEdges) {
+//    verticesVector.reserve(maxNoVertices);
+//    edgesVector.reserve(maxNoEdges);
+//}
 
-Graph::Graph(std::vector<Undirected_edge> _edges, std::vector<Vertex> _vertices) {
-    edgesVector=_edges;
+Graph::Graph(std::vector<Vertex> _vertices, std::vector<Undirected_edge> _edges) {
     verticesVector=_vertices;
+    edgesVector=_edges;
+    graphSize = _vertices.size();
 }
 
 
-Graph::Graph(std::string graphInG6String) {
-
-    initGraphFromG6String(graphInG6String);
-}
 
 Graph::~Graph() {
 
@@ -47,22 +44,6 @@ void Graph::addVertex(Vertex newVertex) {
     if (!findVertex(newVertex.getId())) verticesVector.push_back(newVertex);
 }
 
-void Graph::initGraphFromG6String(std::string inputString) {
-    // init vector
-    std::vector<int> graphVector = {0};
-//    int graphSize;
-    // fill vector with adjacency matrix of graph
-    GraphFunctions::readGraphFromG6String(inputString, graphVector, graphSize);
-
-
-//    initEdges(graphVector);
-    initEdgesAndVertices(graphVector);
-
-
-    // TODO - init also vector of vertices ...
-
-
-}
 
 // TODO - improve findEdge - maybe replace with better data structure (unordered_set/hashSet)
 //// with vector
@@ -88,44 +69,6 @@ void Graph::initGraphFromG6String(std::string inputString) {
 //    edges.shrink_to_fit();
 //
 //}
-
-// inits edges to vector and vertices to vector
-void Graph::initEdgesAndVertices(std::vector<int> &graphVector) {
-    // at beginning - reserve enough space for edges (to avoid reallocation)
-    // enough just for cubic graphs
-    int maxNoEdges = graphSize*2;
-    edgesVector.reserve(maxNoEdges);
-    //reserve space for vertices
-    verticesVector.reserve(graphSize);
-
-    // TODO - could work just with upper triangle of adjMatrix
-    // from adjacency matrix - create vector/map structure of graph
-    for(int i=0; i<graphSize;i++){
-        Vertex vertex(i);
-        for(int j= 0; j<graphSize; j++){
-            int offset = i * graphSize + j;
-
-            //if there is edge - add edge to edges
-            //also add neighbor to vertex
-            if(graphVector[offset]==1){
-                // if edge not already there - add
-                Undirected_edge edge(i, j);
-                if(!findEdge(i, j)) {
-                    edgesVector.push_back(edge);
-                }
-                vertex.addNeighbor(j);
-                vertex.addEdge(edge);
-            }
-        }
-        verticesVector.push_back(vertex);
-    }
-    //at the end free unused space
-    edgesVector.shrink_to_fit();
-
-
-}
-
-
 
 void Graph::printEdges() {
 
@@ -232,6 +175,13 @@ void Graph::colourEdge(Undirected_edge &edge, int colour) {
     verticesMap.at(edge.to()).colourEdge(edge, colour);
 
 }
+
+Graph::vertex_type Graph::order() const {
+    return graphSize;
+}
+
+
+
 
 
 

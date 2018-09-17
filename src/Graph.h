@@ -19,16 +19,17 @@
 class Graph {
     typedef std::pair<int, int> edgeKey;
 public:
-    Graph();
-    Graph(int reserveNoEdges, int reserveNoVertices);
-    Graph(std::vector<Undirected_edge> edges, std::vector<Vertex> vertices);
+    using edge_type = Undirected_edge;
+    using vertex_type = edge_type::vertex_type;
+    using size_type = std::size_t;
 
-    Graph(std::string graphInG6String);
+    Graph();
+    Graph(std::vector<Vertex> vertices, std::vector<Undirected_edge> edges);
 
     virtual ~Graph();
 
 
-
+    vertex_type order() const;
     bool findEdge(int from, int to);
     bool findEdge(int from, int to, int& position);
     bool findVertex(int vertexId);
@@ -61,10 +62,7 @@ private:
     std::map<Undirected_edge, Undirected_edge> edgesMap;
 
     std::unordered_map<std::string, Undirected_edge> edges2;
-    void initGraphFromG6String(std::string inputString);
-    void initEdges(std::vector<int> &graphVector);
 
-    void initEdgesAndVertices(std::vector<int> &graphVector);
     void addVertex(Vertex newVertex);
     void addEdge(int fromVertex, int toVertex);
 

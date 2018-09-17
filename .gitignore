@@ -91,3 +91,9 @@ fabric.properties
 
 
 # End of https://www.gitignore.io/api/linux,clion
+
+\.idea/
+
+GraphInput/
+
+GraphOutput/

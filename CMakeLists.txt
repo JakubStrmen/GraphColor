@@ -71,7 +71,7 @@ set(GLUCOSE_FILES
         GlucoseMiniSat/utils/Options.h
         GlucoseMiniSat/utils/ParseUtils.h
         GlucoseMiniSat/utils/System.cc
-        GlucoseMiniSat/utils/System.h src/Edge.cpp src/Edge.h src/Graph.cpp src/Graph.h src/GraphFunctions.cpp src/GraphFunctions.h)
+        GlucoseMiniSat/utils/System.h src/Edge.cpp src/Edge.h src/Graph.cpp src/Graph.h src/GraphFunctions.cpp src/GraphFunctions.h BA_GraphFormat/io_bagraph.cpp BA_GraphFormat/io_bagraph.h)
 
 add_executable(GraphColor
         main.cpp
