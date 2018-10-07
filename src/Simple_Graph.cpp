@@ -115,6 +115,11 @@ bool Graph::findEdge(int from, int to, int &position) {
     return false;
 }
 
+/**
+ * returns position of an edge in vector of edges
+ * @param edge
+ * @return
+ */
 int Graph::getEdgePosition(Undirected_edge edge) {
     int position;
     findEdge(edge.from(), edge.to(), position);
